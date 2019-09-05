@@ -1,4 +1,4 @@
 module.exports = {
   outputDir: "dist",
-  publicPath: process.env.NODE_ENV === "production" ? "/keyset-catalog/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/Keyset-Catalog/" : "/"
 };
