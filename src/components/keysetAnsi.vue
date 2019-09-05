@@ -1,9 +1,12 @@
 <template>
-  <div>
+  <div style="height:300px">
     <svg
       width="1000px"
       height="100px"
-      style="overflow:initial;margin-left: -454px;transform: scale(0.7);max-width: 100px;"
+      style="    overflow: initial;
+    transform: scale(0.7);
+    max-width: 100px;
+    height: 100px;"
       viewBox="0 0 100 70"
     >
       <g>
