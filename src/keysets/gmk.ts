@@ -7,7 +7,7 @@ export default [
         background: "#fff3ef",
         color: "#3e728f"
       },
-      novelty: {
+      mod: {
         background: "#fb7279",
         color: "#3e728f"
       },
@@ -18,14 +18,68 @@ export default [
     }
   },
   {
-    name:"carbon",
-    designer:"tomb3ry",
+    name: "jamon",
+    designer: "zambunon",
+    colors: {
+      base: {
+        background: "#84172c",
+        color: "#ece4d0"
+      },
+      mod: {
+        background: "#ac2c32",
+        color: "#ece4d0"
+      },
+      accent: {
+        background: "#0c0c0c",
+        color: "#ece4d0"
+      }
+    }
+  },
+  {
+    name: "nautilus",
+    designer: "",
+    colors: {
+      base: {
+        background: "#1b365d",
+        color: "#00a4a9"
+      },
+      mod: {
+        background: "#1f2a44",
+        color: "#e5a100"
+      },
+      accent: {
+        background: "#e5a100",
+        color: "#1f2a44"
+      }
+    }
+  },
+  {
+    name: "dmg",
+    designer: "",
+    colors: {
+      base: {
+        background: "#c6c3b6",
+        color: "#240773"
+      },
+      mod: {
+        background: "#747773",
+        color: "#240773"
+      },
+      accent: {
+        background: "#8d2a59",
+        color: "#c1bfb2"
+      }
+    }
+  },
+  {
+    name: "carbon",
+    designer: "tomb3ry",
     colors: {
       base: {
         background: "#cec1a9",
         color: "#464746"
       },
-      novelty: {
+      mod: {
         background: "#464746",
         color: "#de6722"
       },
