@@ -30,8 +30,62 @@ export default [
         color: "#ece4d0"
       },
       accent: {
-        background: "#0c0c0c",
+        background: "#272727",
         color: "#ece4d0"
+      }
+    }
+  },
+  {
+    name: "Plum",
+    designer: "",
+    colors: {
+      base: {
+        background: "#ded0af",
+        color: "#736b7c"
+      },
+      mod: {
+        background: "#736b7c",
+        color: "#ded0af"
+      },
+      accent: {
+        background: "#863f48",
+        color: "#ded0af"
+      }
+    }
+  },
+  {
+    name: "Miami Night",
+    designer: "",
+    colors: {
+      base: {
+        background: "#040403",
+        color: "#63e3f8"
+      },
+      mod: {
+        background: "#2d394c",
+        color: "#6c2374"
+      },
+      accent: {
+        background: "#6c2374",
+        color: "#63e3f8"
+      }
+    }
+  },
+  {
+    name: "Yuri",
+    designer: "",
+    colors: {
+      base: {
+        background: "#c7e6f5",
+        color: "#f54730"
+      },
+      mod: {
+        background: "#2d394c",
+        color: "#f54730"
+      },
+      accent: {
+        background: "#f54730",
+        color: "#2d394c"
       }
     }
   },
