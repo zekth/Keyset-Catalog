@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg width="1000px" height="400px" style="overflow:initial;overflow: initial;margin-left: -450px;" viewbox="0 0 100 70">
+    <svg width="1000px" height="400px" style="overflow:initial;overflow: initial;margin-left: -450px;transform: scale(0.7);" viewbox="0 0 100 70">
       <g>
         <svg x="0" height="70px" width="1000px" style="overflow:initial">
           <U1 x="0" y="0" content="ESC" subcontent="" :color="keyset.colors.accent" />
