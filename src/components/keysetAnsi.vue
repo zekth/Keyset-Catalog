@@ -2,8 +2,8 @@
   <div>
     <svg
       width="1000px"
-      height="400px"
-      style="overflow:initial;overflow: initial;margin-left: -450px;transform: scale(0.7);"
+      height="100px"
+      style="overflow:initial;margin-left: -454px;transform: scale(0.7);max-width: 100px;"
       viewBox="0 0 100 70"
     >
       <g>
