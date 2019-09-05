@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <svg width="1000px" height="230px" style="overflow:initial" viewbox="0 0 100 70">
+      <svg width="1000px" height="300px" style="overflow:initial" viewbox="0 0 100 70">
         <g>
           <svg x="0" height="70px" width="1000px" style="overflow:initial">
             <U1 x="0" y="0" content="~" subcontent="`" :color="keyset.colors.base" />
@@ -20,7 +20,7 @@
           </svg>
         </g>
          <g>
-          <svg x="40" y="73" height="70px" width="1000px" style="overflow:initial">
+          <svg x="120" y="73" height="70px" width="1000px" style="overflow:initial">
             <U1 x="0" y="0" content="Q" subcontent="" :color="keyset.colors.base" />
             <U1 x="75" y="0" content="W" subcontent="" :color="keyset.colors.base" />
             <U1 x="150" y="0" content="E" subcontent="" :color="keyset.colors.base" />
@@ -36,7 +36,7 @@
           </svg>
         </g>
          <g>
-          <svg x="55" y="146" height="70px" width="1000px" style="overflow:initial">
+          <svg x="135" y="146" height="70px" width="1000px" style="overflow:initial">
             <U1 x="0" y="0" content="A" subcontent="" :color="keyset.colors.base" />
             <U1 x="75" y="0" content="S" subcontent="" :color="keyset.colors.base" />
             <U1 x="150" y="0" content="D" subcontent="" :color="keyset.colors.base" />
@@ -48,6 +48,20 @@
             <U1 x="600" y="0" content="L" subcontent="" :color="keyset.colors.base" />
             <U1 x="675" y="0" content=":" subcontent=";" :color="keyset.colors.base" />
             <U1 x="750" y="0" content='"' subcontent="'" :color="keyset.colors.base" />
+          </svg>
+        </g>
+         <g>
+          <svg x="185" y="222" height="70px" width="1000px" style="overflow:initial">
+            <U1 x="0" y="0" content="Z" subcontent="" :color="keyset.colors.base" />
+            <U1 x="75" y="0" content="X" subcontent="" :color="keyset.colors.base" />
+            <U1 x="150" y="0" content="C" subcontent="" :color="keyset.colors.base" />
+            <U1 x="225" y="0" content="V" subcontent="" :color="keyset.colors.base" />
+            <U1 x="300" y="0" content="B" subcontent="" :color="keyset.colors.base" />
+            <U1 x="375" y="0" content="N" subcontent="" :color="keyset.colors.base" />
+            <U1 x="450" y="0" content="M" subcontent="" :color="keyset.colors.base" />
+            <U1 x="525" y="0" content="<" subcontent="," :color="keyset.colors.base" />
+            <U1 x="600" y="0" content=">" subcontent="." :color="keyset.colors.base" />
+            <U1 x="675" y="0" content="?" subcontent="/" :color="keyset.colors.base" />
           </svg>
         </g>
       </svg>
