@@ -11,7 +11,7 @@
     >
       <g>
         <svg x="0" height="70px" width="1000px" style="overflow:initial">
-          <U1 x="0":data="getKeyData('Esc',keyset.colors.accent,'Esc')"  isMod="true"  />
+          <U1 x="0" :data="getKeyData('Esc',keyset.colors.accent,'Esc')" isMod="true" />
           <U1 x="150" :data="getKeyData('F1',keyset.colors.base,'F1')" isMod="true" />
           <U1 x="225" :data="getKeyData('F2',keyset.colors.base,'F2')" isMod="true" />
           <U1 x="300" :data="getKeyData('F3',keyset.colors.base,'F3')" isMod="true" />
@@ -23,7 +23,7 @@
           <U1 x="825" :data="getKeyData('F9',keyset.colors.base,'F9')" isMod="true" />
           <U1 x="900" :data="getKeyData('F10',keyset.colors.base,'F10')" isMod="true" />
           <U1 x="975" :data="getKeyData('F11',keyset.colors.base,'F11')" isMod="true" />
-          <U1 x="1050" :data="getKeyData('F12',keyset.colors.base,'F12')" isMod="true"  />
+          <U1 x="1050" :data="getKeyData('F12',keyset.colors.base,'F12')" isMod="true" />
           <U1 x="1160" content="Print" isMod="true" subcontent :color="keyset.colors.base" />
           <U1 x="1235" content="Lock" isMod="true" subcontent :color="keyset.colors.base" />
           <U1 x="1310" content="Pause" isMod="true" subcontent :color="keyset.colors.base" />
@@ -31,19 +31,19 @@
       </g>
       <g>
         <svg x="0" y="100" height="70px" width="1000px" style="overflow:initial">
-          <U1 x="0" content="~" subcontent="`" :color="keyset.colors.base" />
-          <U1 x="75" content="!" subcontent="1" :color="keyset.colors.base" />
-          <U1 x="150" content="@" subcontent="2" :color="keyset.colors.base" />
-          <U1 x="225" content="#" subcontent="3" :color="keyset.colors.base" />
-          <U1 x="300" content="$" subcontent="4" :color="keyset.colors.base" />
-          <U1 x="375" content="%" subcontent="5" :color="keyset.colors.base" />
-          <U1 x="450" content="^" subcontent="6" :color="keyset.colors.base" />
-          <U1 x="525" :content="char" subcontent="7" :color="keyset.colors.base" />
-          <U1 x="600" content="*" subcontent="8" :color="keyset.colors.base" />
-          <U1 x="675" content="(" subcontent="9" :color="keyset.colors.base" />
-          <U1 x="750" content=")" subcontent="0" :color="keyset.colors.base" />
-          <U1 x="825" content="_" subcontent="-" :color="keyset.colors.base" />
-          <U1 x="900" content="+" subcontent="=" :color="keyset.colors.base" />
+          <U1 x="0" :data="getKeyData('F12',keyset.colors.base,'~','`')" />
+          <U1 x="75" :data="getKeyData('F12',keyset.colors.base,'!','1')" />
+          <U1 x="150" :data="getKeyData('F12',keyset.colors.base,'@','2')" />
+          <U1 x="225" :data="getKeyData('F12',keyset.colors.base,'#','3')" />
+          <U1 x="300" :data="getKeyData('F12',keyset.colors.base,'$','4')" />
+          <U1 x="375" :data="getKeyData('F12',keyset.colors.base,'%','5')" />
+          <U1 x="450" :data="getKeyData('F12',keyset.colors.base,'^','6')" />
+          <U1 x="525" :data="getKeyData('F12',keyset.colors.base,char,'7')" />
+          <U1 x="600" :data="getKeyData('F12',keyset.colors.base,'*','8')" />
+          <U1 x="675" :data="getKeyData('F12',keyset.colors.base,'(','9')" />
+          <U1 x="750" :data="getKeyData('F12',keyset.colors.base,')','0')" />
+          <U1 x="825" :data="getKeyData('F12',keyset.colors.base,'_','-')" />
+          <U1 x="900" :data="getKeyData('F12',keyset.colors.base,'+','=')" />
           <U2 x="975" content="Backspace" isMod="true" :color="keyset.colors.mod" />
           <U1 x="1160" content="Insert" isMod="true" subcontent :color="keyset.colors.base" />
           <U1 x="1235" content="Home" isMod="true" subcontent :color="keyset.colors.base" />
