@@ -10,17 +10,20 @@
   >
     <g>
       <path
+        style="transform:scaleX(1.75)"
         fill="black"
         d="M705.94,715H9.06C4.06,715,0,710.94,0,705.94V9.06C0,4.06,4.06,0,9.06,0h696.87c5.01,0,9.06,4.06,9.06,9.06
                         v696.87C715,710.94,710.94,715,705.94,715z"
       />
       <path
+        style="transform:scaleX(1.75)"
         :fill="color.background"
         class="key-shadow"
         d="M705.94,715H9.06C4.06,715,0,710.94,0,705.94V9.06C0,4.06,4.06,0,9.06,0h696.87c5.01,0,9.06,4.06,9.06,9.06
                         v696.87C715,710.94,710.94,715,705.94,715z"
       />
       <path
+        style="transform:scaleX(2.15) translate(-60px, 0px);"
         :fill="color.background"
         class
         d="M112.45,102.85v428.96c0,14.52,10.4,26.95,24.69,29.51l0,0c145.74,26.15,294.97,26.15,440.72,0l0,0
@@ -30,7 +33,7 @@
       <text
         v-if="!isMod"
         class="key-content"
-        x="160"
+        x="220"
         y="270"
         font-size="200px"
         :fill="color.color"
@@ -46,25 +49,17 @@
       <text
         v-if="subcontent"
         class="key-content"
-        x="160"
+        x="220"
         y="500"
         font-size="200px"
         :fill="color.color"
       >{{ subcontent }}</text>
-      <text
-        v-if="thirdcontent"
-        class="key-content"
-        x="430"
-        y="500"
-        font-size="200px"
-        :fill="color.color"
-      >{{ thirdcontent }}</text>
     </g>
   </svg>
 </template>
 
 <script>
 export default {
-  props: ["content", "subcontent","thirdcontent", "color", "isMod"]
+  props: ["content", "subcontent", "color", "isMod"]
 };
 </script>
