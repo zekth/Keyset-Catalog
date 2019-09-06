@@ -15,6 +15,102 @@ export default [
         background: "#fb7279",
         color: "#3e728f"
       }
+    },
+    specialKeys: {
+      Q: {
+        thirdContent: "た"
+      },
+      W: {
+        thirdContent: "て"
+      },
+      E: {
+        thirdContent: "ぃ"
+      },
+      R: {
+        thirdContent: "す"
+      },
+      T: {
+        thirdContent: "か"
+      },
+      Y: {
+        thirdContent: "ん"
+      },
+      U: {
+        thirdContent: "た"
+      },
+      I: {
+        thirdContent: "に"
+      },
+      O: {
+        thirdContent: "ら"
+      },
+      P: {
+        thirdContent: "ぜ"
+      },
+      quote:{
+        thirdContent:"け"
+      },
+      OPENBRACE: {
+        thirdContent: "゛"
+      },
+      CLOSEBRACE: {
+        thirdContent: "゜"
+      },
+      A: { thirdContent: "ち" },
+      S: { thirdContent: "と" },
+      D: { thirdContent: "し" },
+      F: { thirdContent: "は" },
+      G: { thirdContent: "き" },
+      H: { thirdContent: "く" },
+      J: { thirdContent: "ま" },
+      K: { thirdContent: "の" },
+      L: { thirdContent: "り" },
+      Z: { thirdContent: "つ" },
+      X: { thirdContent: "" },
+      C: { thirdContent: "そ" },
+      V: { thirdContent: "ひ" },
+      B: { thirdContent: "こ" },
+      N: { thirdContent: "み" },
+      M: { thirdContent: "も" },
+      SUP: { thirdContent: "ね" },
+      MINUS: { thirdContent: "る" },
+      INTER: { thirdContent: "め" },
+    }
+  },
+  {
+    name: "Terminal",
+    designer: "",
+    colors: {
+      base: {
+        background: "#393b3b",
+        color: "#689b34"
+      },
+      mod: {
+        background: "#393b3b",
+        color: "#689b34"
+      },
+      accent: {
+        background: "#689b34",
+        color: "#393b3b"
+      }
+    },
+    specialKeys: {
+      H: {
+        type: "accent",
+        thirdContent: "←"
+      },
+      J: {
+        type: "accent",
+        thirdContent: "↓"
+      },
+      K: {
+        type: "accent",
+        thirdContent: "↑"
+      },
+      L: {
+        type: "accent",
+        thirdContent: "→"
+      }
     }
   },
   {
