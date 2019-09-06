@@ -8,12 +8,12 @@ export default [
         color: "#3e728f"
       },
       mod: {
-        background: "#fb7279",
-        color: "#3e728f"
-      },
-      accent: {
         background: "#3e728f",
         color: "#fb7279"
+      },
+      accent: {
+        background: "#fb7279",
+        color: "#3e728f"
       }
     }
   },

@@ -1,10 +1,9 @@
 <template>
   <svg
+    class="keycap U1"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0"
-    y="0"
     viewBox="0 0 715 715"
     style="enable-background:new 0 0 715 715;"
     xml:space="preserve"
