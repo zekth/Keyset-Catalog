@@ -173,7 +173,7 @@ const weeb = {
 
 export default [
   {
-    name: "bento",
+    name: "Bento",
     designer: "biip",
     colors: {
       base: {
@@ -201,7 +201,7 @@ export default [
     }
   },
   {
-    name: "bento weeb alt",
+    name: "Bento - weeb alt",
     designer: "biip",
     colors: {
       base: {
@@ -230,7 +230,7 @@ export default [
     }
   },
   {
-    name: "bento true weeb",
+    name: "Bento - true weeb",
     designer: "biip",
     colors: {
       base: {
@@ -295,8 +295,8 @@ export default [
     }
   },
   {
-    name: "jamon",
-    designer: "zambunon",
+    name: "Jamon",
+    designer: "zambumon",
     colors: {
       base: {
         background: "#84172c",
@@ -350,7 +350,7 @@ export default [
   },
   {
     name: "Yuri",
-    designer: "",
+    designer: "Tomb3ry",
     colors: {
       base: {
         background: "#c7e6f5",
@@ -367,7 +367,7 @@ export default [
     }
   },
   {
-    name: "nautilus",
+    name: "Nautilus",
     designer: "",
     colors: {
       base: {
@@ -385,7 +385,46 @@ export default [
     }
   },
   {
-    name: "dmg",
+    name: "Serika",
+    designer: "Zambumon",
+    colors: {
+      base: {
+        background: "#e1e1d5",
+        color: "#36373b"
+      },
+      mod: {
+        background: "#eabe16",
+        color: "#36373b"
+      },
+      accent: {
+        background: "#36373b",
+        color: "#e1e1d5"
+      }
+    }
+  },
+  {
+    name: "Serika - weeb",
+    designer: "Zambumon",
+    colors: {
+      base: {
+        background: "#e1e1d5",
+        color: "#36373b"
+      },
+      mod: {
+        background: "#eabe16",
+        color: "#36373b"
+      },
+      accent: {
+        background: "#36373b",
+        color: "#e1e1d5"
+      }
+    },
+    specialKeys: {
+      ...weebAlt
+    }
+  },
+  {
+    name: "Dmg",
     designer: "",
     colors: {
       base: {
@@ -403,7 +442,7 @@ export default [
     }
   },
   {
-    name: "carbon",
+    name: "Carbon",
     designer: "tomb3ry",
     colors: {
       base: {
@@ -421,8 +460,104 @@ export default [
     }
   },
   {
-    name: "Laser",
+    name: "Hyperfuse",
     designer: "",
+    colors: {
+      base: {
+        background: "#cbcdd1",
+        color: "#695182"
+      },
+      mod: {
+        background: "#635e5d",
+        color: "#47aeb9"
+      },
+      accent: {
+        background: "#47aeb9",
+        color: "#695182"
+      }
+    }
+  },
+  {
+    name: "Miami",
+    designer: "",
+    colors: {
+      base: {
+        background: "#4ed6d6",
+        color: "#fa67af"
+      },
+      mod: {
+        background: "#fa67af",
+        color: "#4ed6d6"
+      },
+      accent: {
+        background: "#fa67af",
+        color: "#4ed6d6"
+      }
+    }
+  },
+  {
+    name: "Striker",
+    designer: "Zambumon",
+    colors: {
+      base: {
+        background: "#345b95",
+        color: "#fff"
+      },
+      mod: {
+        background: "#345b95",
+        color: "#fff"
+      },
+      accent: {
+        background: "#334660",
+        color: "#fff"
+      }
+    },
+    specialKeys: {
+      ...weebAlt
+    }
+  },
+  {
+    name: "Red Samurai",
+    designer: "",
+    colors: {
+      base: {
+        background: "#64242e",
+        color: "#9f744d"
+      },
+      mod: {
+        background: "#262629",
+        color: "#9f744d"
+      },
+      accent: {
+        background: "#9f744d",
+        color: "#64242e"
+      }
+    }
+  },
+  {
+    name: "Red Samurai - weeb",
+    designer: "",
+    colors: {
+      base: {
+        background: "#64242e",
+        color: "#9f744d"
+      },
+      mod: {
+        background: "#262629",
+        color: "#9f744d"
+      },
+      accent: {
+        background: "#9f744d",
+        color: "#64242e"
+      }
+    },
+    specialKeys: {
+      ...weebAlt
+    }
+  },
+  {
+    name: "Laser",
+    designer: "Mito",
     colors: {
       base: {
         background: "#2e2180",
@@ -436,6 +571,117 @@ export default [
         background: "#b6245e",
         color: "#1d1551"
       }
+    }
+  },
+  {
+    name: "Lime",
+    designer: "",
+    colors: {
+      base: {
+        background: "#c1ced6",
+        color: "#678f58"
+      },
+      mod: {
+        background: "#7f8a90",
+        color: "#97bb49"
+      },
+      accent: {
+        background: "#9ac65e",
+        color: "#c1ced6"
+      }
+    }
+  },
+  {
+    name: "Honeywell",
+    designer: "",
+    colors: {
+      base: {
+        background: "#faf7f8",
+        color: "#647675"
+      },
+      mod: {
+        background: "#6e6868",
+        color: "#f9f6f6"
+      },
+      accent: {
+        background: "#d63123",
+        color: "#faf7f8"
+      }
+    }
+  },
+  {
+    name: "Mizu",
+    designer: "",
+    colors: {
+      base: {
+        background: "#acc8da",
+        color: "#212b35"
+      },
+      mod: {
+        background: "#212b35",
+        color: "#d6d6d4"
+      },
+      accent: {
+        background: "#d6d6d4",
+        color: "#212b35"
+      }
+    }
+  },
+  {
+    name: "NightRunner",
+    designer: "",
+    colors: {
+      base: {
+        background: "#2b2f31",
+        color: "#f9ff23"
+      },
+      mod: {
+        background: "#47456c",
+        color: "#f9ff23"
+      },
+      accent: {
+        background: "#f9ff23",
+        color: "#2b2f31"
+      }
+    }
+  },
+  {
+    name: "Olivia",
+    designer: "",
+    colors: {
+      base: {
+        background: "#fefef5",
+        color: "#43413f"
+      },
+      mod: {
+        background: "#43413f",
+        color: "#d1b6a6"
+      },
+      accent: {
+        background: "#d1b6a6",
+        color: "#43413f"
+      }
+    }
+  },
+  {
+    name: "Laser - Gaijin",
+    designer: "Mito",
+    colors: {
+      base: {
+        background: "#2e2180",
+        color: "#0c9eb5"
+      },
+      mod: {
+        background: "#1d1551",
+        color: "#b6245e"
+      },
+      accent: {
+        background: "#b6245e",
+        color: "#1d1551"
+      }
+    },
+    specialKeys: {
+      ...weebAlt
     }
   },
 ];
