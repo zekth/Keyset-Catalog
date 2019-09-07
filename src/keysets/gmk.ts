@@ -786,5 +786,139 @@ export default [
       KC_DOT: { type: "blue" },
       KC_SLSH: { type: "blue" }
     }
-  }
+  },
+  {
+    name: "Minimal",
+    designer: "janglad",
+    colors: {
+      base: {
+        background: "#f1f2f6",
+        color: "black"
+      },
+      mod: {
+        background: "#f1f2f6",
+        color: "black"
+      },
+      accent: {
+        background: "#f1f2f6",
+        color: "black"
+      }
+    }
+  },
+  {
+    name: "Modern Dolch (blue accent)",
+    designer: "janglad",
+    colors: {
+      base: {
+        background: "#82878d",
+        color: "#e2e5ea"
+      },
+      mod: {
+        background: "#595e64",
+        color: "#e2e5ea"
+      },
+      accent: {
+        background: "#6bd8d5",
+        color: "#e2e5ea"
+      }
+    },
+  },
+  {
+    name: "Modern Dolch (red accent)",
+    designer: "janglad",
+    colors: {
+      base: {
+        background: "#82878d",
+        color: "#e2e5ea"
+      },
+      mod: {
+        background: "#595e64",
+        color: "#e2e5ea"
+      },
+      accent: {
+        background: "#cf6478",
+        color: "#e2e5ea"
+      }
+    },
+  },
+  {
+    name: "SkIIdata",
+    designer: "TKC",
+    colors: {
+      base: {
+        background: "#1b1b19",
+        color: "#f17b24"
+      },
+      mod: {
+        background: "#1b1b19",
+        color: "#f17b24"
+      },
+      accent: {
+        background: "#f17b24",
+        color: "#1b1b19"
+      }
+    },
+  },
+  {
+    name: "Nines",
+    designer: "Emir",
+    colors: {
+      base: {
+        background: "#494949",
+        color: "#bcb6a6"
+      },
+      mod: {
+        background: "#494949",
+        color: "#bcb6a6"
+      },
+      accent: {
+        background: "#bcb6a6",
+        color: "#494949"
+      }
+    },
+  },
+  {
+    name: "Taro",
+    designer: "pwade3",
+    colors: {
+      base: {
+        background: "#8e71a2",
+        color: "#170b19"
+      },
+      mod: {
+        background: "#170b19",
+        color: "#8e71a2"
+      },
+      accent: {
+        background: "#5ed8df",
+        color: "#8e71a2"
+      }
+    },
+  },
+  {
+    name: "9009",
+    designer: "janglad",
+    colors: {
+      base: {
+        background: "#e1dbcf",
+        color: "#212121"
+      },
+      mod: {
+        background: "#c0b8a3",
+        color: "#212121"
+      },
+      accent: {
+        background: "#7f987b",
+        color: "#212121"
+      },
+      accent_red: {
+        background: "#e49181",
+        color: "#212121"
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: "accent_red" },
+      KC_SPC: { type: "accent" },
+    }
+  },
 ];
