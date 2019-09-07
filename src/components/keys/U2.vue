@@ -37,7 +37,7 @@
         y="270"
         font-size="200px"
         :fill="data.colors.color"
-      >{{ content }}</text>
+      >{{ data.content }}</text>
       <text
         v-if="isMod"
         class="key-content"
@@ -60,6 +60,6 @@
 
 <script>
 export default {
-  props: ["data", "isMod"]
-};
+  props: ['data', 'isMod']
+}
 </script>

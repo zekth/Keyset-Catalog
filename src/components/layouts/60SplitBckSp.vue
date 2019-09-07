@@ -96,36 +96,29 @@
 </template>
 
 <script>
-import { genKeyData } from "../../utils/keys";
-import U1 from "../keys/U1.vue";
-import U125 from "../keys/U125.vue";
-import U225 from "../keys/U225.vue";
-import U275 from "../keys/U275.vue";
-import U625 from "../keys/U625.vue";
-import U175 from "../keys/U175.vue";
-import U15 from "../keys/U15.vue";
-import U2 from "../keys/U2.vue";
+import { genKeyData } from '../../utils/keys'
+import U1 from '../keys/U1.vue'
+import U125 from '../keys/U125.vue'
+import U225 from '../keys/U225.vue'
+import U275 from '../keys/U275.vue'
+import U625 from '../keys/U625.vue'
+import U175 from '../keys/U175.vue'
+import U15 from '../keys/U15.vue'
+import U2 from '../keys/U2.vue'
 export default {
-  props: ["keyset"],
+  props: ['keyset'],
   components: { U1, U125, U15, U175, U275, U2, U225, U625 },
   methods: {
     getKeyData(key, baseColors, content, subContent, thirdContent) {
-      return genKeyData(
-        this.keyset,
-        key,
-        baseColors,
-        content,
-        subContent,
-        thirdContent
-      );
+      return genKeyData(this.keyset, key, baseColors, content, subContent, thirdContent)
     }
   },
   data() {
     return {
-      char: "&",
+      char: '&',
       doubleQuote: '"',
       simpleQuote: "'"
-    };
+    }
   }
-};
+}
 </script>
