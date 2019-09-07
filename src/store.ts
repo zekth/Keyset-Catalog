@@ -1,8 +1,8 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import gmk from "./keysets/gmk";
+import Vue from 'vue'
+import Vuex from 'vuex'
+import gmk from './keysets/gmk'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {},
@@ -10,8 +10,8 @@ export default new Vuex.Store({
   actions: {
     genKeyset(_, name) {
       const s = gmk.find(e => {
-        return e.name === name;
-      });
+        return e.name === name
+      })
     }
   }
-});
+})

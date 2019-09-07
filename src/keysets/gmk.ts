@@ -1,515 +1,422 @@
 const weebAlt = {
   KC_Q: {
-    thirdContent: "た"
+    thirdContent: 'た'
   },
   KC_W: {
-    thirdContent: "て"
+    thirdContent: 'て'
   },
   KC_E: {
-    thirdContent: "ぃ"
+    thirdContent: 'ぃ'
   },
   KC_R: {
-    thirdContent: "す"
+    thirdContent: 'す'
   },
   KC_T: {
-    thirdContent: "か"
+    thirdContent: 'か'
   },
   KC_Y: {
-    thirdContent: "ん"
+    thirdContent: 'ん'
   },
   KC_U: {
-    thirdContent: "た"
+    thirdContent: 'た'
   },
   KC_I: {
-    thirdContent: "に"
+    thirdContent: 'に'
   },
   KC_O: {
-    thirdContent: "ら"
+    thirdContent: 'ら'
   },
   KC_P: {
-    thirdContent: "ぜ"
+    thirdContent: 'ぜ'
   },
   KC_QUOT: {
-    thirdContent: "け"
+    thirdContent: 'け'
   },
   KC_LBRC: {
-    thirdContent: "゛"
+    thirdContent: '゛'
   },
   KC_RBRC: {
-    thirdContent: "゜"
+    thirdContent: '゜'
   },
-  KC_A: { thirdContent: "ち" },
-  KC_S: { thirdContent: "と" },
-  KC_D: { thirdContent: "し" },
-  KC_F: { thirdContent: "は" },
-  KC_G: { thirdContent: "き" },
-  KC_H: { thirdContent: "く" },
-  KC_J: { thirdContent: "ま" },
-  KC_K: { thirdContent: "の" },
-  KC_L: { thirdContent: "り" },
-  KC_Z: { thirdContent: "つ" },
-  KC_X: { thirdContent: "せ" },
-  KC_C: { thirdContent: "そ" },
-  KC_V: { thirdContent: "ひ" },
-  KC_B: { thirdContent: "こ" },
-  KC_N: { thirdContent: "み" },
-  KC_M: { thirdContent: "も" },
-  KC_COMM: { thirdContent: "ね" },
-  KC_DOT: { thirdContent: "る" },
-  KC_SLSH: { thirdContent: "め" },
-  KC_1: { thirdContent: "ぬ" },
-  KC_2: { thirdContent: "ふ" },
-  KC_3: { thirdContent: "あ" },
-  KC_4: { thirdContent: "う" },
-  KC_5: { thirdContent: "え" },
-  KC_6: { thirdContent: "お" },
-  KC_7: { thirdContent: "や" },
-  KC_8: { thirdContent: "ゆ" },
-  KC_9: { thirdContent: "よ" },
-  KC_0: { thirdContent: "わ" },
-  KC_MINS: { thirdContent: "ほ" },
-  KC_EQL: { thirdContent: "へ" },
-  KC_GRV: { thirdContent: "ろ" }
-};
+  KC_A: { thirdContent: 'ち' },
+  KC_S: { thirdContent: 'と' },
+  KC_D: { thirdContent: 'し' },
+  KC_F: { thirdContent: 'は' },
+  KC_G: { thirdContent: 'き' },
+  KC_H: { thirdContent: 'く' },
+  KC_J: { thirdContent: 'ま' },
+  KC_K: { thirdContent: 'の' },
+  KC_L: { thirdContent: 'り' },
+  KC_Z: { thirdContent: 'つ' },
+  KC_X: { thirdContent: 'せ' },
+  KC_C: { thirdContent: 'そ' },
+  KC_V: { thirdContent: 'ひ' },
+  KC_B: { thirdContent: 'こ' },
+  KC_N: { thirdContent: 'み' },
+  KC_M: { thirdContent: 'も' },
+  KC_COMM: { thirdContent: 'ね' },
+  KC_DOT: { thirdContent: 'る' },
+  KC_SLSH: { thirdContent: 'め' },
+  KC_1: { thirdContent: 'ぬ' },
+  KC_2: { thirdContent: 'ふ' },
+  KC_3: { thirdContent: 'あ' },
+  KC_4: { thirdContent: 'う' },
+  KC_5: { thirdContent: 'え' },
+  KC_6: { thirdContent: 'お' },
+  KC_7: { thirdContent: 'や' },
+  KC_8: { thirdContent: 'ゆ' },
+  KC_9: { thirdContent: 'よ' },
+  KC_0: { thirdContent: 'わ' },
+  KC_MINS: { thirdContent: 'ほ' },
+  KC_EQL: { thirdContent: 'へ' },
+  KC_GRV: { thirdContent: 'ろ' }
+}
 const weeb = {
   KC_Q: {
-    content: "た",
-    subContent: "",
-    thirdContent: ""
+    content: 'た',
+    subContent: '',
+    thirdContent: ''
   },
   KC_W: {
-    content: "て",
-    subContent: "",
-    thirdContent: ""
+    content: 'て',
+    subContent: '',
+    thirdContent: ''
   },
   KC_E: {
-    content: "ぃ",
-    subContent: "",
-    thirdContent: ""
+    content: 'ぃ',
+    subContent: '',
+    thirdContent: ''
   },
   KC_R: {
-    content: "す",
-    subContent: "",
-    thirdContent: ""
+    content: 'す',
+    subContent: '',
+    thirdContent: ''
   },
   KC_T: {
-    content: "か",
-    subContent: "",
-    thirdContent: ""
+    content: 'か',
+    subContent: '',
+    thirdContent: ''
   },
   KC_Y: {
-    content: "ん",
-    subContent: "",
-    thirdContent: ""
+    content: 'ん',
+    subContent: '',
+    thirdContent: ''
   },
   KC_U: {
-    content: "た",
-    subContent: "",
-    thirdContent: ""
+    content: 'た',
+    subContent: '',
+    thirdContent: ''
   },
   KC_I: {
-    content: "に",
-    subContent: "",
-    thirdContent: ""
+    content: 'に',
+    subContent: '',
+    thirdContent: ''
   },
   KC_O: {
-    content: "ら",
-    subContent: "",
-    thirdContent: ""
+    content: 'ら',
+    subContent: '',
+    thirdContent: ''
   },
   KC_P: {
-    content: "ぜ",
-    subContent: "",
-    thirdContent: ""
+    content: 'ぜ',
+    subContent: '',
+    thirdContent: ''
   },
   KC_QUOT: {
-    content: "け",
-    subContent: "",
-    thirdContent: ""
+    content: 'け',
+    subContent: '',
+    thirdContent: ''
   },
   KC_LBRC: {
-    content: "゛",
-    subContent: "",
-    thirdContent: ""
+    content: '゛',
+    subContent: '',
+    thirdContent: ''
   },
   KC_RBRC: {
-    content: "゜",
-    subContent: "",
-    thirdContent: ""
+    content: '゜',
+    subContent: '',
+    thirdContent: ''
   },
-  KC_A: { content: "ち", subContent: "", thirdContent: "" },
-  KC_S: { content: "と", subContent: "", thirdContent: "" },
-  KC_D: { content: "し", subContent: "", thirdContent: "" },
-  KC_F: { content: "は", subContent: "", thirdContent: "" },
-  KC_G: { content: "き", subContent: "", thirdContent: "" },
-  KC_H: { content: "く", subContent: "", thirdContent: "" },
-  KC_J: { content: "ま", subContent: "", thirdContent: "" },
-  KC_K: { content: "の", subContent: "", thirdContent: "" },
-  KC_L: { content: "り", subContent: "", thirdContent: "" },
-  KC_Z: { content: "つ", subContent: "", thirdContent: "" },
-  KC_X: { content: "せ", subContent: "", thirdContent: "" },
-  KC_C: { content: "そ", subContent: "", thirdContent: "" },
-  KC_V: { content: "ひ", subContent: "", thirdContent: "" },
-  KC_B: { content: "こ", subContent: "", thirdContent: "" },
-  KC_N: { content: "み", subContent: "", thirdContent: "" },
-  KC_M: { content: "も", subContent: "", thirdContent: "" },
-  KC_COMM: { content: "ね", subContent: "", thirdContent: "" },
-  KC_DOT: { content: "る", subContent: "", thirdContent: "" },
-  KC_SLSH: { content: "め", subContent: "", thirdContent: "" },
-  KC_1: { content: "ぬ", subContent: "", thirdContent: "" },
-  KC_2: { content: "ふ", subContent: "", thirdContent: "" },
-  KC_3: { content: "あ", subContent: "", thirdContent: "" },
-  KC_4: { content: "う", subContent: "", thirdContent: "" },
-  KC_5: { content: "え", subContent: "", thirdContent: "" },
-  KC_6: { content: "お", subContent: "", thirdContent: "" },
-  KC_7: { content: "や", subContent: "", thirdContent: "" },
-  KC_8: { content: "ゆ", subContent: "", thirdContent: "" },
-  KC_9: { content: "よ", subContent: "", thirdContent: "" },
-  KC_0: { content: "わ", subContent: "", thirdContent: "" },
-  KC_MINS: { content: "ほ", subContent: "", thirdContent: "" },
-  KC_EQL: { content: "へ", subContent: "", thirdContent: "" },
-  KC_GRV: { content: "ろ", subContent: "", thirdContent: "" }
-};
+  KC_A: { content: 'ち', subContent: '', thirdContent: '' },
+  KC_S: { content: 'と', subContent: '', thirdContent: '' },
+  KC_D: { content: 'し', subContent: '', thirdContent: '' },
+  KC_F: { content: 'は', subContent: '', thirdContent: '' },
+  KC_G: { content: 'き', subContent: '', thirdContent: '' },
+  KC_H: { content: 'く', subContent: '', thirdContent: '' },
+  KC_J: { content: 'ま', subContent: '', thirdContent: '' },
+  KC_K: { content: 'の', subContent: '', thirdContent: '' },
+  KC_L: { content: 'り', subContent: '', thirdContent: '' },
+  KC_Z: { content: 'つ', subContent: '', thirdContent: '' },
+  KC_X: { content: 'せ', subContent: '', thirdContent: '' },
+  KC_C: { content: 'そ', subContent: '', thirdContent: '' },
+  KC_V: { content: 'ひ', subContent: '', thirdContent: '' },
+  KC_B: { content: 'こ', subContent: '', thirdContent: '' },
+  KC_N: { content: 'み', subContent: '', thirdContent: '' },
+  KC_M: { content: 'も', subContent: '', thirdContent: '' },
+  KC_COMM: { content: 'ね', subContent: '', thirdContent: '' },
+  KC_DOT: { content: 'る', subContent: '', thirdContent: '' },
+  KC_SLSH: { content: 'め', subContent: '', thirdContent: '' },
+  KC_1: { content: 'ぬ', subContent: '', thirdContent: '' },
+  KC_2: { content: 'ふ', subContent: '', thirdContent: '' },
+  KC_3: { content: 'あ', subContent: '', thirdContent: '' },
+  KC_4: { content: 'う', subContent: '', thirdContent: '' },
+  KC_5: { content: 'え', subContent: '', thirdContent: '' },
+  KC_6: { content: 'お', subContent: '', thirdContent: '' },
+  KC_7: { content: 'や', subContent: '', thirdContent: '' },
+  KC_8: { content: 'ゆ', subContent: '', thirdContent: '' },
+  KC_9: { content: 'よ', subContent: '', thirdContent: '' },
+  KC_0: { content: 'わ', subContent: '', thirdContent: '' },
+  KC_MINS: { content: 'ほ', subContent: '', thirdContent: '' },
+  KC_EQL: { content: 'へ', subContent: '', thirdContent: '' },
+  KC_GRV: { content: 'ろ', subContent: '', thirdContent: '' }
+}
 
 export default [
   {
-    name: "Bento",
-    designer: "biip",
+    name: 'Bento',
+    designer: 'biip',
     colors: {
       base: {
-        background: "#fff3ef",
-        color: "#3e728f"
+        background: '#fff3ef',
+        color: '#3e728f'
       },
       mod: {
-        background: "#3e728f",
-        color: "#fb7279"
+        background: '#3e728f',
+        color: '#fb7279'
       },
       accent: {
-        background: "#fb7279",
-        color: "#3e728f"
+        background: '#fb7279',
+        color: '#3e728f'
       },
       ptn: {
-        background: "red",
-        color: "white"
+        background: 'red',
+        color: 'white'
       }
     },
     specialKeys: {
       KC_ESC: {
-        content: "Putain",
-        type: "ptn"
+        content: 'Putain',
+        type: 'ptn'
       }
     }
   },
   {
-    name: "Bento - weeb alt",
-    designer: "biip",
+    name: 'Bento - weeb alt',
+    designer: 'biip',
     colors: {
       base: {
-        background: "#fff3ef",
-        color: "#3e728f"
+        background: '#fff3ef',
+        color: '#3e728f'
       },
       mod: {
-        background: "#3e728f",
-        color: "#fb7279"
+        background: '#3e728f',
+        color: '#fb7279'
       },
       accent: {
-        background: "#fb7279",
-        color: "#3e728f"
+        background: '#fb7279',
+        color: '#3e728f'
       },
       ptn: {
-        background: "red",
-        color: "white"
+        background: 'red',
+        color: 'white'
       }
     },
     specialKeys: {
       KC_ESC: {
-        content: "Putain",
-        type: "ptn"
+        content: 'Putain',
+        type: 'ptn'
       },
       ...weebAlt
     }
   },
   {
-    name: "Bento - true weeb",
-    designer: "biip",
+    name: 'Bento - true weeb',
+    designer: 'biip',
     colors: {
       base: {
-        background: "#fff3ef",
-        color: "#3e728f"
+        background: '#fff3ef',
+        color: '#3e728f'
       },
       mod: {
-        background: "#3e728f",
-        color: "#fb7279"
+        background: '#3e728f',
+        color: '#fb7279'
       },
       accent: {
-        background: "#fb7279",
-        color: "#3e728f"
+        background: '#fb7279',
+        color: '#3e728f'
       },
       ptn: {
-        background: "red",
-        color: "white"
+        background: 'red',
+        color: 'white'
       }
     },
     specialKeys: {
       KC_ESC: {
-        content: "Putain",
-        type: "ptn"
+        content: 'Putain',
+        type: 'ptn'
       },
       ...weeb
     }
   },
   {
-    name: "Terminal",
-    designer: "",
+    name: 'Terminal',
+    designer: '',
     colors: {
       base: {
-        background: "#393b3b",
-        color: "#689b34"
+        background: '#393b3b',
+        color: '#689b34'
       },
       mod: {
-        background: "#393b3b",
-        color: "#689b34"
+        background: '#393b3b',
+        color: '#689b34'
       },
       accent: {
-        background: "#689b34",
-        color: "#393b3b"
+        background: '#689b34',
+        color: '#393b3b'
       }
     },
     specialKeys: {
       KC_H: {
-        type: "accent",
-        thirdContent: "←"
+        type: 'accent',
+        thirdContent: '←'
       },
       KC_J: {
-        type: "accent",
-        thirdContent: "↓"
+        type: 'accent',
+        thirdContent: '↓'
       },
       KC_K: {
-        type: "accent",
-        thirdContent: "↑"
+        type: 'accent',
+        thirdContent: '↑'
       },
       KC_L: {
-        type: "accent",
-        thirdContent: "→"
+        type: 'accent',
+        thirdContent: '→'
       }
     }
   },
   {
-    name: "Jamon",
-    designer: "zambumon",
+    name: 'Jamon',
+    designer: 'zambumon',
     colors: {
       base: {
-        background: "#84172c",
-        color: "#ece4d0"
+        background: '#84172c',
+        color: '#ece4d0'
       },
       mod: {
-        background: "#ac2c32",
-        color: "#ece4d0"
+        background: '#ac2c32',
+        color: '#ece4d0'
       },
       accent: {
-        background: "#272727",
-        color: "#ece4d0"
+        background: '#272727',
+        color: '#ece4d0'
       }
     }
   },
   {
-    name: "Plum",
-    designer: "",
+    name: 'Plum',
+    designer: '',
     colors: {
       base: {
-        background: "#ded0af",
-        color: "#736b7c"
+        background: '#ded0af',
+        color: '#736b7c'
       },
       mod: {
-        background: "#736b7c",
-        color: "#ded0af"
+        background: '#736b7c',
+        color: '#ded0af'
       },
       accent: {
-        background: "#863f48",
-        color: "#ded0af"
+        background: '#863f48',
+        color: '#ded0af'
       }
     }
   },
   {
-    name: "Miami Night",
-    designer: "",
+    name: 'Miami Night',
+    designer: '',
     colors: {
       base: {
-        background: "#040403",
-        color: "#63e3f8"
+        background: '#040403',
+        color: '#63e3f8'
       },
       mod: {
-        background: "#2d394c",
-        color: "#6c2374"
+        background: '#2d394c',
+        color: '#6c2374'
       },
       accent: {
-        background: "#6c2374",
-        color: "#63e3f8"
+        background: '#6c2374',
+        color: '#63e3f8'
       }
     }
   },
   {
-    name: "Yuri",
-    designer: "Tomb3ry",
+    name: 'Yuri',
+    designer: 'Tomb3ry',
     colors: {
       base: {
-        background: "#c7e6f5",
-        color: "#f54730"
+        background: '#c7e6f5',
+        color: '#f54730'
       },
       mod: {
-        background: "#2d394c",
-        color: "#f54730"
+        background: '#2d394c',
+        color: '#f54730'
       },
       accent: {
-        background: "#f54730",
-        color: "#2d394c"
+        background: '#f54730',
+        color: '#2d394c'
       }
     }
   },
   {
-    name: "Nautilus",
-    designer: "",
+    name: 'Nautilus',
+    designer: '',
     colors: {
       base: {
-        background: "#1b365d",
-        color: "#00a4a9"
+        background: '#1b365d',
+        color: '#00a4a9'
       },
       mod: {
-        background: "#1f2a44",
-        color: "#e5a100"
+        background: '#1f2a44',
+        color: '#e5a100'
       },
       accent: {
-        background: "#e5a100",
-        color: "#1f2a44"
+        background: '#e5a100',
+        color: '#1f2a44'
       }
     }
   },
   {
-    name: "Serika",
-    designer: "Zambumon",
+    name: 'Serika',
+    designer: 'Zambumon',
     colors: {
       base: {
-        background: "#e1e1d5",
-        color: "#36373b"
+        background: '#e1e1d5',
+        color: '#36373b'
       },
       mod: {
-        background: "#eabe16",
-        color: "#36373b"
+        background: '#eabe16',
+        color: '#36373b'
       },
       accent: {
-        background: "#36373b",
-        color: "#e1e1d5"
+        background: '#36373b',
+        color: '#e1e1d5'
       }
     }
   },
   {
-    name: "Serika - weeb",
-    designer: "Zambumon",
+    name: 'Serika - weeb',
+    designer: 'Zambumon',
     colors: {
       base: {
-        background: "#e1e1d5",
-        color: "#36373b"
+        background: '#e1e1d5',
+        color: '#36373b'
       },
       mod: {
-        background: "#eabe16",
-        color: "#36373b"
+        background: '#eabe16',
+        color: '#36373b'
       },
       accent: {
-        background: "#36373b",
-        color: "#e1e1d5"
-      }
-    },
-    specialKeys: {
-      ...weebAlt
-    }
-  },
-  {
-    name: "Dmg",
-    designer: "",
-    colors: {
-      base: {
-        background: "#c6c3b6",
-        color: "#240773"
-      },
-      mod: {
-        background: "#747773",
-        color: "#240773"
-      },
-      accent: {
-        background: "#8d2a59",
-        color: "#c1bfb2"
-      }
-    }
-  },
-  {
-    name: "Carbon",
-    designer: "tomb3ry",
-    colors: {
-      base: {
-        background: "#cec1a9",
-        color: "#464746"
-      },
-      mod: {
-        background: "#464746",
-        color: "#de6722"
-      },
-      accent: {
-        background: "#de6722",
-        color: "#464746"
-      }
-    }
-  },
-  {
-    name: "Hyperfuse",
-    designer: "",
-    colors: {
-      base: {
-        background: "#cbcdd1",
-        color: "#695182"
-      },
-      mod: {
-        background: "#635e5d",
-        color: "#47aeb9"
-      },
-      accent: {
-        background: "#47aeb9",
-        color: "#695182"
-      }
-    }
-  },
-  {
-    name: "Miami",
-    designer: "",
-    colors: {
-      base: {
-        background: "#4ed6d6",
-        color: "#fa67af"
-      },
-      mod: {
-        background: "#fa67af",
-        color: "#4ed6d6"
-      },
-      accent: {
-        background: "#fa67af",
-        color: "#4ed6d6"
-      }
-    }
-  },
-  {
-    name: "Striker",
-    designer: "Zambumon",
-    colors: {
-      base: {
-        background: "#345b95",
-        color: "#fff"
-      },
-      mod: {
-        background: "#345b95",
-        color: "#fff"
-      },
-      accent: {
-        background: "#334660",
-        color: "#fff"
+        background: '#36373b',
+        color: '#e1e1d5'
       }
     },
     specialKeys: {
@@ -517,167 +424,92 @@ export default [
     }
   },
   {
-    name: "Red Samurai",
-    designer: "",
+    name: 'Dmg',
+    designer: '',
     colors: {
       base: {
-        background: "#64242e",
-        color: "#9f744d"
+        background: '#c6c3b6',
+        color: '#240773'
       },
       mod: {
-        background: "#262629",
-        color: "#9f744d"
+        background: '#747773',
+        color: '#240773'
       },
       accent: {
-        background: "#9f744d",
-        color: "#64242e"
+        background: '#8d2a59',
+        color: '#c1bfb2'
       }
     }
   },
   {
-    name: "Red Samurai - weeb",
-    designer: "",
+    name: 'Carbon',
+    designer: 'tomb3ry',
     colors: {
       base: {
-        background: "#64242e",
-        color: "#9f744d"
+        background: '#cec1a9',
+        color: '#464746'
       },
       mod: {
-        background: "#262629",
-        color: "#9f744d"
+        background: '#464746',
+        color: '#de6722'
       },
       accent: {
-        background: "#9f744d",
-        color: "#64242e"
-      }
-    },
-    specialKeys: {
-      ...weebAlt
-    }
-  },
-  {
-    name: "Laser",
-    designer: "Mito",
-    colors: {
-      base: {
-        background: "#2e2180",
-        color: "#0c9eb5"
-      },
-      mod: {
-        background: "#1d1551",
-        color: "#b6245e"
-      },
-      accent: {
-        background: "#b6245e",
-        color: "#1d1551"
+        background: '#de6722',
+        color: '#464746'
       }
     }
   },
   {
-    name: "Lime",
-    designer: "",
+    name: 'Hyperfuse',
+    designer: '',
     colors: {
       base: {
-        background: "#c1ced6",
-        color: "#678f58"
+        background: '#cbcdd1',
+        color: '#695182'
       },
       mod: {
-        background: "#7f8a90",
-        color: "#97bb49"
+        background: '#635e5d',
+        color: '#47aeb9'
       },
       accent: {
-        background: "#9ac65e",
-        color: "#c1ced6"
+        background: '#47aeb9',
+        color: '#695182'
       }
     }
   },
   {
-    name: "Honeywell",
-    designer: "",
+    name: 'Miami',
+    designer: '',
     colors: {
       base: {
-        background: "#faf7f8",
-        color: "#647675"
+        background: '#4ed6d6',
+        color: '#fa67af'
       },
       mod: {
-        background: "#6e6868",
-        color: "#f9f6f6"
+        background: '#fa67af',
+        color: '#4ed6d6'
       },
       accent: {
-        background: "#d63123",
-        color: "#faf7f8"
+        background: '#fa67af',
+        color: '#4ed6d6'
       }
     }
   },
   {
-    name: "Mizu",
-    designer: "",
+    name: 'Striker',
+    designer: 'Zambumon',
     colors: {
       base: {
-        background: "#acc8da",
-        color: "#212b35"
+        background: '#345b95',
+        color: '#fff'
       },
       mod: {
-        background: "#212b35",
-        color: "#d6d6d4"
+        background: '#345b95',
+        color: '#fff'
       },
       accent: {
-        background: "#d6d6d4",
-        color: "#212b35"
-      }
-    }
-  },
-  {
-    name: "NightRunner",
-    designer: "",
-    colors: {
-      base: {
-        background: "#2b2f31",
-        color: "#f9ff23"
-      },
-      mod: {
-        background: "#47456c",
-        color: "#f9ff23"
-      },
-      accent: {
-        background: "#f9ff23",
-        color: "#2b2f31"
-      }
-    }
-  },
-  {
-    name: "Olivia",
-    designer: "",
-    colors: {
-      base: {
-        background: "#fefef5",
-        color: "#43413f"
-      },
-      mod: {
-        background: "#43413f",
-        color: "#d1b6a6"
-      },
-      accent: {
-        background: "#d1b6a6",
-        color: "#43413f"
-      }
-    }
-  },
-  {
-    name: "Laser - Gaijin",
-    designer: "Mito",
-    colors: {
-      base: {
-        background: "#2e2180",
-        color: "#0c9eb5"
-      },
-      mod: {
-        background: "#1d1551",
-        color: "#b6245e"
-      },
-      accent: {
-        background: "#b6245e",
-        color: "#1d1551"
+        background: '#334660',
+        color: '#fff'
       }
     },
     specialKeys: {
@@ -685,240 +517,408 @@ export default [
     }
   },
   {
-    name: "Handarbeit",
-    designer: "",
+    name: 'Red Samurai',
+    designer: '',
     colors: {
       base: {
-        background: "#a11901",
-        color: "#fefef8"
+        background: '#64242e',
+        color: '#9f744d'
       },
       mod: {
-        background: "#6b428c",
-        color: "#fefef8"
+        background: '#262629',
+        color: '#9f744d'
       },
       accent: {
-        background: "#dbb51e",
-        color: "#fefef8"
+        background: '#9f744d',
+        color: '#64242e'
+      }
+    }
+  },
+  {
+    name: 'Red Samurai - weeb',
+    designer: '',
+    colors: {
+      base: {
+        background: '#64242e',
+        color: '#9f744d'
+      },
+      mod: {
+        background: '#262629',
+        color: '#9f744d'
+      },
+      accent: {
+        background: '#9f744d',
+        color: '#64242e'
+      }
+    },
+    specialKeys: {
+      ...weebAlt
+    }
+  },
+  {
+    name: 'Laser',
+    designer: 'Mito',
+    colors: {
+      base: {
+        background: '#2e2180',
+        color: '#0c9eb5'
+      },
+      mod: {
+        background: '#1d1551',
+        color: '#b6245e'
+      },
+      accent: {
+        background: '#b6245e',
+        color: '#1d1551'
+      }
+    }
+  },
+  {
+    name: 'Lime',
+    designer: '',
+    colors: {
+      base: {
+        background: '#c1ced6',
+        color: '#678f58'
+      },
+      mod: {
+        background: '#7f8a90',
+        color: '#97bb49'
+      },
+      accent: {
+        background: '#9ac65e',
+        color: '#c1ced6'
+      }
+    }
+  },
+  {
+    name: 'Honeywell',
+    designer: '',
+    colors: {
+      base: {
+        background: '#faf7f8',
+        color: '#647675'
+      },
+      mod: {
+        background: '#6e6868',
+        color: '#f9f6f6'
+      },
+      accent: {
+        background: '#d63123',
+        color: '#faf7f8'
+      }
+    }
+  },
+  {
+    name: 'Mizu',
+    designer: '',
+    colors: {
+      base: {
+        background: '#acc8da',
+        color: '#212b35'
+      },
+      mod: {
+        background: '#212b35',
+        color: '#d6d6d4'
+      },
+      accent: {
+        background: '#d6d6d4',
+        color: '#212b35'
+      }
+    }
+  },
+  {
+    name: 'NightRunner',
+    designer: '',
+    colors: {
+      base: {
+        background: '#2b2f31',
+        color: '#f9ff23'
+      },
+      mod: {
+        background: '#47456c',
+        color: '#f9ff23'
+      },
+      accent: {
+        background: '#f9ff23',
+        color: '#2b2f31'
+      }
+    }
+  },
+  {
+    name: 'Olivia',
+    designer: '',
+    colors: {
+      base: {
+        background: '#fefef5',
+        color: '#43413f'
+      },
+      mod: {
+        background: '#43413f',
+        color: '#d1b6a6'
+      },
+      accent: {
+        background: '#d1b6a6',
+        color: '#43413f'
+      }
+    }
+  },
+  {
+    name: 'Laser - Gaijin',
+    designer: 'Mito',
+    colors: {
+      base: {
+        background: '#2e2180',
+        color: '#0c9eb5'
+      },
+      mod: {
+        background: '#1d1551',
+        color: '#b6245e'
+      },
+      accent: {
+        background: '#b6245e',
+        color: '#1d1551'
+      }
+    },
+    specialKeys: {
+      ...weebAlt
+    }
+  },
+  {
+    name: 'Handarbeit',
+    designer: '',
+    colors: {
+      base: {
+        background: '#a11901',
+        color: '#fefef8'
+      },
+      mod: {
+        background: '#6b428c',
+        color: '#fefef8'
+      },
+      accent: {
+        background: '#dbb51e',
+        color: '#fefef8'
       },
       green: {
-        color: "#fefef8",
-        background: "#7eac1a"
+        color: '#fefef8',
+        background: '#7eac1a'
       },
       blue: {
-        color: "#fefef8",
-        background: "#0558ab"
+        color: '#fefef8',
+        background: '#0558ab'
       },
       lightPink: {
-        background: "#d9b7b8",
-        color: "#fefef8"
+        background: '#d9b7b8',
+        color: '#fefef8'
       },
       darkGreen: {
-        background: "#307b37",
-        color: "#fefef8"
+        background: '#307b37',
+        color: '#fefef8'
       },
       orange: {
-        background: "#c86b18",
-        color: "#fefef8"
+        background: '#c86b18',
+        color: '#fefef8'
       },
       darkCyan: {
-        background: "#0b687a",
-        color: "#fefef8"
+        background: '#0b687a',
+        color: '#fefef8'
       }
     },
     specialKeys: {
-      KC_PDOT: { type: "darkCyan" },
-      KC_NLCK: { type: "accent" },
-      KC_PSLS: { type: "accent" },
-      KC_PAST: { type: "accent" },
-      KC_PMNS: { type: "accent" },
-      KC_P7: { type: "mod" },
-      KC_P8: { type: "mod" },
-      KC_P9: { type: "mod" },
-      KC_P4: { type: "mod" },
-      KC_P6: { type: "mod" },
-      KC_P1: { type: "mod" },
-      KC_P2: { type: "mod" },
-      KC_P3: { type: "mod" },
-      KC_RGHT: { type: "orange" },
-      KC_LEFT: { type: "orange" },
-      KC_DOWN: { type: "green" },
-      KC_UP: { type: "accent" },
+      KC_PDOT: { type: 'darkCyan' },
+      KC_NLCK: { type: 'accent' },
+      KC_PSLS: { type: 'accent' },
+      KC_PAST: { type: 'accent' },
+      KC_PMNS: { type: 'accent' },
+      KC_P7: { type: 'mod' },
+      KC_P8: { type: 'mod' },
+      KC_P9: { type: 'mod' },
+      KC_P4: { type: 'mod' },
+      KC_P6: { type: 'mod' },
+      KC_P1: { type: 'mod' },
+      KC_P2: { type: 'mod' },
+      KC_P3: { type: 'mod' },
+      KC_RGHT: { type: 'orange' },
+      KC_LEFT: { type: 'orange' },
+      KC_DOWN: { type: 'green' },
+      KC_UP: { type: 'accent' },
 
-      KC_INS: { type: "accent" },
-      KC_DEL: { type: "accent" },
-      KC_HOME: { type: "green" },
-      KC_END: { type: "green" },
-      KC_PGUP: { type: "base" },
-      KC_PGDN: { type: "base" },
-      KC_PSCR: { type: "darkGreen" },
-      KC_SLCK: { type: "darkGreen" },
-      KC_PAUS: { type: "darkGreen" },
-      KC_F1: { type: "blue" },
-      KC_F2: { type: "blue" },
-      KC_F3: { type: "blue" },
-      KC_F4: { type: "blue" },
-      KC_F5: { type: "lightPink" },
-      KC_F6: { type: "lightPink" },
-      KC_F7: { type: "lightPink" },
-      KC_F8: { type: "lightPink" },
-      KC_F9: { type: "accent" },
-      KC_F10: { type: "accent" },
-      KC_F11: { type: "accent" },
-      KC_F12: { type: "accent" },
-      KC_ESC: { type: "base" },
-      KC_1: { type: "green" },
-      KC_2: { type: "green" },
-      KC_3: { type: "green" },
-      KC_4: { type: "green" },
-      KC_5: { type: "green" },
-      KC_6: { type: "green" },
-      KC_7: { type: "green" },
-      KC_8: { type: "green" },
-      KC_9: { type: "green" },
-      KC_0: { type: "green" },
-      KC_F: { type: "accent" },
-      KC_J: { type: "accent" },
-      KC_LBRC: { type: "blue" },
-      KC_RBRC: { type: "blue" },
-      KC_SCLN: { type: "blue" },
-      KC_QUOT: { type: "blue" },
-      KC_COMM: { type: "blue" },
-      KC_DOT: { type: "blue" },
-      KC_SLSH: { type: "blue" }
+      KC_INS: { type: 'accent' },
+      KC_DEL: { type: 'accent' },
+      KC_HOME: { type: 'green' },
+      KC_END: { type: 'green' },
+      KC_PGUP: { type: 'base' },
+      KC_PGDN: { type: 'base' },
+      KC_PSCR: { type: 'darkGreen' },
+      KC_SLCK: { type: 'darkGreen' },
+      KC_PAUS: { type: 'darkGreen' },
+      KC_F1: { type: 'blue' },
+      KC_F2: { type: 'blue' },
+      KC_F3: { type: 'blue' },
+      KC_F4: { type: 'blue' },
+      KC_F5: { type: 'lightPink' },
+      KC_F6: { type: 'lightPink' },
+      KC_F7: { type: 'lightPink' },
+      KC_F8: { type: 'lightPink' },
+      KC_F9: { type: 'accent' },
+      KC_F10: { type: 'accent' },
+      KC_F11: { type: 'accent' },
+      KC_F12: { type: 'accent' },
+      KC_ESC: { type: 'base' },
+      KC_1: { type: 'green' },
+      KC_2: { type: 'green' },
+      KC_3: { type: 'green' },
+      KC_4: { type: 'green' },
+      KC_5: { type: 'green' },
+      KC_6: { type: 'green' },
+      KC_7: { type: 'green' },
+      KC_8: { type: 'green' },
+      KC_9: { type: 'green' },
+      KC_0: { type: 'green' },
+      KC_F: { type: 'accent' },
+      KC_J: { type: 'accent' },
+      KC_LBRC: { type: 'blue' },
+      KC_RBRC: { type: 'blue' },
+      KC_SCLN: { type: 'blue' },
+      KC_QUOT: { type: 'blue' },
+      KC_COMM: { type: 'blue' },
+      KC_DOT: { type: 'blue' },
+      KC_SLSH: { type: 'blue' }
     }
   },
   {
-    name: "Minimal",
-    designer: "janglad",
+    name: 'Minimal',
+    designer: 'janglad',
     colors: {
       base: {
-        background: "#f1f2f6",
-        color: "black"
+        background: '#f1f2f6',
+        color: 'black'
       },
       mod: {
-        background: "#f1f2f6",
-        color: "black"
+        background: '#f1f2f6',
+        color: 'black'
       },
       accent: {
-        background: "#f1f2f6",
-        color: "black"
+        background: '#f1f2f6',
+        color: 'black'
       }
     }
   },
   {
-    name: "Modern Dolch (blue accent)",
-    designer: "janglad",
+    name: 'Modern Dolch (blue accent)',
+    designer: 'janglad',
     colors: {
       base: {
-        background: "#82878d",
-        color: "#e2e5ea"
+        background: '#82878d',
+        color: '#e2e5ea'
       },
       mod: {
-        background: "#595e64",
-        color: "#e2e5ea"
+        background: '#595e64',
+        color: '#e2e5ea'
       },
       accent: {
-        background: "#6bd8d5",
-        color: "#e2e5ea"
+        background: '#6bd8d5',
+        color: '#e2e5ea'
       }
-    },
+    }
   },
   {
-    name: "Modern Dolch (red accent)",
-    designer: "janglad",
+    name: 'Modern Dolch (red accent)',
+    designer: 'janglad',
     colors: {
       base: {
-        background: "#82878d",
-        color: "#e2e5ea"
+        background: '#82878d',
+        color: '#e2e5ea'
       },
       mod: {
-        background: "#595e64",
-        color: "#e2e5ea"
+        background: '#595e64',
+        color: '#e2e5ea'
       },
       accent: {
-        background: "#cf6478",
-        color: "#e2e5ea"
+        background: '#cf6478',
+        color: '#e2e5ea'
       }
-    },
+    }
   },
   {
-    name: "SkIIdata",
-    designer: "TKC",
+    name: 'SkIIdata',
+    designer: 'TKC',
     colors: {
       base: {
-        background: "#1b1b19",
-        color: "#f17b24"
+        background: '#1b1b19',
+        color: '#f17b24'
       },
       mod: {
-        background: "#1b1b19",
-        color: "#f17b24"
+        background: '#1b1b19',
+        color: '#f17b24'
       },
       accent: {
-        background: "#f17b24",
-        color: "#1b1b19"
+        background: '#f17b24',
+        color: '#1b1b19'
       }
-    },
+    }
   },
   {
-    name: "Nines",
-    designer: "Emir",
+    name: 'Nines',
+    designer: 'Emir',
     colors: {
       base: {
-        background: "#494949",
-        color: "#bcb6a6"
+        background: '#494949',
+        color: '#bcb6a6'
       },
       mod: {
-        background: "#494949",
-        color: "#bcb6a6"
+        background: '#494949',
+        color: '#bcb6a6'
       },
       accent: {
-        background: "#bcb6a6",
-        color: "#494949"
+        background: '#bcb6a6',
+        color: '#494949'
       }
-    },
+    }
   },
   {
-    name: "Taro",
-    designer: "pwade3",
+    name: 'Taro',
+    designer: 'pwade3',
     colors: {
       base: {
-        background: "#8e71a2",
-        color: "#170b19"
+        background: '#8e71a2',
+        color: '#170b19'
       },
       mod: {
-        background: "#170b19",
-        color: "#8e71a2"
+        background: '#170b19',
+        color: '#8e71a2'
       },
       accent: {
-        background: "#5ed8df",
-        color: "#8e71a2"
+        background: '#5ed8df',
+        color: '#8e71a2'
       }
-    },
+    }
   },
   {
-    name: "9009",
-    designer: "janglad",
+    name: '9009',
+    designer: 'janglad',
     colors: {
       base: {
-        background: "#e1dbcf",
-        color: "#212121"
+        background: '#e1dbcf',
+        color: '#212121'
       },
       mod: {
-        background: "#c0b8a3",
-        color: "#212121"
+        background: '#c0b8a3',
+        color: '#212121'
       },
       accent: {
-        background: "#7f987b",
-        color: "#212121"
+        background: '#7f987b',
+        color: '#212121'
       },
       accent_red: {
-        background: "#e49181",
-        color: "#212121"
+        background: '#e49181',
+        color: '#212121'
       }
     },
     specialKeys: {
-      KC_ENT: { type: "accent_red" },
-      KC_SPC: { type: "accent" },
+      KC_ENT: { type: 'accent_red' },
+      KC_SPC: { type: 'accent' }
     }
-  },
-];
+  }
+]

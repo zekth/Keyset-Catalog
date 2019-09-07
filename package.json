@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier -c \"./**/*.ts*\"",
-    "lint:fix": "eslint --fix",
+    "prettier": "prettier -c \"./src/**/*.*\"",
+    "prettier:fix": "prettier -c \"./src/**/*.*\" --write",
+    "lint": "eslint 'src/**/*.{ts,vue}' --max-warnings 0",
+    "lint:fix": "eslint 'src/**/*.{ts,vue}' --fix",
+    "prebuild":"npm run prettier && npm run lint",
     "build": "webpack -d",
     "serve": "npm run build && webpack-dev-server --progress --colors"
   },
@@ -31,6 +34,7 @@
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
+    "babel": "^6.23.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
     "clean-webpack-plugin": "^3.0.0",
