@@ -3,31 +3,43 @@
     <div class="header clearfix">
       <h3 class>Keyset Catalog</h3>
     </div>
-    <form>
-      <div class="form-group">
-        <label for="exampleFormControlSelect2">Layout</label>
-        <select v-model="selectedLayout" class="form-control">
-          <option value="fullSizeAnsi">Full Size Ansi</option>
-          <option value="60SplitBckSp">60% Split Backspace</option>
-        </select>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Layout</label>
+          <select v-model="selectedLayout" class="form-control">
+            <option value="fullSizeAnsi">Full Size Ansi</option>
+            <option value="60SplitBckSp">60% Split Backspace</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect2">Keyset</label>
-        <select v-model="selectedSet" class="form-control">
-          <option v-for="k in keysets" v-bind:value="k.name" v-bind:key="k.name">{{ k.name }}</option>
-        </select>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Keyset</label>
+          <select v-model="selectedSet" class="form-control">
+            <option v-for="k in keysets" v-bind:value="k.name" v-bind:key="k.name">{{ k.name }}</option>
+          </select>
+        </div>
       </div>
-    </form>
-    <fullSizeAnsi v-if="selectedLayout === 'fullSizeAnsi'" :keyset="keyset" />
-    <split60 v-if="selectedLayout === '60SplitBckSp'" :keyset="keyset" />
+    </div>
+    <div>
+      <div class="col">
+        <fullSizeAnsi v-if="selectedLayout === 'fullSizeAnsi'" :keyset="keyset" />
+        <split60 v-if="selectedLayout === '60SplitBckSp'" :keyset="keyset" />
+      </div>
+    </div>
     <div class="row marketing">
       <div class="col-lg-6">
         <h4>Just a database</h4>
         <p>Just here to have a list of all the available keysets</p>
+        <h4>Why there is no novelties?</h4>
+        <p>Because i do not own those designs neither the SVG files.</p>
       </div>
       <div class="col-lg-6">
         <h4>Searching</h4>
         <p>Provide a way find the best colormatch</p>
+        <h4>Missing keyset?</h4>
+        <p>Just submit a pull Request</p>
       </div>
     </div>
 
