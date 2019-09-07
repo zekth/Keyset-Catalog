@@ -1,6 +1,13 @@
 import { isUndefined } from "lodash";
 
-export function genKeyData(keyset, key:string, baseColors, content, subContent, thirdContent) {
+export function genKeyData(
+  keyset: any,
+  key: string,
+  baseColors: string,
+  content: string,
+  subContent: string,
+  thirdContent: string
+) {
   let output = {
     content,
     subContent,
