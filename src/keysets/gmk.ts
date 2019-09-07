@@ -1,3 +1,176 @@
+const weebAlt = {
+  KC_Q: {
+    thirdContent: "た"
+  },
+  KC_W: {
+    thirdContent: "て"
+  },
+  KC_E: {
+    thirdContent: "ぃ"
+  },
+  KC_R: {
+    thirdContent: "す"
+  },
+  KC_T: {
+    thirdContent: "か"
+  },
+  KC_Y: {
+    thirdContent: "ん"
+  },
+  KC_U: {
+    thirdContent: "た"
+  },
+  KC_I: {
+    thirdContent: "に"
+  },
+  KC_O: {
+    thirdContent: "ら"
+  },
+  KC_P: {
+    thirdContent: "ぜ"
+  },
+  KC_QUOT: {
+    thirdContent: "け"
+  },
+  KC_LBRC: {
+    thirdContent: "゛"
+  },
+  KC_RBRC: {
+    thirdContent: "゜"
+  },
+  KC_A: { thirdContent: "ち" },
+  KC_S: { thirdContent: "と" },
+  KC_D: { thirdContent: "し" },
+  KC_F: { thirdContent: "は" },
+  KC_G: { thirdContent: "き" },
+  KC_H: { thirdContent: "く" },
+  KC_J: { thirdContent: "ま" },
+  KC_K: { thirdContent: "の" },
+  KC_L: { thirdContent: "り" },
+  KC_Z: { thirdContent: "つ" },
+  KC_X: { thirdContent: "せ" },
+  KC_C: { thirdContent: "そ" },
+  KC_V: { thirdContent: "ひ" },
+  KC_B: { thirdContent: "こ" },
+  KC_N: { thirdContent: "み" },
+  KC_M: { thirdContent: "も" },
+  KC_COMM: { thirdContent: "ね" },
+  KC_DOT: { thirdContent: "る" },
+  KC_SLSH: { thirdContent: "め" },
+  KC_1: { thirdContent: "ぬ" },
+  KC_2: { thirdContent: "ふ" },
+  KC_3: { thirdContent: "あ" },
+  KC_4: { thirdContent: "う" },
+  KC_5: { thirdContent: "え" },
+  KC_6: { thirdContent: "お" },
+  KC_7: { thirdContent: "や" },
+  KC_8: { thirdContent: "ゆ" },
+  KC_9: { thirdContent: "よ" },
+  KC_0: { thirdContent: "わ" },
+  KC_MINS: { thirdContent: "ほ" },
+  KC_EQL: { thirdContent: "へ" },
+  KC_GRV: { thirdContent: "ろ" }
+};
+const weeb = {
+  KC_Q: {
+    content: "た",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_W: {
+    content: "て",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_E: {
+    content: "ぃ",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_R: {
+    content: "す",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_T: {
+    content: "か",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_Y: {
+    content: "ん",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_U: {
+    content: "た",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_I: {
+    content: "に",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_O: {
+    content: "ら",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_P: {
+    content: "ぜ",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_QUOT: {
+    content: "け",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_LBRC: {
+    content: "゛",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_RBRC: {
+    content: "゜",
+    subContent: "",
+    thirdContent: ""
+  },
+  KC_A: { content: "ち", subContent: "", thirdContent: "" },
+  KC_S: { content: "と", subContent: "", thirdContent: "" },
+  KC_D: { content: "し", subContent: "", thirdContent: "" },
+  KC_F: { content: "は", subContent: "", thirdContent: "" },
+  KC_G: { content: "き", subContent: "", thirdContent: "" },
+  KC_H: { content: "く", subContent: "", thirdContent: "" },
+  KC_J: { content: "ま", subContent: "", thirdContent: "" },
+  KC_K: { content: "の", subContent: "", thirdContent: "" },
+  KC_L: { content: "り", subContent: "", thirdContent: "" },
+  KC_Z: { content: "つ", subContent: "", thirdContent: "" },
+  KC_X: { content: "せ", subContent: "", thirdContent: "" },
+  KC_C: { content: "そ", subContent: "", thirdContent: "" },
+  KC_V: { content: "ひ", subContent: "", thirdContent: "" },
+  KC_B: { content: "こ", subContent: "", thirdContent: "" },
+  KC_N: { content: "み", subContent: "", thirdContent: "" },
+  KC_M: { content: "も", subContent: "", thirdContent: "" },
+  KC_COMM: { content: "ね", subContent: "", thirdContent: "" },
+  KC_DOT: { content: "る", subContent: "", thirdContent: "" },
+  KC_SLSH: { content: "め", subContent: "", thirdContent: "" },
+  KC_1: { content: "ぬ", subContent: "", thirdContent: "" },
+  KC_2: { content: "ふ", subContent: "", thirdContent: "" },
+  KC_3: { content: "あ", subContent: "", thirdContent: "" },
+  KC_4: { content: "う", subContent: "", thirdContent: "" },
+  KC_5: { content: "え", subContent: "", thirdContent: "" },
+  KC_6: { content: "お", subContent: "", thirdContent: "" },
+  KC_7: { content: "や", subContent: "", thirdContent: "" },
+  KC_8: { content: "ゆ", subContent: "", thirdContent: "" },
+  KC_9: { content: "よ", subContent: "", thirdContent: "" },
+  KC_0: { content: "わ", subContent: "", thirdContent: "" },
+  KC_MINS: { content: "ほ", subContent: "", thirdContent: "" },
+  KC_EQL: { content: "へ", subContent: "", thirdContent: "" },
+  KC_GRV: { content: "ろ", subContent: "", thirdContent: "" }
+};
+
 export default [
   {
     name: "bento",
@@ -14,67 +187,75 @@ export default [
       accent: {
         background: "#fb7279",
         color: "#3e728f"
+      },
+      ptn: {
+        background: "red",
+        color: "white"
       }
     },
     specialKeys: {
-      Q: {
-        thirdContent: "た"
+      KC_ESC: {
+        content: "Putain",
+        type: "ptn"
+      }
+    }
+  },
+  {
+    name: "bento weeb alt",
+    designer: "biip",
+    colors: {
+      base: {
+        background: "#fff3ef",
+        color: "#3e728f"
       },
-      W: {
-        thirdContent: "て"
+      mod: {
+        background: "#3e728f",
+        color: "#fb7279"
       },
-      E: {
-        thirdContent: "ぃ"
+      accent: {
+        background: "#fb7279",
+        color: "#3e728f"
       },
-      R: {
-        thirdContent: "す"
+      ptn: {
+        background: "red",
+        color: "white"
+      }
+    },
+    specialKeys: {
+      KC_ESC: {
+        content: "Putain",
+        type: "ptn"
       },
-      T: {
-        thirdContent: "か"
+      ...weebAlt
+    }
+  },
+  {
+    name: "bento true weeb",
+    designer: "biip",
+    colors: {
+      base: {
+        background: "#fff3ef",
+        color: "#3e728f"
       },
-      Y: {
-        thirdContent: "ん"
+      mod: {
+        background: "#3e728f",
+        color: "#fb7279"
       },
-      U: {
-        thirdContent: "た"
+      accent: {
+        background: "#fb7279",
+        color: "#3e728f"
       },
-      I: {
-        thirdContent: "に"
+      ptn: {
+        background: "red",
+        color: "white"
+      }
+    },
+    specialKeys: {
+      KC_ESC: {
+        content: "Putain",
+        type: "ptn"
       },
-      O: {
-        thirdContent: "ら"
-      },
-      P: {
-        thirdContent: "ぜ"
-      },
-      quote:{
-        thirdContent:"け"
-      },
-      OPENBRACE: {
-        thirdContent: "゛"
-      },
-      CLOSEBRACE: {
-        thirdContent: "゜"
-      },
-      A: { thirdContent: "ち" },
-      S: { thirdContent: "と" },
-      D: { thirdContent: "し" },
-      F: { thirdContent: "は" },
-      G: { thirdContent: "き" },
-      H: { thirdContent: "く" },
-      J: { thirdContent: "ま" },
-      K: { thirdContent: "の" },
-      L: { thirdContent: "り" },
-      Z: { thirdContent: "つ" },
-      X: { thirdContent: "" },
-      C: { thirdContent: "そ" },
-      V: { thirdContent: "ひ" },
-      B: { thirdContent: "こ" },
-      N: { thirdContent: "み" },
-      M: { thirdContent: "も" },
-      SUP: { thirdContent: "ね" },
-      MINUS: { thirdContent: "る" },
-      INTER: { thirdContent: "め" },
+      ...weeb
     }
   },
   {
@@ -95,19 +276,19 @@ export default [
       }
     },
     specialKeys: {
-      H: {
+      KC_H: {
         type: "accent",
         thirdContent: "←"
       },
-      J: {
+      KC_J: {
         type: "accent",
         thirdContent: "↓"
       },
-      K: {
+      KC_K: {
         type: "accent",
         thirdContent: "↑"
       },
-      L: {
+      KC_L: {
         type: "accent",
         thirdContent: "→"
       }
@@ -238,5 +419,23 @@ export default [
         color: "#464746"
       }
     }
-  }
+  },
+  {
+    name: "Laser",
+    designer: "",
+    colors: {
+      base: {
+        background: "#2e2180",
+        color: "#0c9eb5"
+      },
+      mod: {
+        background: "#1d1551",
+        color: "#b6245e"
+      },
+      accent: {
+        background: "#b6245e",
+        color: "#1d1551"
+      }
+    }
+  },
 ];
