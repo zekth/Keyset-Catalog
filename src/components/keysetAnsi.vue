@@ -1,5 +1,5 @@
 <template>
-  <div style="height:350px;width:1200px">
+  <div id="render-zone" >
     <svg
       width="1000px"
       height="100px"

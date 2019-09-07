@@ -1,4 +1,9 @@
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+#render-zone {
+  background-color: grey;
+  height: 380px;
+  width: 1200px;
+}
 .key-shadow {
   fill-opacity: 0.78;
 }
@@ -7,9 +12,9 @@
   font-weight: bold;
 }
 .container-1U {
-  max-width:70px;
-  min-width:70px;
+  max-width: 70px;
+  min-width: 70px;
   margin-top: -3px;
   margin-right: 2px;
-  display:inline-block;
+  display: inline-block;
 }
