@@ -47,13 +47,13 @@
         :fill="data.colors.color"
       >{{ data.content }}</text>
       <text
-        v-if="data.colors.subContent"
+        v-if="data.subContent"
         class="key-content"
         x="220"
         y="500"
         font-size="200px"
         :fill="data.colors.color"
-      >{{ data.colors.subContent }}</text>
+      >{{ data.subContent }}</text>
     </g>
   </svg>
 </template>
