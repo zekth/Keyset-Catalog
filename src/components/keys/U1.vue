@@ -65,6 +65,6 @@
 
 <script>
 export default {
-  props: ["data", "isMod"]
-};
+  props: ['data', 'isMod']
+}
 </script>

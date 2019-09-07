@@ -44,7 +44,7 @@
           <U1 x="750" :data="getKeyData('KC_0','base',')','0')" />
           <U1 x="825" :data="getKeyData('KC_MINS','base','_','-')" />
           <U1 x="900" :data="getKeyData('KC_EQL','base','+','=')" />
-          <U2 x="975" :data="getKeyData('KC_BSPC','mod','Backspace')" isMod="true"  />
+          <U2 x="975" :data="getKeyData('KC_BSPC','mod','Backspace')" isMod="true" />
           <U1 x="1160" :data="getKeyData('KC_INS','base','Insert')" isMod="true" />
           <U1 x="1235" :data="getKeyData('KC_HOME','base','Home')" isMod="true" />
           <U1 x="1310" :data="getKeyData('KC_PGUP','base','Pg Up')" isMod="true" />
@@ -56,7 +56,7 @@
       </g>
       <g>
         <svg x="0" y="173" height="70px" width="1000px" style="overflow:initial">
-          <U15 x="0" :data="getKeyData('KC_TAB','mod','Tab')" isMod="true"/>
+          <U15 x="0" :data="getKeyData('KC_TAB','mod','Tab')" isMod="true" />
           <U1 x="110" :data="getKeyData('KC_Q','base','Q')" />
           <U1 x="185" :data="getKeyData('KC_W','base','W')" />
           <U1 x="260" :data="getKeyData('KC_E','base','E')" />
@@ -142,17 +142,17 @@
       <g>
         <svg x="0" y="395" height="70px" width="1000px" style="overflow:initial">
           <U125 x="0" :data="getKeyData('KC_LCTL','mod','Ctrl')" isMod="true" />
-          <U125 x="93" :data="getKeyData('KC_LGUI','mod','Code')" isMod="true"  />
-          <U125 x="186" :data="getKeyData('KC_LALT','mod','Alt')"  isMod="true"/>
+          <U125 x="93" :data="getKeyData('KC_LGUI','mod','Code')" isMod="true" />
+          <U125 x="186" :data="getKeyData('KC_LALT','mod','Alt')" isMod="true" />
           <U625 x="279" :data="getKeyData('KC_SPC','base')" />
-          <U125 x="751" :data="getKeyData('KC_RALT','mod','Alt Gr')"  isMod="true"  />
-          <U125 x="844" :data="getKeyData('KC_RGUI','mod','Win')" isMod="true"  />
-          <U125 x="937" :data="getKeyData('KC_APP','mod','Code')"  isMod="true" />
-          <U125 x="1030" :data="getKeyData('KC_RCTL','mod','Ctrl')"  isMod="true" />
+          <U125 x="751" :data="getKeyData('KC_RALT','mod','Alt Gr')" isMod="true" />
+          <U125 x="844" :data="getKeyData('KC_RGUI','mod','Win')" isMod="true" />
+          <U125 x="937" :data="getKeyData('KC_APP','mod','Code')" isMod="true" />
+          <U125 x="1030" :data="getKeyData('KC_RCTL','mod','Ctrl')" isMod="true" />
           <U1 x="1160" :data="getKeyData('KC_LEFT','base','←')" />
           <U1 x="1235" :data="getKeyData('KC_DOWN','base','↓')" />
           <U1 x="1310" :data="getKeyData('KC_RGHT','base','→')" />
-          <U2 x="1420" content="0" :color="'base'" />
+          <U2 x="1420" :data="getKeyData('KC_P0','base','0')" />
           <U1 x="1570" :data="getKeyData('KC_PDOT','base','.')" />
         </svg>
       </g>
@@ -161,29 +161,29 @@
 </template>
 
 <script>
-import { genKeyData } from "../../utils/keys";
-import U1 from "../keys/U1.vue";
-import U125 from "../keys/U125.vue";
-import U225 from "../keys/U225.vue";
-import U275 from "../keys/U275.vue";
-import U625 from "../keys/U625.vue";
-import U175 from "../keys/U175.vue";
-import U15 from "../keys/U15.vue";
-import U2 from "../keys/U2.vue";
+import { genKeyData } from '../../utils/keys'
+import U1 from '../keys/U1.vue'
+import U125 from '../keys/U125.vue'
+import U225 from '../keys/U225.vue'
+import U275 from '../keys/U275.vue'
+import U625 from '../keys/U625.vue'
+import U175 from '../keys/U175.vue'
+import U15 from '../keys/U15.vue'
+import U2 from '../keys/U2.vue'
 export default {
-  props: ["keyset"],
+  props: ['keyset'],
   components: { U1, U125, U15, U175, U275, U2, U225, U625 },
   methods: {
     getKeyData(key, baseColors, content, subContent, thirdContent) {
-      return genKeyData(this.keyset,key, baseColors, content, subContent, thirdContent);
+      return genKeyData(this.keyset, key, baseColors, content, subContent, thirdContent)
     }
   },
   data() {
     return {
-      char: "&",
+      char: '&',
       doubleQuote: '"',
       simpleQuote: "'"
-    };
+    }
   }
-};
+}
 </script>
