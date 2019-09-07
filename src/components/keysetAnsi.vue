@@ -1,5 +1,5 @@
 <template>
-  <div id="render-zone" >
+  <div id="render-zone">
     <svg
       width="1000px"
       height="100px"
@@ -24,9 +24,9 @@
           <U1 x="900" :data="getKeyData('KC_F10',keyset.colors.base,'F10')" isMod="true" />
           <U1 x="975" :data="getKeyData('KC_F11',keyset.colors.base,'F11')" isMod="true" />
           <U1 x="1050" :data="getKeyData('KC_F12',keyset.colors.base,'F12')" isMod="true" />
-          <U1 x="1160" :data="getKeyData('KC_DEL',keyset.colors.base,'Print')"  isMod="true" />
-          <U1 x="1235" :data="getKeyData('KC_END',keyset.colors.base,'Lock')"  isMod="true" />
-          <U1 x="1310" :data="getKeyData('KC_PGDN',keyset.colors.base,'Pause')" isMod="true"  />
+          <U1 x="1160" :data="getKeyData('KC_PSCR',keyset.colors.base,'Print')" isMod="true" />
+          <U1 x="1235" :data="getKeyData('KC_SLCK',keyset.colors.base,'Lock')" isMod="true" />
+          <U1 x="1310" :data="getKeyData('KC_PAUS',keyset.colors.base,'Pause')" isMod="true" />
         </svg>
       </g>
       <g>
@@ -46,11 +46,11 @@
           <U1 x="900" :data="getKeyData('KC_EQL',keyset.colors.base,'+','=')" />
           <U2 x="975" content="Backspace" isMod="true" :color="keyset.colors.mod" />
           <U1 x="1160" :data="getKeyData('KC_INS',keyset.colors.base,'Insert')" isMod="true" />
-          <U1 x="1235" :data="getKeyData('KC_HOME',keyset.colors.base,'Home')"  isMod="true" />
-          <U1 x="1310" :data="getKeyData('KC_PGUP',keyset.colors.base,'Pg Up')" isMod="true"  />
-          <U1 x="1420" :data="getKeyData('KC_NLCK',keyset.colors.mod,'Num')" isMod="true"  />
-          <U1 x="1495" :data="getKeyData('KC_PSLS',keyset.colors.mod,'%')"  isMod="true"/>
-          <U1 x="1570" :data="getKeyData('KC_PAST',keyset.colors.mod,'X')" isMod="true"  />
+          <U1 x="1235" :data="getKeyData('KC_HOME',keyset.colors.base,'Home')" isMod="true" />
+          <U1 x="1310" :data="getKeyData('KC_PGUP',keyset.colors.base,'Pg Up')" isMod="true" />
+          <U1 x="1420" :data="getKeyData('KC_NLCK',keyset.colors.mod,'Num')" isMod="true" />
+          <U1 x="1495" :data="getKeyData('KC_PSLS',keyset.colors.mod,'%')" isMod="true" />
+          <U1 x="1570" :data="getKeyData('KC_PAST',keyset.colors.mod,'X')" isMod="true" />
           <U1 x="1645" :data="getKeyData('KC_PMNS',keyset.colors.mod,'-')" isMod="true" />
         </svg>
       </g>
@@ -70,9 +70,30 @@
           <U1 x="860" :data="getKeyData('KC_LBRC',keyset.colors.base,'{','[')" />
           <U1 x="935" :data="getKeyData('KC_RBRC',keyset.colors.base,'}',']')" />
           <U15 x="1010" content="|" subcontent="\" :color="keyset.colors.base" />
-          <U1 x="1160" :data="getKeyData('KC_DEL',keyset.colors.base,'Del')"  content="Delete" isMod="true" subcontent :color="keyset.colors.base" />
-          <U1 x="1235" :data="getKeyData('KC_END',keyset.colors.base,'End')"  content="End" isMod="true" subcontent :color="keyset.colors.base" />
-          <U1 x="1310" :data="getKeyData('KC_PGDN',keyset.colors.base,'Pg Dn')"  content="Pg Dn" isMod="true" subcontent :color="keyset.colors.base" />
+          <U1
+            x="1160"
+            :data="getKeyData('KC_DEL',keyset.colors.base,'Del')"
+            content="Delete"
+            isMod="true"
+            subcontent
+            :color="keyset.colors.base"
+          />
+          <U1
+            x="1235"
+            :data="getKeyData('KC_END',keyset.colors.base,'End')"
+            content="End"
+            isMod="true"
+            subcontent
+            :color="keyset.colors.base"
+          />
+          <U1
+            x="1310"
+            :data="getKeyData('KC_PGDN',keyset.colors.base,'Pg Dn')"
+            content="Pg Dn"
+            isMod="true"
+            subcontent
+            :color="keyset.colors.base"
+          />
           <U1 x="1420" :data="getKeyData('KC_P7',keyset.colors.base,'7')" />
           <U1 x="1495" :data="getKeyData('KC_P8',keyset.colors.base,'8')" />
           <U1 x="1570" :data="getKeyData('KC_P9',keyset.colors.base,'9')" />
@@ -90,7 +111,7 @@
           <U1 x="579" :data="getKeyData('KC_J',keyset.colors.base,'J')" />
           <U1 x="654" :data="getKeyData('KC_K',keyset.colors.base,'K')" />
           <U1 x="729" :data="getKeyData('KC_L',keyset.colors.base,'L')" />
-          <U1 x="805" :data="getKeyData('KC_M',keyset.colors.base,':',';')" />
+          <U1 x="805" :data="getKeyData('KC_SCLN',keyset.colors.base,':',';')" />
           <U1 x="880" :data="getKeyData('KC_QUOT',keyset.colors.base,doubleQuote,simpleQuote)" />
           <U225 x="958" content="Enter" isMod="true" subcontent :color="keyset.colors.accent" />
           <U1 x="1420" :data="getKeyData('KC_P4',keyset.colors.base,'4')" />
@@ -139,7 +160,7 @@
 </template>
 
 <script>
-import {isUndefined} from 'lodash'
+import { isUndefined } from "lodash";
 import U1 from "./keys/U1.vue";
 import U125 from "./keys/U125.vue";
 import U225 from "./keys/U225.vue";

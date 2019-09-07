@@ -34,7 +34,6 @@ import { Component, Vue } from "vue-property-decorator";
 import "./scss/style.scss";
 import k from "./keysets/gmk";
 import keysetAnsi from "./components/keysetAnsi.vue";
-console.log(orderBy(k, ["name"], ["asc"]));
 
 @Component({
   components: { keysetAnsi }

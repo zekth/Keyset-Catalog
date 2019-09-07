@@ -684,4 +684,107 @@ export default [
       ...weebAlt
     }
   },
+  {
+    name: "Handarbeit",
+    designer: "",
+    colors: {
+      base: {
+        background: "#a11901",
+        color: "#fefef8"
+      },
+      mod: {
+        background: "#6b428c",
+        color: "#fefef8"
+      },
+      accent: {
+        background: "#dbb51e",
+        color: "#fefef8"
+      },
+      green: {
+        color: "#fefef8",
+        background: "#7eac1a"
+      },
+      blue: {
+        color: "#fefef8",
+        background: "#0558ab"
+      },
+      lightPink: {
+        background: "#d9b7b8",
+        color: "#fefef8"
+      },
+      darkGreen: {
+        background: "#307b37",
+        color: "#fefef8"
+      },
+      orange: {
+        background: "#c86b18",
+        color: "#fefef8"
+      },
+      darkCyan: {
+        background: "#0b687a",
+        color: "#fefef8"
+      }
+    },
+    specialKeys: {
+      KC_PDOT: { type: "darkCyan" },
+      KC_NLCK: { type: "accent" },
+      KC_PSLS: { type: "accent" },
+      KC_PAST: { type: "accent" },
+      KC_PMNS: { type: "accent" },
+      KC_P7: { type: "mod" },
+      KC_P8: { type: "mod" },
+      KC_P9: { type: "mod" },
+      KC_P4: { type: "mod" },
+      KC_P6: { type: "mod" },
+      KC_P1: { type: "mod" },
+      KC_P2: { type: "mod" },
+      KC_P3: { type: "mod" },
+      KC_RGHT: { type: "orange" },
+      KC_LEFT: { type: "orange" },
+      KC_DOWN: { type: "green" },
+      KC_UP: { type: "accent" },
+
+      KC_INS: { type: "accent" },
+      KC_DEL: { type: "accent" },
+      KC_HOME: { type: "green" },
+      KC_END: { type: "green" },
+      KC_PGUP: { type: "base" },
+      KC_PGDN: { type: "base" },
+      KC_PSCR: { type: "darkGreen" },
+      KC_SLCK: { type: "darkGreen" },
+      KC_PAUS: { type: "darkGreen" },
+      KC_F1: { type: "blue" },
+      KC_F2: { type: "blue" },
+      KC_F3: { type: "blue" },
+      KC_F4: { type: "blue" },
+      KC_F5: { type: "lightPink" },
+      KC_F6: { type: "lightPink" },
+      KC_F7: { type: "lightPink" },
+      KC_F8: { type: "lightPink" },
+      KC_F9: { type: "accent" },
+      KC_F10: { type: "accent" },
+      KC_F11: { type: "accent" },
+      KC_F12: { type: "accent" },
+      KC_ESC: { type: "base" },
+      KC_1: { type: "green" },
+      KC_2: { type: "green" },
+      KC_3: { type: "green" },
+      KC_4: { type: "green" },
+      KC_5: { type: "green" },
+      KC_6: { type: "green" },
+      KC_7: { type: "green" },
+      KC_8: { type: "green" },
+      KC_9: { type: "green" },
+      KC_0: { type: "green" },
+      KC_F: { type: "accent" },
+      KC_J: { type: "accent" },
+      KC_LBRC: { type: "blue" },
+      KC_RBRC: { type: "blue" },
+      KC_SCLN: { type: "blue" },
+      KC_QUOT: { type: "blue" },
+      KC_COMM: { type: "blue" },
+      KC_DOT: { type: "blue" },
+      KC_SLSH: { type: "blue" }
+    }
+  }
 ];
