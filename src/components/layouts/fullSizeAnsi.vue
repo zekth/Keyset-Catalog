@@ -5,8 +5,8 @@
         x="0"
         y="0"
         fill="#1f1f1f"
-        width="1770"
-        height="520"
+        width="1750"
+        height="510"
         rx="7"
         ry="7"
       />
@@ -23,7 +23,7 @@
         x="1430"
         y="112"
         fill="#080808"
-        width="305"
+        width="306"
         height="385"
         rx="7"
         ry="7"
@@ -71,6 +71,24 @@
         fill="#080808"
         width="306"
         height="81"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1245"
+        y="339"
+        fill="#080808"
+        width="81"
+        height="84"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1169"
+        y="414"
+        fill="#080808"
+        width="233"
+        height="84"
         rx="7"
         ry="7"
       />
