@@ -27,23 +27,51 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="form-group">
-          <label for>Picked Color</label>
-          <chrome-picker v-model="colors" />
-          <button class="btn btn-info" v-on:click="findKeyset('base')">
-            Find Base
-          </button>
-          <button class="btn btn-info" v-on:click="findKeyset('accent')">
-            Find Accent
-          </button>
-          <button class="btn btn-info" v-on:click="findKeyset('mod')">
-            Find Mod
-          </button>
-          <label>Color distance threshold</label>
-          <input type="number" v-model="threshold" />
-          <label>colorDistance</label>
-          <span>{{ colorDistance }}</span>
+        <button v-on:click="toggleSearch()" class="btn btn-info">
+          Show Search Form
+        </button>
+      </div>
+    </div>
+    <div class="row" v-bind:class="{ collapse: !showSearch }">
+      <div class="col-lg-6">
+        <h2>Color pick</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <chrome-picker v-model="colors" />
+          </div>
+          <div class="col-lg-6">
+            <button class="btn btn-info" v-on:click="findKeyset('base')">
+              Find Base
+            </button>
+            <button class="btn btn-info" v-on:click="findKeyset('accent')">
+              Find Accent
+            </button>
+            <button class="btn btn-info" v-on:click="findKeyset('mod')">
+              Find Mod
+            </button>
+            <label>Color distance threshold</label>
+            <VueSlider v-model="threshold" v-bind="sliderOptions" />
+          </div>
         </div>
+      </div>
+      <div class="col-lg-6">
+        <h2>Search Results</h2>
+        <table id="search-results" class="table table-hover">
+          <thead>
+            <tr>
+              <th>Keyset Name</th>
+              <th>Distance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template v-for="r in searchResult">
+              <tr v-bind:key="r.name" v-on:click="changeSet(r.name)">
+                <td>{{ r.name }}</td>
+                <td>{{ r.distance.toFixed() }}</td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
       </div>
     </div>
     <div>
@@ -77,6 +105,8 @@
 </template>
 
 <script lang="ts">
+import VueSlider from 'vue-slider-component';
+import 'vue-slider-component/theme/antd.css';
 import { orderBy } from 'lodash';
 import { from } from 'nearest-color';
 import { Component, Vue } from 'vue-property-decorator';
@@ -88,37 +118,64 @@ import appFooter from '@/components/footer.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
 
 @Component({
-  components: { fullSizeAnsi, appFooter, split60, 'chrome-picker': Chrome }
+  components: {
+    VueSlider,
+    fullSizeAnsi,
+    appFooter,
+    split60,
+    'chrome-picker': Chrome
+  }
 })
 export default class App extends Vue {
   keysets = orderBy(k, [key => key.name.toLowerCase()], ['asc']);
-  selectedSet = this.keysets[0].name;
+  selectedSet: any = this.keysets[0].name;
   selectedLayout = 'fullSizeAnsi';
-  colorDistance = '';
-  threshold = 30;
+  threshold = 100;
   colors: any = '#fff';
+  searchResult: any[] = [];
+  showSearch = false;
+  sliderOptions = {
+    max: 300
+  };
   get keyset() {
     return this.keysets.find(x => {
       return x.name === this.selectedSet;
     });
   }
+  toggleSearch() {
+    this.showSearch = !this.showSearch;
+  }
+  changeSet(s) {
+    this.selectedSet = s;
+  }
   findKeyset(type) {
-    console.log(`find keyset:${type}`);
     let colorsToTest = {};
     k.forEach(x => {
       colorsToTest[x.name] = x.colors[type].background;
     });
-    console.log(colorsToTest);
-    const nearest = from(colorsToTest);
+    const outputs: any = [];
     let nearestKeyset;
-    if (this.colors.hex) {
-      nearestKeyset = nearest(this.colors.hex);
-    } else {
-      nearestKeyset = nearest(this.colors);
+    for (;;) {
+      const nearest = from(colorsToTest);
+      let tempNearest;
+      if (this.colors.hex) {
+        tempNearest = nearest(this.colors.hex);
+      } else {
+        tempNearest = nearest(this.colors);
+      }
+      if (Number(tempNearest.distance.toFixed()) > this.threshold) {
+        break;
+      } else {
+        delete colorsToTest[tempNearest.name];
+      }
+      outputs.push(tempNearest);
     }
-    console.log(nearestKeyset);
-    this.selectedSet = nearestKeyset.name;
-    this.colorDistance = nearestKeyset.distance.toFixed();
+    this.searchResult = outputs;
+    if (outputs.length > 0) {
+      this.changeSet(outputs[0].name);
+    } else {
+      console.log('no keyset found');
+    }
   }
 }
 </script>

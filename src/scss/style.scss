@@ -18,3 +18,10 @@
   margin-right: 2px;
   display: inline-block;
 }
+#search-results {
+  tbody {
+    tr {
+      cursor: pointer;
+    }
+  }
+}
