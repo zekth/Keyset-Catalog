@@ -1,6 +1,49 @@
 <template>
   <svg viewBox="0 0 1770 520" preserveAspectRatio="xMinYMin meet">
+    <defs>
+      <linearGradient
+        id="gradient-vertical"
+        x1="50%"
+        y1="0%"
+        x2="50%"
+        y2="100%"
+      >
+        <stop offset="0%" stop-color="#808080" />
+        <stop offset="100%" stop-color="#e0e0e0" />
+      </linearGradient>
+    </defs>
+    <pattern>
+      <pattern
+        id="noise"
+        width="1"
+        height="1"
+        patternContentUnits="objectBoundingBox"
+      >
+        <image
+          xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/160607/metal.png"
+          x="0"
+          y="0"
+          width="1"
+          height="1"
+        />
+        <rect
+          width="1"
+          height="1"
+          fill="url(#gradient-vertical)"
+          style="mix-blend-mode: multiply;"
+        />
+      </pattern>
+    </pattern>
     <g class="keyboard-case">
+      <!-- <rect
+        x="0"
+        y="0"
+        :fill="keyboardColor"
+        width="1750"
+        height="510"
+        rx="7"
+        ry="7"
+      />-->
       <rect
         x="0"
         y="0"
