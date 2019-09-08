@@ -4,7 +4,7 @@
       <rect
         x="0"
         y="0"
-        fill="#1f1f1f"
+        :fill="keyboardColor"
         width="1750"
         height="510"
         rx="7"
@@ -46,13 +46,13 @@
         rx="7"
         ry="7"
       />
-      <rect x="10" y="15" fill="#080808" width="80" height="81" rx="7" ry="7" />
+      <rect x="10" y="15" fill="#080808" width="82" height="82" rx="7" ry="7" />
       <rect
         x="160"
         y="15"
         fill="#080808"
-        width="306"
-        height="81"
+        width="307"
+        height="82"
         rx="7"
         ry="7"
       />
@@ -60,8 +60,8 @@
         x="495"
         y="15"
         fill="#080808"
-        width="306"
-        height="81"
+        width="307"
+        height="82"
         rx="7"
         ry="7"
       />
@@ -69,8 +69,8 @@
         x="835"
         y="15"
         fill="#080808"
-        width="306"
-        height="81"
+        width="307"
+        height="82"
         rx="7"
         ry="7"
       />
@@ -292,7 +292,7 @@ import U15 from '../keys/U15.vue';
 import U2 from '../keys/U2.vue';
 import U2V from '../keys/U2vertical.vue';
 export default {
-  props: ['keyset'],
+  props: ['keyset', 'keyboardColor'],
   components: { U1, U125, U2V, U15, U175, U275, U2, U225, U625 },
   methods: {
     getKeyData(key, baseColors, content, subContent, thirdContent) {

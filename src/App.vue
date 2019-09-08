@@ -86,8 +86,27 @@
           <fullSizeAnsi
             v-if="selectedLayout === 'fullSizeAnsi'"
             :keyset="keyset"
+            :keyboardColor="keyboardColor.hex"
           />
           <split60 v-if="selectedLayout === '60SplitBckSp'" :keyset="keyset" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="col-lg-6">
+          <button
+            class="btn btn-sm btn-info"
+            v-on:click="toggleCustomKeyboard()"
+          >
+            Customize keyboard case
+          </button>
+          <div
+            v-bind:class="{ collapse: !showCustomKeyboard }"
+            style="margin-top:10px;margin-bottom:10px;"
+          >
+            <chrome-picker v-model="keyboardColor" />
+          </div>
         </div>
       </div>
     </div>
@@ -141,6 +160,10 @@ export default class App extends Vue {
   selectedLayout = 'fullSizeAnsi';
   threshold = 100;
   colors: any = '#fff';
+  showCustomKeyboard = false;
+  keyboardColor = {
+    hex: '#1f1f1f'
+  };
   searchResult: any[] = [];
   showSearch = false;
   sliderOptions = {
@@ -150,6 +173,9 @@ export default class App extends Vue {
     return this.keysets.find(x => {
       return x.id === this.selectedSet;
     });
+  }
+  toggleCustomKeyboard() {
+    this.showCustomKeyboard = !this.showCustomKeyboard;
   }
   toggleSearch() {
     this.showSearch = !this.showSearch;
