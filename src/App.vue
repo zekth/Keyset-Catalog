@@ -19,8 +19,8 @@
           <select v-model="selectedSet" class="form-control">
             <option
               v-for="k in keysets"
-              v-bind:value="k.name"
-              v-bind:key="k.name"
+              v-bind:value="k.id"
+              v-bind:key="k.id"
               >{{ k.name }}</option
             >
           </select>
@@ -40,21 +40,22 @@
             <chrome-picker v-model="colors" />
           </div>
           <div class="col-lg-6">
+            <h2>Search for</h2>
             <button class="btn btn-info" v-on:click="findKeyset('base')">
-              Find Base
+              Base
             </button>
             <button class="btn btn-info" v-on:click="findKeyset('accent')">
-              Find Accent
+              Accent
             </button>
             <button class="btn btn-info" v-on:click="findKeyset('mod')">
-              Find Mod
+              Mod
             </button>
             <label>Color distance threshold</label>
             <VueSlider v-model="threshold" v-bind="sliderOptions" />
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6" style="height:300px;overflow-y:scroll">
         <h2>Search Results</h2>
         <table id="search-results" class="table table-hover">
           <thead>
@@ -65,7 +66,7 @@
           </thead>
           <tbody>
             <template v-for="r in searchResult">
-              <tr v-bind:key="r.name" v-on:click="changeSet(r.name)">
+              <tr v-bind:key="r.id" v-on:click="changeSet(r.id)">
                 <td>{{ r.name }}</td>
                 <td>{{ r.distance.toFixed() }}</td>
               </tr>
@@ -107,7 +108,7 @@
 <script lang="ts">
 import VueSlider from 'vue-slider-component';
 import 'vue-slider-component/theme/antd.css';
-import { orderBy } from 'lodash';
+import { orderBy, isEmpty } from 'lodash';
 import { from } from 'nearest-color';
 import { Component, Vue } from 'vue-property-decorator';
 import { Chrome } from 'vue-color';
@@ -116,7 +117,6 @@ import k from './keysets/gmk';
 import fullSizeAnsi from '@/components/layouts/fullSizeAnsi.vue';
 import appFooter from '@/components/footer.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
-
 @Component({
   components: {
     VueSlider,
@@ -128,7 +128,7 @@ import split60 from '@/components/layouts/60SplitBckSp.vue';
 })
 export default class App extends Vue {
   keysets = orderBy(k, [key => key.name.toLowerCase()], ['asc']);
-  selectedSet: any = this.keysets[0].name;
+  selectedSet: any = this.keysets[0].id;
   selectedLayout = 'fullSizeAnsi';
   threshold = 100;
   colors: any = '#fff';
@@ -139,7 +139,7 @@ export default class App extends Vue {
   };
   get keyset() {
     return this.keysets.find(x => {
-      return x.name === this.selectedSet;
+      return x.id === this.selectedSet;
     });
   }
   toggleSearch() {
@@ -151,7 +151,7 @@ export default class App extends Vue {
   findKeyset(type) {
     let colorsToTest = {};
     k.forEach(x => {
-      colorsToTest[x.name] = x.colors[type].background;
+      colorsToTest[x.id] = x.colors[type].background;
     });
     const outputs: any = [];
     let nearestKeyset;
@@ -168,11 +168,18 @@ export default class App extends Vue {
       } else {
         delete colorsToTest[tempNearest.name];
       }
-      outputs.push(tempNearest);
+      outputs.push({
+        distance: tempNearest.distance,
+        name: k[tempNearest.name].name,
+        id: k[tempNearest.name].id
+      });
+      if (isEmpty(colorsToTest)) {
+        break;
+      }
     }
     this.searchResult = outputs;
     if (outputs.length > 0) {
-      this.changeSet(outputs[0].name);
+      this.changeSet(outputs[0].id);
     } else {
       console.log('no keyset found');
     }

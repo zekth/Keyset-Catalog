@@ -1,5 +1,11 @@
 import { isUndefined } from 'lodash';
-
+export function genIds(arr) {
+  let i = 0;
+  return arr.map(x => {
+    x.id = i++;
+    return x;
+  });
+}
 export function genKeyData(
   keyset: any,
   key: string,

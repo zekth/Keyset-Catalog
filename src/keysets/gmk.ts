@@ -1,3 +1,5 @@
+import { genIds } from '@/utils/keys';
+
 const weebAlt = {
   KC_Q: {
     thirdContent: 'た'
@@ -171,7 +173,7 @@ const weeb = {
   KC_GRV: { content: 'ろ', subContent: '', thirdContent: '' }
 };
 
-export default [
+const sets = [
   {
     name: 'Bento',
     designer: 'biip',
@@ -501,15 +503,15 @@ export default [
     colors: {
       base: {
         background: '#345b95',
-        color: '#fff'
+        color: '#ffffff'
       },
       mod: {
         background: '#345b95',
-        color: '#fff'
+        color: '#ffffff'
       },
       accent: {
         background: '#334660',
-        color: '#fff'
+        color: '#ffffff'
       }
     },
     specialKeys: {
@@ -922,3 +924,4 @@ export default [
     }
   }
 ];
+export default genIds(sets);
