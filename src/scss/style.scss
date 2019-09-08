@@ -2,6 +2,9 @@
 #render-zone {
   height: 380px;
   width: 1200px;
+  svg {
+    overflow: initial;
+  }
 }
 .key-shadow {
   fill-opacity: 0.78;
@@ -9,6 +12,25 @@
 .key-content {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+}
+.render-container {
+  display: inline-block;
+position: relative;
+width: 100%;
+vertical-align: middle;
+overflow: hidden;
+}
+.keycap {
+  transform: scale(0.1);
+}
+.keycap.U2V{
+  text{
+    writing-mode: tb;           /* SVG 1 syntax */
+    glyph-orientation-vertical: 0;
+    writing-mode: vertical-rl;  /* CSS3 syntax */
+    text-orientation: upright;
+    text-anchor: middle;
+  }
 }
 .container-1U {
   max-width: 70px;

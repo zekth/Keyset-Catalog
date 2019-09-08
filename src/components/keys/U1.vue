@@ -1,14 +1,6 @@
 <template>
-  <svg
-    class="keycap U1"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 715 715"
-    style="enable-background:new 0 0 715 715;"
-    xml:space="preserve"
-  >
-    <g>
+  <svg>
+    <g class="keycap U1">
       <path
         fill="black"
         d="M705.94,715H9.06C4.06,715,0,710.94,0,705.94V9.06C0,4.06,4.06,0,9.06,0h696.87c5.01,0,9.06,4.06,9.06,9.06

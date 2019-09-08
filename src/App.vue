@@ -1,7 +1,12 @@
 <template>
   <div id="app" class="container">
     <div class="header clearfix">
-      <h3 class>Keyset Catalog</h3>
+      <h3 class>
+        Keyset Catalog -
+        <a href="https://github.com/zekth/Keyset-Catalog" target="_blank"
+          >GitHub Project</a
+        >
+      </h3>
     </div>
     <div class="row">
       <div class="col-lg-4">
@@ -9,7 +14,7 @@
           <label for>Layout</label>
           <select v-model="selectedLayout" class="form-control">
             <option value="fullSizeAnsi">Full Size Ansi</option>
-            <option value="60SplitBckSp">60% Split Backspace</option>
+            <!-- <option value="60SplitBckSp">60% Split Backspace</option> -->
           </select>
         </div>
       </div>
@@ -75,13 +80,15 @@
         </table>
       </div>
     </div>
-    <div>
+    <div class="row">
       <div class="col">
-        <fullSizeAnsi
-          v-if="selectedLayout === 'fullSizeAnsi'"
-          :keyset="keyset"
-        />
-        <split60 v-if="selectedLayout === '60SplitBckSp'" :keyset="keyset" />
+        <div class="render-container">
+          <fullSizeAnsi
+            v-if="selectedLayout === 'fullSizeAnsi'"
+            :keyset="keyset"
+          />
+          <split60 v-if="selectedLayout === '60SplitBckSp'" :keyset="keyset" />
+        </div>
       </div>
     </div>
     <div class="row marketing">
@@ -128,7 +135,9 @@ import split60 from '@/components/layouts/60SplitBckSp.vue';
 })
 export default class App extends Vue {
   keysets = orderBy(k, [key => key.name.toLowerCase()], ['asc']);
-  selectedSet: any = this.keysets[0].id;
+  selectedSet: any = this.keysets[
+    Math.floor(Math.random() * Math.floor(k.length))
+  ].id;
   selectedLayout = 'fullSizeAnsi';
   threshold = 100;
   colors: any = '#fff';
