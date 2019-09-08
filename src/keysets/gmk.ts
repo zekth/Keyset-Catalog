@@ -519,6 +519,24 @@ const sets = [
     }
   },
   {
+    name: 'Sandstorm',
+    designer: 'Zambumon',
+    colors: {
+      base: {
+        background: '#ae9c78',
+        color: '#dfe0d0'
+      },
+      mod: {
+        background: '#ae9c78',
+        color: '#dfe0d0'
+      },
+      accent: {
+        background: '#dfe0d0',
+        color: '#000000'
+      }
+    }
+  },
+  {
     name: 'Red Samurai',
     designer: '',
     colors: {
@@ -895,6 +913,192 @@ const sets = [
         background: '#5ed8df',
         color: '#8e71a2'
       }
+    }
+  },
+  {
+    name: 'Pulse',
+    designer: '',
+    colors: {
+      base: {
+        background: '#000000',
+        color: '#13bac0'
+      },
+      mod: {
+        background: '#13bac0',
+        color: '#000000'
+      },
+      accent: {
+        background: '#13bac0',
+        color: '#000000'
+      }
+    }
+  },
+  {
+    name: 'First Love',
+    designer: '',
+    colors: {
+      base: {
+        background: '#313334',
+        color: '#9381d7'
+      },
+      mod: {
+        background: '#322b4a',
+        color: '#9381d7'
+      },
+      accent: {
+        background: '#9381d7',
+        color: '#322b4a'
+      }
+    }
+  },
+  {
+    name: 'Rocket',
+    designer: '',
+    colors: {
+      base: {
+        background: '#c6c1c1',
+        color: '#c91c0b'
+      },
+      mod: {
+        background: '#1c7fc3',
+        color: '#c91c0b'
+      },
+      accent: {
+        background: '#c91c0b',
+        color: '#c6c1c1'
+      }
+    }
+  },
+  {
+    name: 'Voyage',
+    designer: '',
+    colors: {
+      base: {
+        background: '#244fa5',
+        color: '#71c2dc'
+      },
+      mod: {
+        background: '#243143',
+        color: '#71c2dc'
+      },
+      accent: {
+        background: '#71c2dc',
+        color: '#243143'
+      }
+    }
+  },
+  {
+    name: 'Peach n Cream',
+    designer: '',
+    colors: {
+      base: {
+        background: '#d5d0c9',
+        color: '#f38568'
+      },
+      mod: {
+        background: '#ecb893',
+        color: '#f38568'
+      },
+      accent: {
+        background: '#f38568',
+        color: '#d5d0c9'
+      }
+    }
+  },
+  {
+    name: 'Chocolatier',
+    designer: '',
+    colors: {
+      base: {
+        background: '#563b2e',
+        color: '#ada391'
+      },
+      mod: {
+        background: '#463730',
+        color: '#ada391'
+      },
+      accent: {
+        background: '#463730',
+        color: '#ada391'
+      }
+    }
+  },
+  {
+    name: 'Led Zep',
+    designer: '',
+    colors: {
+      base: {
+        background: '#e4dfc2',
+        color: '#3c3d41'
+      },
+      mod: {
+        background: '#3c3d41',
+        color: '#d43633'
+      },
+      accent: {
+        background: '#d43633',
+        color: '#3c3d41'
+      }
+    }
+  },
+  {
+    name: 'Metaverse',
+    designer: '',
+    colors: {
+      base: {
+        background: '#ffffff',
+        color: '#000000'
+      },
+      mod: {
+        background: '#000000',
+        color: '#ffffff'
+      },
+      accent: {
+        background: '#dc2e16',
+        color: '#ffffff'
+      }
+    },
+    specialKeys: {
+      ...weebAlt
+    }
+  },
+  {
+    name: 'Merlin',
+    designer: '',
+    colors: {
+      base: {
+        background: '#fefef4',
+        color: '#28768d'
+      },
+      mod: {
+        background: '#28768d',
+        color: '#fec93d'
+      },
+      accent: {
+        background: '#fec93d',
+        color: '#28768d'
+      }
+    }
+  },
+  {
+    name: 'Denim',
+    designer: '',
+    colors: {
+      base: {
+        background: '#65748f',
+        color: '#c7baa0'
+      },
+      mod: {
+        background: '#484e5d',
+        color: '#c7baa0'
+      },
+      accent: {
+        background: '#ad855d',
+        color: '#9b2f1e'
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'mod' }
     }
   },
   {
