@@ -1,6 +1,6 @@
 # Keyset Catalog
 
-Just a simple app to browse available keysets and find the best matches for a color.
+Just a simple app to browse available keysets and find the best matches for a color. Accessible here: [https://zekth.github.io/Keyset-Catalog/](https://zekth.github.io/Keyset-Catalog/)
 
 ## Develop
 
