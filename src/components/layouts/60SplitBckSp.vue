@@ -11,7 +11,11 @@
     >
       <g>
         <svg x="0" y="0" height="70px" width="1000px" style="overflow:initial">
-          <U1 x="0" :data="getKeyData('KC_ESC', 'accent', 'Esc')" isMod="true" />
+          <U1
+            x="0"
+            :data="getKeyData('KC_ESC', 'accent', 'Esc')"
+            isMod="true"
+          />
           <U1 x="75" :data="getKeyData('KC_1', 'base', '!', '1')" />
           <U1 x="150" :data="getKeyData('KC_2', 'base', '@', '2')" />
           <U1 x="225" :data="getKeyData('KC_3', 'base', '#', '3')" />
@@ -47,8 +51,18 @@
         </svg>
       </g>
       <g>
-        <svg x="0" y="146" height="70px" width="1000px" style="overflow:initial">
-          <U175 x="0" isMod="true" :data="getKeyData('KC_capslock', 'mod', 'CapsLock')" />
+        <svg
+          x="0"
+          y="146"
+          height="70px"
+          width="1000px"
+          style="overflow:initial"
+        >
+          <U175
+            x="0"
+            isMod="true"
+            :data="getKeyData('KC_capslock', 'mod', 'CapsLock')"
+          />
           <U1 x="129" :data="getKeyData('KC_A', 'base', 'A')" />
           <U1 x="204" :data="getKeyData('KC_S', 'base', 'S')" />
           <U1 x="279" :data="getKeyData('KC_D', 'base', 'D')" />
@@ -59,13 +73,30 @@
           <U1 x="654" :data="getKeyData('KC_K', 'base', 'K')" />
           <U1 x="729" :data="getKeyData('KC_L', 'base', 'L')" />
           <U1 x="805" :data="getKeyData('KC_SCLN', 'base', ':', ';')" />
-          <U1 x="880" :data="getKeyData('KC_QUOT', 'base', doubleQuote, simpleQuote)" />
-          <U225 x="958" :data="getKeyData('KC_ENT', 'accent', 'Enter')" isMod="true" />
+          <U1
+            x="880"
+            :data="getKeyData('KC_QUOT', 'base', doubleQuote, simpleQuote)"
+          />
+          <U225
+            x="958"
+            :data="getKeyData('KC_ENT', 'accent', 'Enter')"
+            isMod="true"
+          />
         </svg>
       </g>
       <g>
-        <svg x="0" y="222" height="70px" width="1000px" style="overflow:initial">
-          <U225 x="0" :data="getKeyData('KC_LSFT', 'mod', 'Shift')" isMod="true" />
+        <svg
+          x="0"
+          y="222"
+          height="70px"
+          width="1000px"
+          style="overflow:initial"
+        >
+          <U225
+            x="0"
+            :data="getKeyData('KC_LSFT', 'mod', 'Shift')"
+            isMod="true"
+          />
           <U1 x="164" :data="getKeyData('KC_Z', 'base', 'Z')" />
           <U1 x="239" :data="getKeyData('KC_X', 'base', 'X')" />
           <U1 x="314" :data="getKeyData('KC_C', 'base', 'C')" />
@@ -76,19 +107,57 @@
           <U1 x="689" :data="getKeyData('KC_COMM', 'base', '<', ',')" />
           <U1 x="764" :data="getKeyData('KC_DOT', 'base', '>', '.')" />
           <U1 x="839" :data="getKeyData('KC_SLSH', 'base', '?', '/')" />
-          <U275 x="914" :data="getKeyData('KC_RSFT', 'mod', 'Shift')" isMod="true" />
+          <U275
+            x="914"
+            :data="getKeyData('KC_RSFT', 'mod', 'Shift')"
+            isMod="true"
+          />
         </svg>
       </g>
       <g>
-        <svg x="0" y="295" height="70px" width="1000px" style="overflow:initial">
-          <U125 x="0" :data="getKeyData('KC_LCTL', 'mod', 'Ctrl')" isMod="true" />
-          <U125 x="93" :data="getKeyData('KC_LGUI', 'mod', 'Code')" isMod="true" />
-          <U125 x="186" :data="getKeyData('KC_LALT', 'mod', 'Alt')" isMod="true" />
+        <svg
+          x="0"
+          y="295"
+          height="70px"
+          width="1000px"
+          style="overflow:initial"
+        >
+          <U125
+            x="0"
+            :data="getKeyData('KC_LCTL', 'mod', 'Ctrl')"
+            isMod="true"
+          />
+          <U125
+            x="93"
+            :data="getKeyData('KC_LGUI', 'mod', 'Code')"
+            isMod="true"
+          />
+          <U125
+            x="186"
+            :data="getKeyData('KC_LALT', 'mod', 'Alt')"
+            isMod="true"
+          />
           <U625 x="279" :data="getKeyData('KC_SPC', 'base')" />
-          <U125 x="751" :data="getKeyData('KC_RALT', 'mod', 'Alt Gr')" isMod="true" />
-          <U125 x="844" :data="getKeyData('KC_RGUI', 'mod', 'Win')" isMod="true" />
-          <U125 x="937" :data="getKeyData('KC_APP', 'mod', 'Code')" isMod="true" />
-          <U125 x="1030" :data="getKeyData('KC_RCTL', 'mod', 'Ctrl')" isMod="true" />
+          <U125
+            x="751"
+            :data="getKeyData('KC_RALT', 'mod', 'Alt Gr')"
+            isMod="true"
+          />
+          <U125
+            x="844"
+            :data="getKeyData('KC_RGUI', 'mod', 'Win')"
+            isMod="true"
+          />
+          <U125
+            x="937"
+            :data="getKeyData('KC_APP', 'mod', 'Code')"
+            isMod="true"
+          />
+          <U125
+            x="1030"
+            :data="getKeyData('KC_RCTL', 'mod', 'Ctrl')"
+            isMod="true"
+          />
         </svg>
       </g>
     </svg>
@@ -96,20 +165,27 @@
 </template>
 
 <script>
-import { genKeyData } from '../../utils/keys'
-import U1 from '../keys/U1.vue'
-import U125 from '../keys/U125.vue'
-import U225 from '../keys/U225.vue'
-import U275 from '../keys/U275.vue'
-import U625 from '../keys/U625.vue'
-import U175 from '../keys/U175.vue'
-import U15 from '../keys/U15.vue'
+import { genKeyData } from '../../utils/keys';
+import U1 from '../keys/U1.vue';
+import U125 from '../keys/U125.vue';
+import U225 from '../keys/U225.vue';
+import U275 from '../keys/U275.vue';
+import U625 from '../keys/U625.vue';
+import U175 from '../keys/U175.vue';
+import U15 from '../keys/U15.vue';
 export default {
   props: ['keyset'],
   components: { U1, U125, U15, U175, U275, U225, U625 },
   methods: {
     getKeyData(key, baseColors, content, subContent, thirdContent) {
-      return genKeyData(this.keyset, key, baseColors, content, subContent, thirdContent)
+      return genKeyData(
+        this.keyset,
+        key,
+        baseColors,
+        content,
+        subContent,
+        thirdContent
+      );
     }
   },
   data() {
@@ -117,7 +193,7 @@ export default {
       char: '&',
       doubleQuote: '"',
       simpleQuote: "'"
-    }
+    };
   }
-}
+};
 </script>

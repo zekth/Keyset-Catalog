@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier -c \"./src/**/*.*\"",
-    "prettier:fix": "prettier -c \"./src/**/*.*\" --write",
+    "prettier": "prettier -c \"./src/**/*.{ts,vue}\"",
+    "prettier:fix": "prettier -c \"./src/**/*.{ts,vue}\" --write",
     "lint": "eslint 'src/**/*.{ts,vue}' --max-warnings 0",
     "lint:fix": "eslint 'src/**/*.{ts,vue}' --fix",
-    "prebuild":"npm run prettier && npm run lint",
+    "prebuild": "npm run prettier && npm run lint",
     "build": "webpack -d",
     "serve": "npm run build && webpack-dev-server --progress --colors"
   },
@@ -17,8 +17,10 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
     "lodash": "^4.17.11",
+    "nearest-color": "^0.4.4",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
+    "vue-color": "^2.7.0",
     "vue-property-decorator": "^8.1.0",
     "vue-tags": "^1.0.4",
     "vuex": "^3.0.1"

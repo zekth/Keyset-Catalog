@@ -3,8 +3,15 @@
   "env": {
     "node": true
   },
-  "extends": ["plugin:vue/essential", "plugin:prettier/recommended", "@vue/prettier", "@vue/typescript"],
-  "rules": {},
+  "extends": [
+    "plugin:vue/essential",
+    "plugin:prettier/recommended",
+    "@vue/prettier",
+    "@vue/typescript"
+  ],
+  "rules": {
+    "no-console": "off"
+  },
   "parserOptions": {
     "parser": "@typescript-eslint/parser"
   }

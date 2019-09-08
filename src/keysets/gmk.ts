@@ -70,7 +70,7 @@ const weebAlt = {
   KC_MINS: { thirdContent: 'ほ' },
   KC_EQL: { thirdContent: 'へ' },
   KC_GRV: { thirdContent: 'ろ' }
-}
+};
 const weeb = {
   KC_Q: {
     content: 'た',
@@ -169,7 +169,7 @@ const weeb = {
   KC_MINS: { content: 'ほ', subContent: '', thirdContent: '' },
   KC_EQL: { content: 'へ', subContent: '', thirdContent: '' },
   KC_GRV: { content: 'ろ', subContent: '', thirdContent: '' }
-}
+};
 
 export default [
   {
@@ -921,4 +921,4 @@ export default [
       KC_SPC: { type: 'accent' }
     }
   }
-]
+];
