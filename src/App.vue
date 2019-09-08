@@ -39,6 +39,8 @@
           <button class="btn btn-info" v-on:click="findKeyset('mod')">
             Find Mod
           </button>
+          <label>Color distance threshold</label>
+          <input type="number" v-model="threshold" />
           <label>colorDistance</label>
           <span>{{ colorDistance }}</span>
         </div>
@@ -70,12 +72,7 @@
       </div>
     </div>
 
-    <footer class="footer">
-      <p>
-        ©
-        <a href="https://github.com/zekth">Zekth</a> 2019
-      </p>
-    </footer>
+    <appFooter />
   </div>
 </template>
 
@@ -87,16 +84,18 @@ import { Chrome } from 'vue-color';
 import '@/scss/style.scss';
 import k from './keysets/gmk';
 import fullSizeAnsi from '@/components/layouts/fullSizeAnsi.vue';
+import appFooter from '@/components/footer.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
 
 @Component({
-  components: { fullSizeAnsi, split60, 'chrome-picker': Chrome }
+  components: { fullSizeAnsi, appFooter, split60, 'chrome-picker': Chrome }
 })
 export default class App extends Vue {
   keysets = orderBy(k, [key => key.name.toLowerCase()], ['asc']);
   selectedSet = this.keysets[0].name;
   selectedLayout = 'fullSizeAnsi';
   colorDistance = '';
+  threshold = 30;
   colors: any = '#fff';
   get keyset() {
     return this.keysets.find(x => {
