@@ -1,12 +1,12 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const OUTPUT = path.resolve(__dirname, 'dist')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 function resolve(dir) {
-  return path.join(__dirname, dir)
+  return path.join(__dirname, dir);
 }
 module.exports = {
   devServer: {
@@ -23,7 +23,7 @@ module.exports = {
     app: ['./src/main.ts']
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -105,8 +105,8 @@ module.exports = {
       inject: true
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/[name].css',
-      chunkFilename: 'assets/css/[id].css'
+      filename: 'assets/css/[name].[contenthash].css',
+      chunkFilename: 'assets/css/[id].[contenthash].css'
     })
   ]
-}
+};
