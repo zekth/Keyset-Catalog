@@ -1,5 +1,42 @@
 import { genIds } from '@/utils/keys';
 
+const GmkBaseColors = {
+  _CR: '#171718',
+  _N9: '#393b3b',
+  _CC: '#67635b',
+  _2B: '#727474',
+  _BJ: '#91867a',
+  _CB: '#9b9284',
+  _U9: '#aca693',
+  _L9: '#d8d2c3',
+  _T9: '#c3c3ba',
+  _3K: '#ccc6c0',
+  _2M: '#c6c9c7',
+  _GR1: '#c5c7ca',
+  _CP: '#e1dad1',
+  _WS1: '#f7f2ea',
+  _BR1: '#653c25',
+  _N7: '#00773a',
+  _AE: '#689b34',
+  _3B: '#768e72',
+  _3A: '#7fa580',
+  _V4: '#00579f',
+  _N5: '#0085c2',
+  _TU1: '#00627a',
+  _TU2: '#00a3a9',
+  _DY: '#5d437e',
+  _RO1: '#8d242e',
+  _P3: '#bc261e',
+  _V1: '#d02e1c',
+  _RO2: '#dd1125',
+  _3C: '#c87e74',
+  _MG1: '#cb3d6f',
+  _V2: '#ee6b00',
+  _N6: '#e5a000',
+  _CV: '#f8c200',
+  _GE1: '#ebd400'
+};
+
 const weebAlt = {
   KC_Q: {
     thirdContent: 'た'
