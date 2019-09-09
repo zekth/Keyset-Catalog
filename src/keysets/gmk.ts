@@ -371,7 +371,7 @@ const sets = [
   },
   {
     name: 'Plum',
-    designer: '',
+    designer: 'Jessica',
     colors: {
       base: {
         background: '#ded0af',
@@ -521,16 +521,16 @@ const sets = [
     designer: '',
     colors: {
       base: {
-        background: '#cbcdd1',
-        color: '#695182'
+        background: GmkBaseColors._2M,
+        color: GmkBaseColors._DY
       },
       mod: {
-        background: '#635e5d',
-        color: '#47aeb9'
+        background: GmkBaseColors._2B,
+        color: GmkBaseColors._TU2
       },
       accent: {
-        background: '#47aeb9',
-        color: '#695182'
+        background: GmkBaseColors._TU2,
+        color: GmkBaseColors._DY
       }
     }
   },
@@ -587,7 +587,7 @@ const sets = [
       },
       accent: {
         background: GmkBaseColors._AE,
-        color:  GmkBaseColors._WS1
+        color: GmkBaseColors._WS1
       }
     }
   },
