@@ -15,6 +15,7 @@ export function genKeyData(
   thirdContent: string
 ) {
   let output = {
+    key,
     content,
     subContent,
     thirdContent,

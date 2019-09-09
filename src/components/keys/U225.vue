@@ -22,55 +22,73 @@
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
 
-      <text
-        v-if="!isMod"
-        class="key-content"
-        x="160"
-        y="270"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="isMod"
-        class="key-content"
-        x="160"
-        y="370"
-        font-size="130px"
-        :fill="data.colors.color"
-      >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="data.subContent"
-        class="key-content"
-        x="160"
-        y="500"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.subContent }}
-      </text>
-      <text
-        v-if="data.thirdContent"
-        class="key-content"
-        x="430"
-        y="500"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.thirdContent }}
-      </text>
+      <g v-if="!reservedKeys.includes(data.key)">
+        <text
+          v-if="!isMod"
+          class="key-content"
+          x="160"
+          y="270"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="isMod"
+          class="key-content"
+          x="160"
+          y="370"
+          font-size="130px"
+          :fill="data.colors.color"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="data.subContent"
+          class="key-content"
+          x="160"
+          y="500"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.subContent }}
+        </text>
+        <text
+          v-if="data.thirdContent"
+          class="key-content"
+          x="430"
+          y="500"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.thirdContent }}
+        </text>
+      </g>
       <text class="cap-size" x="1150" y="680" font-size="180px" fill="white">
         2.25
       </text>
+      <g v-if="data.key === 'KC_ENT'" transform="scale(0.9),translate(50,90)">
+        <enterLegend :color="data.colors.color" />
+      </g>
+
+      <g v-if="data.key === 'KC_LSFT'" transform="scale(1),translate(-200,60)">
+        <shift225 :color="data.colors.color" />
+      </g>
     </g>
   </svg>
 </template>
 
 <script>
+import enterLegend from './legends/enter.vue';
+import shift225 from './legends/shift225.vue';
+
 export default {
-  props: ['data', 'isMod']
+  components: { enterLegend, shift225 },
+  props: ['data', 'isMod'],
+  data() {
+    return {
+      reservedKeys: ['KC_ENT', 'KC_LSFT']
+    };
+  }
 };
 </script>
