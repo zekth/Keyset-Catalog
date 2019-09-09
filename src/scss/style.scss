@@ -1,6 +1,20 @@
 // @import './variables/darkBootstrapVars'; <= Dark mode vars
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+@font-face {
+  font-family: 'Helvetica Rounded LT';
+  src: url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.eot');
+  src: url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/4633d82b666bc288aaca2e58aeb89690.svg#Helvetica Rounded LT')
+      format('svg');
+}
 
 #render-zone {
   height: 380px;
@@ -13,24 +27,24 @@
   fill-opacity: 0.78;
 }
 .key-content {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica Rounded LT';
   font-weight: bold;
 }
 .render-container {
   display: inline-block;
-position: relative;
-width: 100%;
-vertical-align: middle;
-overflow: hidden;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
 }
 .keycap {
   transform: scale(0.1);
 }
-.keycap.U2V{
-  text{
-    writing-mode: tb;           /* SVG 1 syntax */
+.keycap.U2V {
+  text {
+    writing-mode: tb; /* SVG 1 syntax */
     glyph-orientation-vertical: 0;
-    writing-mode: vertical-rl;  /* CSS3 syntax */
+    writing-mode: vertical-rl; /* CSS3 syntax */
     text-orientation: upright;
     text-anchor: middle;
   }
