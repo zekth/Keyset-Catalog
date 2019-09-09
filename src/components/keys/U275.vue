@@ -52,6 +52,9 @@
       >
         {{ data.subContent }}
       </text>
+      <text class="cap-size" x="1600" y="680" font-size="180px" fill="white">
+        2.75
+      </text>
     </g>
   </svg>
 </template>

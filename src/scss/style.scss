@@ -23,6 +23,17 @@
     overflow: initial;
   }
 }
+.keycap {
+  transform: scale(0.1);
+  text.cap-size {
+    display: none;
+  }
+  &:hover {
+    text.cap-size {
+      display: initial;
+    }
+  }
+}
 .key-shadow {
   fill-opacity: 0.78;
 }
@@ -37,9 +48,7 @@
   vertical-align: middle;
   overflow: hidden;
 }
-.keycap {
-  transform: scale(0.1);
-}
+
 .keycap.U2V {
   text {
     writing-mode: tb; /* SVG 1 syntax */

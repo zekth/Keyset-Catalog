@@ -59,6 +59,9 @@
       >
         {{ data.thirdContent }}
       </text>
+      <text class="cap-size" x="350" y="680" font-size="180px" fill="white">
+        1.00
+      </text>
     </g>
   </svg>
 </template>
