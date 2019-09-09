@@ -555,6 +555,180 @@ const sets = [
     }
   },
   {
+    name: 'Oblivion',
+    designer: '',
+    colors: {
+      base: {
+        background: '#596060',
+        color: '#b3b1a3'
+      },
+      mod: {
+        background: '#424242',
+        color: '#b3b1a3'
+      },
+      accent: {
+        background: '#424242',
+        color: '#607536'
+      },
+      purpleMod: {
+        background: '#424242',
+        color: '#8a879d'
+      },
+      redMod: {
+        background: '#424242',
+        color: '#a55449'
+      },
+      blueMod: {
+        background: '#424242',
+        color: '#32697d'
+      },
+      orangeMod: {
+        background: '#424242',
+        color: '#8f7227'
+      }
+    },
+    specialKeys: {
+      KC_CAPSLOCK: {
+        type: 'accent'
+      },
+      KC_ESC: {
+        type: 'redMod'
+      },
+      KC_LSFT: {
+        type: 'orangeMod'
+      },
+      KC_RSFT: {
+        type: 'orangeMod'
+      },
+      KC_TAB: {
+        type: 'purpleMod'
+      },
+      KC_BSPC: {
+        type: 'purpleMod'
+      },
+      KC_PENT: {
+        type: 'accent'
+      },
+      KC_NLCK: {
+        type: 'redMod'
+      },
+      KC_LGUI: {
+        type: 'redMod'
+      },
+      KC_RGUI: {
+        type: 'redMod'
+      },
+      KC_LCTL: {
+        type: 'blueMod'
+      },
+      KC_LALT: {
+        type: 'blueMod'
+      },
+      KC_RALT: {
+        type: 'blueMod'
+      },
+      KC_APP: {
+        type: 'blueMod'
+      },
+      KC_RCTL: {
+        type: 'blueMod'
+      },
+      KC_PSCR: {
+        type: 'mod'
+      },
+      KC_SLCK: {
+        type: 'mod'
+      },
+      KC_PAUS: {
+        type: 'mod'
+      },
+      KC_INS: {
+        type: 'mod'
+      },
+      KC_HOME: {
+        type: 'mod'
+      },
+      KC_PGUP: {
+        type: 'mod'
+      },
+      KC_DEL: {
+        type: 'mod'
+      },
+      KC_END: {
+        type: 'mod'
+      },
+      KC_PGDN: {
+        type: 'mod'
+      },
+      KC_UP: {
+        type: 'mod'
+      },
+      KC_LEFT: {
+        type: 'mod'
+      },
+      KC_DOWN: {
+        type: 'mod'
+      },
+      KC_RGHT: {
+        type: 'mod'
+      }
+    }
+  },
+  {
+    name: 'Phantom',
+    designer: '',
+    colors: {
+      base: {
+        background: '#302042',
+        color: '#bcac71'
+      },
+      mod: {
+        background: '#302042',
+        color: '#bcac71'
+      },
+      accent: {
+        background: '#bcac71',
+        color: '#302042'
+      }
+    }
+  },
+  {
+    name: 'Space Cadet',
+    designer: '',
+    colors: {
+      base: {
+        background: '#5c6064',
+        color: '#f9fbfa'
+      },
+      mod: {
+        background: '#216a99',
+        color: '#f9fbfa'
+      },
+      accent: {
+        background: '#216a99',
+        color: '#f9fbfa'
+      }
+    }
+  },
+  {
+    name: 'Camping',
+    designer: '',
+    colors: {
+      base: {
+        background: '#dbd4c9',
+        color: '#506d57'
+      },
+      mod: {
+        background: '#506d57',
+        color: '#dbd4c9'
+      },
+      accent: {
+        background: '#6c3638',
+        color: '#dbd4c9'
+      }
+    }
+  },
+  {
     name: 'Red Samurai',
     designer: '',
     colors: {
