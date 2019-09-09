@@ -519,6 +519,24 @@ const sets = [
     }
   },
   {
+    name: 'Retro',
+    designer: 'Matt3o',
+    colors: {
+      base: {
+        background: '#5a2b0c',
+        color: '#fffdf8'
+      },
+      mod: {
+        background: '#701111',
+        color: '#fffdf8'
+      },
+      accent: {
+        background: '#8cb623',
+        color: '#fffdf8'
+      }
+    }
+  },
+  {
     name: 'Sandstorm',
     designer: 'Zambumon',
     colors: {
