@@ -1,5 +1,12 @@
-// @import './variables/darkBootstrapVars'; <= Dark mode vars
-@import '../../node_modules/bootstrap/scss/bootstrap';
+
+html.dark {
+  @import './variables/darkBootstrapVars';
+  @import '../../node_modules/bootstrap/scss/bootstrap';
+}
+html {
+  @import '../../node_modules/bootstrap/scss/bootstrap';
+}
+
 
 @font-face {
   font-family: 'Helvetica Rounded LT';

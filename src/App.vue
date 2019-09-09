@@ -93,20 +93,19 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <div class="col-lg-6">
-          <button
-            class="btn btn-sm btn-info"
-            v-on:click="toggleCustomKeyboard()"
-          >
-            Customize keyboard case
-          </button>
-          <div
-            v-bind:class="{ collapse: !showCustomKeyboard }"
-            style="margin-top:10px;margin-bottom:10px;"
-          >
-            <chrome-picker v-model="keyboardColor" />
-          </div>
+      <div class="col-lg-4">
+        <label>Dark mode</label>
+        <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
+      </div>
+      <div class="col-lg-4">
+        <button class="btn btn-sm btn-info" v-on:click="toggleCustomKeyboard()">
+          Customize keyboard case
+        </button>
+        <div
+          v-bind:class="{ collapse: !showCustomKeyboard }"
+          style="margin-top:10px;margin-bottom:10px;"
+        >
+          <chrome-picker v-model="keyboardColor" />
         </div>
       </div>
     </div>
@@ -134,6 +133,7 @@
 <script lang="ts">
 import VueSlider from 'vue-slider-component';
 import 'vue-slider-component/theme/antd.css';
+import { ToggleButton } from 'vue-js-toggle-button';
 import { orderBy, isEmpty } from 'lodash';
 import { from } from 'nearest-color';
 import { Component, Vue } from 'vue-property-decorator';
@@ -148,6 +148,7 @@ import split60 from '@/components/layouts/60SplitBckSp.vue';
     VueSlider,
     fullSizeAnsi,
     appFooter,
+    ToggleButton,
     split60,
     'chrome-picker': Chrome
   }
@@ -159,6 +160,7 @@ export default class App extends Vue {
   ].id;
   selectedLayout = 'fullSizeAnsi';
   threshold = 100;
+  darkMode = localStorage && localStorage.getItem('darkMode') ? true : false;
   colors: any = '#fff';
   showCustomKeyboard = false;
   keyboardColor = {
@@ -174,6 +176,11 @@ export default class App extends Vue {
       return x.id === this.selectedSet;
     });
   }
+  mounted() {
+    if (this.darkMode) {
+      this.toggleDarkMode({ value: true });
+    }
+  }
   toggleCustomKeyboard() {
     this.showCustomKeyboard = !this.showCustomKeyboard;
   }
@@ -182,6 +189,17 @@ export default class App extends Vue {
   }
   changeSet(s) {
     this.selectedSet = s;
+  }
+  toggleDarkMode(e) {
+    if (e.value) {
+      document.getElementsByTagName('html')[0].classList.add('dark');
+      if (localStorage) {
+        localStorage.setItem('darkMode', 'true');
+      }
+    } else {
+      document.getElementsByTagName('html')[0].classList.remove('dark');
+      localStorage.removeItem('darkMode');
+    }
   }
   findKeyset(type) {
     let colorsToTest = {};
