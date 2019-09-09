@@ -334,6 +334,24 @@ const sets = [
     }
   },
   {
+    name: 'Aero',
+    designer: '',
+    colors: {
+      base: {
+        background: GmkBaseColors._TU1,
+        color: GmkBaseColors._GE1
+      },
+      mod: {
+        background: GmkBaseColors._TU2,
+        color: GmkBaseColors._GE1
+      },
+      accent: {
+        background: GmkBaseColors._V2,
+        color: GmkBaseColors._CV
+      }
+    }
+  },
+  {
     name: 'Jamon',
     designer: 'zambumon',
     colors: {
@@ -561,15 +579,15 @@ const sets = [
     colors: {
       base: {
         background: '#5a2b0c',
-        color: '#fffdf8'
+        color: GmkBaseColors._WS1
       },
       mod: {
         background: '#701111',
-        color: '#fffdf8'
+        color: GmkBaseColors._WS1
       },
       accent: {
-        background: '#8cb623',
-        color: '#fffdf8'
+        background: GmkBaseColors._AE,
+        color:  GmkBaseColors._WS1
       }
     }
   },
