@@ -8,46 +8,56 @@
         x2="50%"
         y2="100%"
       >
-        <stop offset="0%" stop-color="#808080" />
-        <stop offset="100%" stop-color="#e0e0e0" />
+        <stop offset="0%" :stop-color="keyboardGradientStart" />
+        <stop offset="100%" :stop-color="keyboardGradientEnd" />
       </linearGradient>
-    </defs>
-    <pattern>
-      <pattern
-        id="noise"
-        width="1"
-        height="1"
-        patternContentUnits="objectBoundingBox"
+      <filter
+        id="led-glow"
+        x="-5000%"
+        y="-5000%"
+        width="10000%"
+        height="10000%"
       >
-        <image
-          xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/160607/metal.png"
-          x="0"
-          y="0"
-          width="1"
-          height="1"
+        <feFlood result="flood" flood-color="#62d446" flood-opacity="0.6" />
+        <feComposite
+          in="flood"
+          result="mask"
+          in2="SourceGraphic"
+          operator="in"
         />
-        <rect
-          width="1"
-          height="1"
-          fill="url(#gradient-vertical)"
-          style="mix-blend-mode: multiply;"
-        />
-      </pattern>
-    </pattern>
-    <g class="keyboard-case">
-      <!-- <rect
+        <feMorphology in="mask" result="dilated" operator="dilate" radius="2" />
+        <feGaussianBlur in="dilated" result="blurred" stdDeviation="5" />
+        <feMerge>
+          <feMergeNode in="blurred" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    <pattern
+      id="noise"
+      width="1"
+      height="1"
+      patternContentUnits="objectBoundingBox"
+    >
+      <image
+        xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/160607/metal.png"
         x="0"
         y="0"
-        :fill="keyboardColor"
-        width="1750"
-        height="510"
-        rx="7"
-        ry="7"
-      />-->
+        width="1"
+        height="1"
+      />
+      <rect
+        width="1"
+        height="1"
+        fill="url(#gradient-vertical)"
+        style="mix-blend-mode: multiply;"
+      />
+    </pattern>
+    <g class="keyboard-case">
       <rect
         x="0"
         y="0"
-        :fill="keyboardColor"
+        fill="url(#noise)"
         width="1750"
         height="510"
         rx="7"
@@ -135,6 +145,46 @@
         rx="7"
         ry="7"
       />
+      <g class="keyboard-leds">
+        <line
+          x1="1557"
+          y1="90"
+          x2="1608"
+          y2="90"
+          style="stroke:rgb(240,240,240);stroke-width:3"
+        />
+        <line
+          x1="1632"
+          y1="90"
+          x2="1683"
+          y2="90"
+          style="stroke:rgb(240,240,240);stroke-width:3"
+        />
+        <circle cx="1545" cy="90" r="8" />
+        <circle
+          cx="1545"
+          cy="90"
+          r="5"
+          fill="#62d446"
+          filter="url(#led-glow)"
+        />
+        <circle cx="1620" cy="90" r="8" />
+        <circle
+          cx="1620"
+          cy="90"
+          r="5"
+          fill="#62d446"
+          filter="url(#led-glow)"
+        />
+        <circle cx="1695" cy="90" r="8" />
+        <circle
+          cx="1695"
+          cy="90"
+          r="5"
+          fill="#62d446"
+          filter="url(#led-glow)"
+        />
+      </g>
     </g>
     <g transform="translate(15, 20)">
       <U1 x="0" :data="getKeyData('KC_ESC', 'accent', 'Esc')" isMod="true" />
@@ -324,6 +374,7 @@
 </template>
 
 <script>
+import tinycolor from 'tinycolor2';
 import { genKeyData } from '../../utils/keys';
 import U1 from '../keys/U1.vue';
 import U125 from '../keys/U125.vue';
@@ -337,6 +388,18 @@ import U2V from '../keys/U2vertical.vue';
 export default {
   props: ['keyset', 'keyboardColor'],
   components: { U1, U125, U2V, U15, U175, U275, U2, U225, U625 },
+  computed: {
+    keyboardGradientStart: function() {
+      return tinycolor(this.keyboardColor)
+        .darken(5)
+        .toString();
+    },
+    keyboardGradientEnd: function() {
+      return tinycolor(this.keyboardColor)
+        .lighten(5)
+        .toString();
+    }
+  },
   methods: {
     getKeyData(key, baseColors, content, subContent, thirdContent) {
       return genKeyData(

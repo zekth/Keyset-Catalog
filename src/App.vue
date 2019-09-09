@@ -162,7 +162,7 @@ export default class App extends Vue {
   colors: any = '#fff';
   showCustomKeyboard = false;
   keyboardColor = {
-    hex: '#1f1f1f'
+    hex: '#322B2B'
   };
   searchResult: any[] = [];
   showSearch = false;

@@ -121,11 +121,8 @@ Also `weebAlt` and `weeb` are stored as const because it's used in several keyse
 ## TODO
 
 - Add Keysets
-- Make the Search results more than One
-- Add Threshold distance handling
 - Add research on color of writing and not only the background
 - Add an editor for keysets
 - Add more layouts
-- Fix ugly fixed size of keyboard render area
 - Make a better UI
 - Improve todo list?

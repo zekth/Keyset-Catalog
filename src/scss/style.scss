@@ -1,4 +1,7 @@
+// @import './variables/darkBootstrapVars'; <= Dark mode vars
 @import '../../node_modules/bootstrap/scss/bootstrap';
+
+
 #render-zone {
   height: 380px;
   width: 1200px;
