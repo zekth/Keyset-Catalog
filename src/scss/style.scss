@@ -1,3 +1,9 @@
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1400px
+) !default;
 
 html.dark {
   @import './variables/darkBootstrapVars';

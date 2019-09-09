@@ -21,44 +21,56 @@
         d="M112.45,102.85v428.96c0,14.52,10.4,26.95,24.69,29.51l0,0c145.74,26.15,294.97,26.15,440.72,0l0,0
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
-
-      <text
-        v-if="!isMod"
-        class="key-content"
-        x="160"
-        y="270"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="isMod"
-        class="key-content"
-        x="360"
-        y="690"
-        font-size="180px"
-        font-weight="bold"
-        :fill="data.colors.color"
-      >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="data.subContent"
-        class="key-content"
-        x="220"
-        y="500"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.subContent }}
-      </text>
+      <g v-if="!reservedKeys.includes(data.key)">
+        <text
+          v-if="!isMod"
+          class="key-content"
+          x="160"
+          y="270"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="isMod"
+          class="key-content"
+          x="360"
+          y="690"
+          font-size="180px"
+          font-weight="bold"
+          :fill="data.colors.color"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="data.subContent"
+          class="key-content"
+          x="220"
+          y="500"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.subContent }}
+        </text>
+      </g>
+      <g v-if="data.key === 'KC_PENT'" transform="scale(1),translate(-530,370)">
+        <pEnter :color="data.colors.color" />
+      </g>
     </g>
   </svg>
 </template>
 
 <script>
+import pEnter from './legends/pEnter.vue';
+
 export default {
-  props: ['data', 'isMod']
+  components: { pEnter },
+  props: ['data', 'isMod'],
+  data() {
+    return {
+      reservedKeys: ['KC_PENT']
+    };
+  }
 };
 </script>

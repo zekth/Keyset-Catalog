@@ -85,7 +85,7 @@
         x="1170"
         y="112"
         fill="#080808"
-        width="230"
+        width="232"
         height="157"
         rx="7"
         ry="7"
@@ -94,7 +94,7 @@
         x="1170"
         y="15"
         fill="#080808"
-        width="230"
+        width="232"
         height="81"
         rx="7"
         ry="7"
@@ -227,7 +227,7 @@
       <U1 x="825" :data="getKeyData('KC_MINS', 'base', '_', '-')" />
       <U1 x="900" :data="getKeyData('KC_EQL', 'base', '+', '=')" />
       <U2
-        x="975"
+        x="977"
         :data="getKeyData('KC_BSPC', 'mod', 'Backspace')"
         isMod="true"
       />

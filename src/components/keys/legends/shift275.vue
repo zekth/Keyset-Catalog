@@ -1,6 +1,6 @@
 <template>
   <svg
-    viewBox="0.002 -0.585 56.700002 29.7"
+    viewBox="0.002 -0.585 69.300004 29.7"
     enable-background="new 0.002 -0.585 25.625 28.584"
     xml:space="preserve"
     :stroke="color"
@@ -8,14 +8,16 @@
   >
     <g transform="translate(0,-8.1)">
       <polygon
-        points="15.567,25.472 20.104,25.472 20.104,33.225 20.104,33.225 26.587,33.225 26.587,33.225 26.587,25.472 31.126,25.472 23.396,18.042 "
+        points="20.104,33.225 26.587,33.225 26.587,33.225 26.587,25.472 31.126,25.472 23.396,18.042 15.567,25.472 20.104,25.472 20.104,33.225 "
         stroke-miterlimit="10"
         style="fill:none;stroke-width:1.08000004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none"
         transform="matrix(0.89773884,0,0,0.89773884,-13.418245,-1.0057875)"
       />
       <path
+        id="path6"
         d="m 23.394434,20.014767 c -0.522485,-0.501836 -0.88158,-0.76218 -1.589896,-0.76218 -0.783726,0 -1.529747,0.299844 -1.529747,1.173344 0,0.898636 0.991104,1.016241 1.632986,1.198482 0.631111,0.179547 1.62042,0.27381 1.62042,1.342119 0,0.829511 -0.823227,1.211947 -1.658124,1.211947 -0.721782,0 -1.312494,-0.430016 -1.70301,-0.915693"
         stroke-miterlimit="10"
+        inkscape:connector-curvature="0"
         style="fill:none;stroke-width:0.969558;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none"
       />
       <line

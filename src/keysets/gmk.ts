@@ -231,12 +231,6 @@ const sets = [
         background: 'red',
         color: 'white'
       }
-    },
-    specialKeys: {
-      KC_ESC: {
-        content: 'Putain',
-        type: 'ptn'
-      }
     }
   },
   {
@@ -261,10 +255,6 @@ const sets = [
       }
     },
     specialKeys: {
-      KC_ESC: {
-        content: 'Putain',
-        type: 'ptn'
-      },
       ...weebAlt
     }
   },
