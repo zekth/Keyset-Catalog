@@ -15,7 +15,7 @@
           <select v-model="selectedLayout" class="form-control">
             <option value="fullSizeAnsi">Full Size Ansi</option>
             <option value="wklTkl">Tenkeyless Winkeyless</option>
-            <!-- <option value="60SplitBckSp">60% Split Backspace</option> -->
+            <option value="60SplitBckSp">60% Split Backspace</option>
           </select>
         </div>
       </div>
