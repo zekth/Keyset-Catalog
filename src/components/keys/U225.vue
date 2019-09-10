@@ -67,7 +67,7 @@
       <text class="cap-size" x="1150" y="680" font-size="180px" fill="white">
         2.25
       </text>
-      <g v-if="data.key === 'KC_ENT'" transform="scale(1),translate(190,-40)">
+      <g v-if="data.key === 'KC_ENT'" transform="scale(1),translate(190,-60)">
         <enterLegend :color="data.colors.color" />
       </g>
 
