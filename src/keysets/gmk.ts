@@ -1315,7 +1315,7 @@ const sets = [
       },
       accent: {
         background: '#5ed8df',
-        color: '#8e71a2'
+        color: '#170b19'
       }
     }
   },
