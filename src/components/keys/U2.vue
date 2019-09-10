@@ -53,7 +53,7 @@
           {{ data.subContent }}
         </text>
       </g>
-      <g v-if="data.key === 'KC_BSPC'" transform="scale(1),translate(-120,70)">
+      <g v-if="data.key === 'KC_BSPC'" transform="scale(1),translate(120,70)">
         <backspace :color="data.colors.color" />
       </g>
       <text class="cap-size" x="1010" y="680" font-size="180px" fill="white">

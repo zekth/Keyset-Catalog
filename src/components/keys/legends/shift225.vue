@@ -1,10 +1,9 @@
 <template>
   <svg
     viewBox="0.002 -0.585 56.700002 29.7"
-    enable-background="new 0.002 -0.585 25.625 28.584"
-    xml:space="preserve"
     :stroke="color"
     :fill="color"
+    preserveAspectRatio="xMinYMin meet"
   >
     <g transform="translate(0,-8.1)">
       <polygon

@@ -67,11 +67,11 @@
       <text class="cap-size" x="1150" y="680" font-size="180px" fill="white">
         2.25
       </text>
-      <g v-if="data.key === 'KC_ENT'" transform="scale(0.9),translate(50,90)">
+      <g v-if="data.key === 'KC_ENT'" transform="scale(1),translate(190,-40)">
         <enterLegend :color="data.colors.color" />
       </g>
 
-      <g v-if="data.key === 'KC_LSFT'" transform="scale(1),translate(-200,60)">
+      <g v-if="data.key === 'KC_LSFT'" transform="scale(1),translate(180,60)">
         <shift225 :color="data.colors.color" />
       </g>
     </g>

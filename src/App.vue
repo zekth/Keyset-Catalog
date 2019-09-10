@@ -170,8 +170,7 @@ export default class App extends Vue {
   selectedSet: any = this.keysets[
     Math.floor(Math.random() * Math.floor(k.length))
   ].id;
-  // selectedLayout = 'fullSizeAnsi';wklTkl
-  selectedLayout = 'wklTkl';
+  selectedLayout = 'fullSizeAnsi';
   threshold = 100;
   darkMode = localStorage && localStorage.getItem('darkMode') ? true : false;
   colors: any = '#fff';

@@ -54,7 +54,7 @@
           {{ data.subContent }}
         </text>
       </g>
-      <g v-if="data.key === 'KC_RSFT'" transform="scale(1),translate(-90,70)">
+      <g v-if="data.key === 'KC_RSFT'" transform="translate(180,55) scale(1)">
         <shift275 :color="data.colors.color" />
       </g>
       <text class="cap-size" x="1600" y="680" font-size="180px" fill="white">
