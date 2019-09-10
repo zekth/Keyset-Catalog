@@ -1,9 +1,5 @@
 <template>
-  <svg
-    viewBox="0 0 1770 520"
-    preserveAspectRatio="xMinYMin meet"
-    transform="translate(150, 0)"
-  >
+  <svg viewBox="0 0 1420 520" preserveAspectRatio="xMinYMin meet">
     <defs>
       <linearGradient
         id="gradient-vertical"

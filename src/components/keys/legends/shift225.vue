@@ -1,10 +1,5 @@
 <template>
-  <svg
-    viewBox="0.002 -0.585 56.700002 29.7"
-    :stroke="color"
-    :fill="color"
-    preserveAspectRatio="xMinYMin meet"
-  >
+  <svg :stroke="color" :fill="color">
     <g transform="translate(0,-8.1)">
       <polygon
         points="15.567,25.472 20.104,25.472 20.104,33.225 20.104,33.225 26.587,33.225 26.587,33.225 26.587,25.472 31.126,25.472 23.396,18.042 "

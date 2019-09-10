@@ -1,10 +1,5 @@
 <template>
-  <svg
-    viewBox="0.002 -0.585 93.614174 30.755903"
-    :stroke="color"
-    :fill="color"
-    preserveAspectRatio="xMinYMin meet"
-  >
+  <svg :stroke="color" :fill="color">
     <g transform="translate(0,-0.06249996)">
       <path
         d="m 30.553424,18.180517 -3.377569,0 0,5.32916 3.506966,0"
