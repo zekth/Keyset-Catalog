@@ -342,6 +342,24 @@ const sets = [
     }
   },
   {
+    name: 'Coniferous',
+    designer: '',
+    colors: {
+      base: {
+        background: GmkBaseColors._U9,
+        color: GmkBaseColors._N7
+      },
+      mod: {
+        background: GmkBaseColors._N9,
+        color: GmkBaseColors._N7
+      },
+      accent: {
+        background: GmkBaseColors._N7,
+        color: GmkBaseColors._U9
+      }
+    }
+  },
+  {
     name: 'Jamon',
     designer: 'zambumon',
     colors: {
