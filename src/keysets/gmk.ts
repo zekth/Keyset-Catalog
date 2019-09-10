@@ -227,32 +227,6 @@ const sets = [
         background: '#fb7279',
         color: '#3e728f'
       },
-      ptn: {
-        background: 'red',
-        color: 'white'
-      }
-    }
-  },
-  {
-    name: 'Bento - weeb alt',
-    designer: 'biip',
-    colors: {
-      base: {
-        background: '#fff3ef',
-        color: '#3e728f'
-      },
-      mod: {
-        background: '#3e728f',
-        color: '#fb7279'
-      },
-      accent: {
-        background: '#fb7279',
-        color: '#3e728f'
-      },
-      ptn: {
-        background: 'red',
-        color: 'white'
-      }
     },
     specialKeys: {
       ...weebAlt
