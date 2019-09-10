@@ -266,16 +266,16 @@ const sets = [
     designer: 'EnjoyMyInSec',
     colors: {
       base: {
-        background: '#2a515d',
-        color: '#72e446'
+        background: '#00464f',
+        color: '#54bf19'
       },
       mod: {
-        background: '#2c3a41',
-        color: '#72e446'
+        background: '#263740',
+        color: '#54bf19'
       },
       accent: {
-        background: '#72e446',
-        color: '#2c3a41'
+        background: '#54bf19',
+        color: '#263740'
       }
     }
   },
