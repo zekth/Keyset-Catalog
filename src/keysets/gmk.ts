@@ -292,16 +292,16 @@ const sets = [
     designer: '',
     colors: {
       base: {
-        background: '#393b3b',
+        background: GmkBaseColors._N9,
         color: '#689b34'
       },
       mod: {
-        background: '#393b3b',
+        background: GmkBaseColors._N9,
         color: '#689b34'
       },
       accent: {
         background: '#689b34',
-        color: '#393b3b'
+        color: GmkBaseColors._N9
       }
     },
     specialKeys: {
@@ -1103,16 +1103,16 @@ const sets = [
     designer: 'TKC',
     colors: {
       base: {
-        background: '#1b1b19',
-        color: '#f17b24'
+        background: GmkBaseColors._N9,
+        color: GmkBaseColors._V2
       },
       mod: {
-        background: '#1b1b19',
-        color: '#f17b24'
+        background: GmkBaseColors._N9,
+        color: GmkBaseColors._V2
       },
       accent: {
-        background: '#f17b24',
-        color: '#1b1b19'
+        background: GmkBaseColors._V2,
+        color: GmkBaseColors._N9
       }
     }
   },
