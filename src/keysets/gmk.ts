@@ -425,7 +425,7 @@ const sets = [
     }
   },
   {
-    name: 'Miami Night',
+    name: 'Tokio Nights',
     designer: '',
     colors: {
       base: {
