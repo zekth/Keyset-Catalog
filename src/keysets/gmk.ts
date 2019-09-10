@@ -37,7 +37,7 @@ const GmkBaseColors = {
   _GE1: '#ebd400'
 };
 
-const weebAlt = {
+const hiraganasAlt = {
   KC_Q: {
     thirdContent: 'た'
   },
@@ -45,7 +45,7 @@ const weebAlt = {
     thirdContent: 'て'
   },
   KC_E: {
-    thirdContent: 'ぃ'
+    thirdContent: 'い'
   },
   KC_R: {
     thirdContent: 'す'
@@ -62,11 +62,17 @@ const weebAlt = {
   KC_I: {
     thirdContent: 'に'
   },
+  KC_BSLS: {
+    thirdContent: 'む'
+  },
   KC_O: {
     thirdContent: 'ら'
   },
   KC_P: {
-    thirdContent: 'ぜ'
+    thirdContent: 'せ'
+  },
+  KC_SCLN: {
+    thirdContent: 'れ'
   },
   KC_QUOT: {
     thirdContent: 'け'
@@ -110,9 +116,14 @@ const weebAlt = {
   KC_EQL: { thirdContent: 'へ' },
   KC_GRV: { thirdContent: 'ろ' }
 };
-const weeb = {
+const hiraganas = {
   KC_Q: {
     content: 'た',
+    subContent: '',
+    thirdContent: ''
+  },
+  KC_SCLN: {
+    content: 'れ',
     subContent: '',
     thirdContent: ''
   },
@@ -122,7 +133,12 @@ const weeb = {
     thirdContent: ''
   },
   KC_E: {
-    content: 'ぃ',
+    content: 'い',
+    subContent: '',
+    thirdContent: ''
+  },
+  KC_BSLS: {
+    content: 'む',
     subContent: '',
     thirdContent: ''
   },
@@ -229,11 +245,11 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weebAlt
+      ...hiraganasAlt
     }
   },
   {
-    name: 'Bento - true weeb',
+    name: 'Bento - Kobe',
     designer: 'biip',
     colors: {
       base: {
@@ -258,7 +274,7 @@ const sets = [
         content: 'Putain',
         type: 'ptn'
       },
-      ...weeb
+      ...hiraganas
     }
   },
   {
@@ -297,7 +313,7 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weeb
+      ...hiraganas
     }
   },
   {
@@ -498,7 +514,7 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weebAlt
+      ...hiraganasAlt
     }
   },
   {
@@ -591,7 +607,7 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weebAlt
+      ...hiraganasAlt
     }
   },
   {
@@ -960,7 +976,7 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weebAlt
+      ...hiraganasAlt
     }
   },
   {
@@ -1089,7 +1105,7 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weebAlt
+      ...hiraganasAlt
     }
   },
   {
@@ -1447,7 +1463,7 @@ const sets = [
       }
     },
     specialKeys: {
-      ...weebAlt
+      ...hiraganasAlt
     }
   },
   {

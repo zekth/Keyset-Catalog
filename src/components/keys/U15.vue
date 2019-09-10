@@ -52,6 +52,16 @@
       >
         {{ data.subContent }}
       </text>
+      <text
+        v-if="data.thirdContent"
+        class="key-content"
+        x="710"
+        y="500"
+        font-size="180px"
+        :fill="data.colors.color"
+      >
+        {{ data.thirdContent }}
+      </text>
       <text class="cap-size" x="650" y="680" font-size="180px" fill="white">
         1.50
       </text>
