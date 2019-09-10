@@ -14,6 +14,7 @@
           <label for>Layout</label>
           <select v-model="selectedLayout" class="form-control">
             <option value="fullSizeAnsi">Full Size Ansi</option>
+            <option value="wklTkl">Tenkeyless Winkeyless</option>
             <!-- <option value="60SplitBckSp">60% Split Backspace</option> -->
           </select>
         </div>
@@ -88,7 +89,16 @@
             :keyset="keyset"
             :keyboardColor="keyboardColor.hex"
           />
-          <split60 v-if="selectedLayout === '60SplitBckSp'" :keyset="keyset" />
+          <split60
+            v-if="selectedLayout === '60SplitBckSp'"
+            :keyset="keyset"
+            :keyboardColor="keyboardColor.hex"
+          />
+          <wklTkl
+            v-if="selectedLayout === 'wklTkl'"
+            :keyset="keyset"
+            :keyboardColor="keyboardColor.hex"
+          />
         </div>
       </div>
     </div>
@@ -141,6 +151,7 @@ import { Chrome } from 'vue-color';
 import '@/scss/style.scss';
 import k from './keysets/gmk';
 import fullSizeAnsi from '@/components/layouts/fullSizeAnsi.vue';
+import wklTkl from '@/components/layouts/wkl-tkl.vue';
 import appFooter from '@/components/footer.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
 @Component({
@@ -150,6 +161,7 @@ import split60 from '@/components/layouts/60SplitBckSp.vue';
     appFooter,
     ToggleButton,
     split60,
+    wklTkl,
     'chrome-picker': Chrome
   }
 })
@@ -158,7 +170,8 @@ export default class App extends Vue {
   selectedSet: any = this.keysets[
     Math.floor(Math.random() * Math.floor(k.length))
   ].id;
-  selectedLayout = 'fullSizeAnsi';
+  // selectedLayout = 'fullSizeAnsi';wklTkl
+  selectedLayout = 'wklTkl';
   threshold = 100;
   darkMode = localStorage && localStorage.getItem('darkMode') ? true : false;
   colors: any = '#fff';
