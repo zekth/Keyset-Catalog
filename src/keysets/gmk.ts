@@ -226,7 +226,7 @@ const sets = [
       accent: {
         background: '#fb7279',
         color: '#3e728f'
-      },
+      }
     },
     specialKeys: {
       ...weebAlt
@@ -258,6 +258,45 @@ const sets = [
         content: 'Putain',
         type: 'ptn'
       },
+      ...weeb
+    }
+  },
+  {
+    name: 'Wavez',
+    designer: 'EnjoyMyInSec',
+    colors: {
+      base: {
+        background: '#2a515d',
+        color: '#72e446'
+      },
+      mod: {
+        background: '#2c3a41',
+        color: '#72e446'
+      },
+      accent: {
+        background: '#72e446',
+        color: '#2c3a41'
+      }
+    }
+  },
+  {
+    name: 'Wavez - Kobe',
+    designer: 'EnjoyMyInSec',
+    colors: {
+      base: {
+        background: '#2a515d',
+        color: '#72e446'
+      },
+      mod: {
+        background: '#2c3a41',
+        color: '#72e446'
+      },
+      accent: {
+        background: '#72e446',
+        color: '#2c3a41'
+      }
+    },
+    specialKeys: {
       ...weeb
     }
   },
