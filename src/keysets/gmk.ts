@@ -618,36 +618,156 @@ const sets = [
     }
   },
   {
-    name: 'Oblivion',
+    name: 'Oblivion - R1',
     designer: '',
     colors: {
       base: {
         background: '#596060',
-        color: '#b3b1a3'
+        color: GmkBaseColors._L9
       },
       mod: {
         background: '#424242',
-        color: '#b3b1a3'
+        color: GmkBaseColors._L9
       },
       accent: {
         background: '#424242',
-        color: '#607536'
+        color: '#93c247'
       },
       purpleMod: {
         background: '#424242',
-        color: '#8a879d'
+        color: '#a698c5'
       },
       redMod: {
         background: '#424242',
-        color: '#a55449'
+        color: '#ea4221'
       },
       blueMod: {
         background: '#424242',
-        color: '#32697d'
+        color: '#1a8ab7'
       },
       orangeMod: {
         background: '#424242',
-        color: '#8f7227'
+        color: '#ffac00'
+      }
+    },
+    specialKeys: {
+      KC_CAPSLOCK: {
+        type: 'accent'
+      },
+      KC_ESC: {
+        type: 'redMod'
+      },
+      KC_LSFT: {
+        type: 'orangeMod'
+      },
+      KC_RSFT: {
+        type: 'orangeMod'
+      },
+      KC_TAB: {
+        type: 'purpleMod'
+      },
+      KC_BSPC: {
+        type: 'purpleMod'
+      },
+      KC_PENT: {
+        type: 'accent'
+      },
+      KC_NLCK: {
+        type: 'redMod'
+      },
+      KC_LGUI: {
+        type: 'redMod'
+      },
+      KC_RGUI: {
+        type: 'redMod'
+      },
+      KC_LCTL: {
+        type: 'blueMod'
+      },
+      KC_LALT: {
+        type: 'blueMod'
+      },
+      KC_RALT: {
+        type: 'blueMod'
+      },
+      KC_APP: {
+        type: 'blueMod'
+      },
+      KC_RCTL: {
+        type: 'blueMod'
+      },
+      KC_PSCR: {
+        type: 'mod'
+      },
+      KC_SLCK: {
+        type: 'mod'
+      },
+      KC_PAUS: {
+        type: 'mod'
+      },
+      KC_INS: {
+        type: 'mod'
+      },
+      KC_HOME: {
+        type: 'mod'
+      },
+      KC_PGUP: {
+        type: 'mod'
+      },
+      KC_DEL: {
+        type: 'mod'
+      },
+      KC_END: {
+        type: 'mod'
+      },
+      KC_PGDN: {
+        type: 'mod'
+      },
+      KC_UP: {
+        type: 'mod'
+      },
+      KC_LEFT: {
+        type: 'mod'
+      },
+      KC_DOWN: {
+        type: 'mod'
+      },
+      KC_RGHT: {
+        type: 'mod'
+      }
+    }
+  },
+  {
+    name: 'Oblivion - R2',
+    designer: '',
+    colors: {
+      base: {
+        background: '#596060',
+        color: '#c8c3b8'
+      },
+      mod: {
+        background: '#424242',
+        color: '#c8c3b8'
+      },
+      accent: {
+        background: '#424242',
+        color: '#93c247'
+      },
+      purpleMod: {
+        background: '#424242',
+        color: '#a698c5'
+      },
+      redMod: {
+        background: '#424242',
+        color: '#ea4221'
+      },
+      blueMod: {
+        background: '#424242',
+        color: '#1a8ab7'
+      },
+      orangeMod: {
+        background: '#424242',
+        color: '#ffac00'
       }
     },
     specialKeys: {
