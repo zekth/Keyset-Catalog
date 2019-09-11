@@ -8,7 +8,7 @@
     "prettier:fix": "prettier -c \"./src/**/*.{ts,vue}\" --write",
     "lint": "eslint --ext .vue,.ts src --max-warnings 0",
     "lint:fix": "eslint --ext .vue,.ts src --fix",
-    "prebuild": "npm run prettier && npm run lint",
+    "pre:build": "npm run prettier && npm run lint",
     "build": "webpack -d",
     "serve": "npm run build && webpack-dev-server --progress --colors"
   },

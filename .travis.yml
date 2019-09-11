@@ -10,13 +10,19 @@ before_install:
   - npm install
 
 script:
+  - npm run pre:build
   - npm run build
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: dist
-  github_token: $GITHUB_TOKEN
-  keep_history: false
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    local_dir: dist
+    github_token: $GITHUB_TOKEN
+    keep_history: false
+    on:
+      branch: master
+  - provider: script
+    script: bash scripts/deploy-tag.sh
+    on:
+      tags: true
+      branch: master
