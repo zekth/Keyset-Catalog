@@ -63,20 +63,284 @@
         rx="7"
         ry="7"
       />
-      <!-- <rect x="10" y="112" fill="#080808" width="1133" height="385" rx="7" ry="7" />
-      <rect x="1430" y="112" fill="#080808" width="306" height="385" rx="7" ry="7" />
-      <rect x="1170" y="112" fill="#080808" width="232" height="157" rx="7" ry="7" />
-      <rect x="1170" y="15" fill="#080808" width="232" height="81" rx="7" ry="7" />
-      <rect x="10" y="15" fill="#080808" width="82" height="82" rx="7" ry="7" />
-      <rect x="160" y="15" fill="#080808" width="307" height="82" rx="7" ry="7" />
-      <rect x="495" y="15" fill="#080808" width="307" height="82" rx="7" ry="7" />
-      <rect x="835" y="15" fill="#080808" width="307" height="82" rx="7" ry="7" />
-      <rect x="1245" y="339" fill="#080808" width="81" height="84" rx="7" ry="7" />
-      <rect x="1169" y="414" fill="#080808" width="233" height="84" rx="7" ry="7" /> -->
+
+      <g transform="translate(-4,0)">
+        <rect
+          x="61"
+          y="21"
+          fill="#080808"
+          width="80"
+          height="80"
+          rx="7"
+          ry="7"
+        />
+        <rect
+          x="46"
+          y="97"
+          fill="#080808"
+          width="80"
+          height="80"
+          rx="7"
+          ry="7"
+        />
+        <rect
+          x="31"
+          y="173"
+          fill="#080808"
+          width="80"
+          height="80"
+          rx="7"
+          ry="7"
+        />
+      </g>
+
+      <rect
+        x="140"
+        y="31"
+        fill="#080808"
+        width="155"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="126"
+        y="108"
+        fill="#080808"
+        width="191"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="110"
+        y="182"
+        fill="#080808"
+        width="210"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="94"
+        y="258"
+        fill="#080808"
+        width="247"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="90"
+        y="332"
+        fill="#080808"
+        width="117"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+
+      <rect
+        x="290"
+        y="22"
+        fill="#080808"
+        width="80"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+
+      <rect
+        transform="rotate(15)"
+        x="376"
+        y="-69"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(15)"
+        x="343"
+        y="10"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(15)"
+        x="367"
+        y="85"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(15)"
+        x="406"
+        y="160"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(15)"
+        x="392"
+        y="240"
+        fill="#080808"
+        width="116"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(15)"
+        x="508"
+        y="237"
+        fill="#080808"
+        width="155"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(15)"
+        x="676"
+        y="235"
+        fill="#080808"
+        width="82"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+
+      <rect
+        transform="rotate(-15)"
+        x="630"
+        y="275"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(-15)"
+        x="595"
+        y="355"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(-15)"
+        x="614"
+        y="432"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(-15)"
+        x="576"
+        y="510"
+        fill="#080808"
+        width="309"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(-15)"
+        x="579"
+        y="590"
+        fill="#080808"
+        width="219"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        transform="rotate(-15)"
+        x="796"
+        y="593"
+        fill="#080808"
+        width="116"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+
+      <rect
+        x="991"
+        y="23"
+        fill="#080808"
+        width="80"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1063"
+        y="28"
+        fill="#080808"
+        width="236"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="978"
+        y="107"
+        fill="#080808"
+        width="345"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1020"
+        y="182"
+        fill="#080808"
+        width="324"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="998"
+        y="259"
+        fill="#080808"
+        width="363"
+        height="80"
+        rx="7"
+        ry="7"
+      />
+
+      <rect
+        x="1230"
+        y="332"
+        fill="#080808"
+        width="117"
+        height="82"
+        rx="7"
+        ry="7"
+      />
     </g>
 
     <g transform="translate(115, -80)">
-      <g transform="translate(-80,105)">
+      <g transform="translate(-84,105)">
         <U1 x="30" :data="getKeyData('KC_DEL', 'mod', 'Delete')" isMod="true" />
         <U1
           x="15"
@@ -202,7 +466,7 @@
           <U1 x="764" :data="getKeyData('KC_DOT', 'base', '>', '.')" />
           <U1 x="839" :data="getKeyData('KC_SLSH', 'base', '?', '/')" />
           <U175
-            x="917"
+            x="915"
             :data="getKeyData('KC_RSFT', 'mod', 'Shift')"
             isMod="true"
           />
@@ -210,7 +474,7 @@
         </g>
       </g>
       <g transform="translate(-45, 418)">
-        <U15 x="25" :data="getKeyData('KC_LCTL', 'mod', 'Ctrl')" isMod="true" />
+        <U15 x="25" :data="getKeyData('KC_LCTL', 'mod')" isMod="true" />
         <g transform="translate(250, 0),rotate(15)">
           <U15
             x="0"
@@ -221,7 +485,7 @@
           <U2
             x="115"
             y="-3"
-            :data="getKeyData('KC_SPC', 'mod', 'Ctrl')"
+            :data="getKeyData('KC_SPC', 'mod', '')"
             isMod="true"
           />
           <U1
