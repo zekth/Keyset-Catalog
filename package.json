@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "bootstrap": "^4.3.1",
-    "core-js": "^2.6.5",
+    "core-js": "^3.2.1",
     "lodash": "^4.17.11",
     "nearest-color": "^0.4.4",
     "tinycolor2": "^1.4.1",
