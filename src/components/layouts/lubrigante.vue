@@ -259,17 +259,14 @@
 import tinycolor from 'tinycolor2';
 import { genKeyData } from '../../utils/keys';
 import U1 from '../keys/U1.vue';
-import U125 from '../keys/U125.vue';
 import U225 from '../keys/U225.vue';
 import U275 from '../keys/U275.vue';
-import U625 from '../keys/U625.vue';
 import U175 from '../keys/U175.vue';
 import U15 from '../keys/U15.vue';
 import U2 from '../keys/U2.vue';
-import U2V from '../keys/U2vertical.vue';
 export default {
   props: ['keyset', 'keyboardColor'],
-  components: { U1, U125, U2V, U15, U175, U275, U2, U225, U625 },
+  components: { U1, U15, U175, U275, U2, U225 },
   computed: {
     keyboardGradientStart: function() {
       return tinycolor(this.keyboardColor)
