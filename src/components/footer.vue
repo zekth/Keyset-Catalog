@@ -3,7 +3,7 @@
     <p>
       ©
       <a href="https://github.com/zekth">Zekth</a> 2019
-      <span>rev: {{ APP_REV }}</span>
+      <small>rev: {{ APP_REV }}</small>
     </p>
   </footer>
 </template>

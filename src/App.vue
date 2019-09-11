@@ -16,6 +16,7 @@
             <option value="fullSizeAnsi">Full Size Ansi</option>
             <option value="wklTkl">Tenkeyless Winkeyless</option>
             <option value="60SplitBckSp">60% Split Backspace</option>
+            <option value="lubrigante">Lubrigante / Alice</option>
           </select>
         </div>
       </div>
@@ -99,6 +100,11 @@
             :keyset="keyset"
             :keyboardColor="keyboardColor.hex"
           />
+          <lubrigante
+            v-if="selectedLayout === 'lubrigante'"
+            :keyset="keyset"
+            :keyboardColor="keyboardColor.hex"
+          />
         </div>
       </div>
     </div>
@@ -151,6 +157,7 @@ import { Chrome } from 'vue-color';
 import '@/scss/style.scss';
 import k from './keysets/gmk';
 import fullSizeAnsi from '@/components/layouts/fullSizeAnsi.vue';
+import lubrigante from '@/components/layouts/lubrigante.vue';
 import wklTkl from '@/components/layouts/wkl-tkl.vue';
 import appFooter from '@/components/footer.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
@@ -161,6 +168,7 @@ import split60 from '@/components/layouts/60SplitBckSp.vue';
     appFooter,
     ToggleButton,
     split60,
+    lubrigante,
     wklTkl,
     'chrome-picker': Chrome
   }
