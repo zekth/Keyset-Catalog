@@ -1,13 +1,30 @@
 <template>
   <svg viewBox="0 0 1420 520" preserveAspectRatio="xMinYMin meet">
     <defs>
-      <linearGradient id="gradient-vertical" x1="50%" y1="0%" x2="50%" y2="100%">
+      <linearGradient
+        id="gradient-vertical"
+        x1="50%"
+        y1="0%"
+        x2="50%"
+        y2="100%"
+      >
         <stop offset="0%" :stop-color="keyboardGradientStart" />
         <stop offset="100%" :stop-color="keyboardGradientEnd" />
       </linearGradient>
-      <filter id="led-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
+      <filter
+        id="led-glow"
+        x="-5000%"
+        y="-5000%"
+        width="10000%"
+        height="10000%"
+      >
         <feFlood result="flood" flood-color="#62d446" flood-opacity="0.6" />
-        <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in" />
+        <feComposite
+          in="flood"
+          result="mask"
+          in2="SourceGraphic"
+          operator="in"
+        />
         <feMorphology in="mask" result="dilated" operator="dilate" radius="2" />
         <feGaussianBlur in="dilated" result="blurred" stdDeviation="5" />
         <feMerge>
@@ -18,7 +35,13 @@
       <filter id="innershadow" x0="-50%" y0="-50%" width="200%" height="200%">
         <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
         <feOffset dy="2" dx="3" />
-        <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff" />
+        <feComposite
+          in2="SourceAlpha"
+          operator="arithmetic"
+          k2="-1"
+          k3="1"
+          result="shadowDiff"
+        />
 
         <feFlood flood-color="#444444" flood-opacity="0.75" />
         <feComposite in2="shadowDiff" operator="in" />
@@ -26,14 +49,25 @@
 
         <feGaussianBlur in="firstfilter" stdDeviation="3" result="blur2" />
         <feOffset dy="-2" dx="-3" />
-        <feComposite in2="firstfilter" operator="arithmetic" k2="-1" k3="1" result="shadowDiff" />
+        <feComposite
+          in2="firstfilter"
+          operator="arithmetic"
+          k2="-1"
+          k3="1"
+          result="shadowDiff"
+        />
 
         <feFlood flood-color="#444444" flood-opacity="0.75" />
         <feComposite in2="shadowDiff" operator="in" />
         <feComposite in2="firstfilter" operator="over" />
       </filter>
     </defs>
-    <pattern id="noise" width="1" height="1" patternContentUnits="objectBoundingBox">
+    <pattern
+      id="noise"
+      width="1"
+      height="1"
+      patternContentUnits="objectBoundingBox"
+    >
       <image
         xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/160607/metal.png"
         x="0"
@@ -41,21 +75,114 @@
         width="1"
         height="1"
       />
-      <rect width="1" height="1" fill="url(#gradient-vertical)" style="mix-blend-mode: multiply;" />
+      <rect
+        width="1"
+        height="1"
+        fill="url(#gradient-vertical)"
+        style="mix-blend-mode: multiply;"
+      />
     </pattern>
     <g class="keyboard-case">
-      <rect x="0" y="0" fill="url(#noise)" width="1410" height="510" rx="7" ry="7" />
-      <rect x="10" y="112" fill="#080808" width="1133" height="385" rx="7" ry="7" />
-      <rect x="1170" y="112" fill="#080808" width="232" height="157" rx="7" ry="7" />
-      <rect x="1170" y="15" fill="#080808" width="232" height="81" rx="7" ry="7" />
+      <rect
+        x="0"
+        y="0"
+        fill="url(#noise)"
+        width="1410"
+        height="510"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="10"
+        y="112"
+        fill="#080808"
+        width="1133"
+        height="385"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1170"
+        y="112"
+        fill="#080808"
+        width="232"
+        height="157"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1170"
+        y="15"
+        fill="#080808"
+        width="232"
+        height="81"
+        rx="7"
+        ry="7"
+      />
       <rect x="10" y="15" fill="#080808" width="82" height="82" rx="7" ry="7" />
-      <rect x="160" y="15" fill="#080808" width="307" height="82" rx="7" ry="7" />
-      <rect x="495" y="15" fill="#080808" width="307" height="82" rx="7" ry="7" />
-      <rect x="835" y="15" fill="#080808" width="307" height="82" rx="7" ry="7" />
-      <rect x="1245" y="339" fill="#080808" width="81" height="84" rx="7" ry="7" />
-      <rect x="1169" y="414" fill="#080808" width="233" height="84" rx="7" ry="7" />
-      <rect x="127" y="420" fill="url(#noise)" width="70" height="82" rx="7" ry="7" />
-      <rect x="956" y="420" fill="url(#noise)" width="70" height="82" rx="7" ry="7" />
+      <rect
+        x="160"
+        y="15"
+        fill="#080808"
+        width="307"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="495"
+        y="15"
+        fill="#080808"
+        width="307"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="835"
+        y="15"
+        fill="#080808"
+        width="307"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1245"
+        y="339"
+        fill="#080808"
+        width="81"
+        height="84"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="1169"
+        y="414"
+        fill="#080808"
+        width="233"
+        height="84"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="127"
+        y="420"
+        fill="url(#noise)"
+        width="70"
+        height="82"
+        rx="7"
+        ry="7"
+      />
+      <rect
+        x="956"
+        y="420"
+        fill="url(#noise)"
+        width="70"
+        height="82"
+        rx="7"
+        ry="7"
+      />
       <g transform="translate(1200,290)" style="opacity:0.4">
         <line
           x1="0"
@@ -287,9 +414,17 @@
       <U1 x="900" :data="getKeyData('KC_F10', 'base', 'F10')" isMod="true" />
       <U1 x="975" :data="getKeyData('KC_F11', 'base', 'F11')" isMod="true" />
       <U1 x="1050" :data="getKeyData('KC_F12', 'base', 'F12')" isMod="true" />
-      <U1 x="1160" :data="getKeyData('KC_PSCR', 'base', 'Print')" isMod="true" />
+      <U1
+        x="1160"
+        :data="getKeyData('KC_PSCR', 'base', 'Print')"
+        isMod="true"
+      />
       <U1 x="1235" :data="getKeyData('KC_SLCK', 'base', 'Lock')" isMod="true" />
-      <U1 x="1310" :data="getKeyData('KC_PAUS', 'base', 'Pause')" isMod="true" />
+      <U1
+        x="1310"
+        :data="getKeyData('KC_PAUS', 'base', 'Pause')"
+        isMod="true"
+      />
     </g>
     <g transform="translate(15, 116)">
       <U1 x="0" :data="getKeyData('KC_GRV', 'base', '~', '`')" />
@@ -305,10 +440,22 @@
       <U1 x="750" :data="getKeyData('KC_0', 'base', ')', '0')" />
       <U1 x="825" :data="getKeyData('KC_MINS', 'base', '_', '-')" />
       <U1 x="900" :data="getKeyData('KC_EQL', 'base', '+', '=')" />
-      <U2 x="977" :data="getKeyData('KC_BSPC', 'mod', 'Backspace')" isMod="true" />
-      <U1 x="1160" :data="getKeyData('KC_INS', 'base', 'Insert')" isMod="true" />
+      <U2
+        x="977"
+        :data="getKeyData('KC_BSPC', 'mod', 'Backspace')"
+        isMod="true"
+      />
+      <U1
+        x="1160"
+        :data="getKeyData('KC_INS', 'base', 'Insert')"
+        isMod="true"
+      />
       <U1 x="1235" :data="getKeyData('KC_HOME', 'base', 'Home')" isMod="true" />
-      <U1 x="1310" :data="getKeyData('KC_PGUP', 'base', 'Pg Up')" isMod="true" />
+      <U1
+        x="1310"
+        :data="getKeyData('KC_PGUP', 'base', 'Pg Up')"
+        isMod="true"
+      />
     </g>
     <g transform="translate(15, 192)">
       <U15 x="0" :data="getKeyData('KC_TAB', 'mod', 'Tab')" isMod="true" />
@@ -351,7 +498,11 @@
       />
     </g>
     <g transform="translate(15, 268)">
-      <U175 x="0" isMod="true" :data="getKeyData('KC_CAPSLOCK', 'mod', 'CapsLock')" />
+      <U175
+        x="0"
+        isMod="true"
+        :data="getKeyData('KC_CAPSLOCK', 'mod', 'CapsLock')"
+      />
       <U1 x="129" :data="getKeyData('KC_A', 'base', 'A')" />
       <U1 x="204" :data="getKeyData('KC_S', 'base', 'S')" />
       <U1 x="279" :data="getKeyData('KC_D', 'base', 'D')" />
@@ -362,8 +513,15 @@
       <U1 x="658" :data="getKeyData('KC_K', 'base', 'K')" />
       <U1 x="734" :data="getKeyData('KC_L', 'base', 'L')" />
       <U1 x="810" :data="getKeyData('KC_SCLN', 'base', ':', ';')" />
-      <U1 x="886" :data="getKeyData('KC_QUOT', 'base', doubleQuote, simpleQuote)" />
-      <U225 x="963" :data="getKeyData('KC_ENT', 'accent', 'Enter')" isMod="true" />
+      <U1
+        x="886"
+        :data="getKeyData('KC_QUOT', 'base', doubleQuote, simpleQuote)"
+      />
+      <U225
+        x="963"
+        :data="getKeyData('KC_ENT', 'accent', 'Enter')"
+        isMod="true"
+      />
     </g>
     <g transform="translate(15, 344)">
       <U225 x="0" :data="getKeyData('KC_LSFT', 'mod', 'Shift')" isMod="true" />
@@ -377,14 +535,22 @@
       <U1 x="689" :data="getKeyData('KC_COMM', 'base', '<', ',')" />
       <U1 x="764" :data="getKeyData('KC_DOT', 'base', '>', '.')" />
       <U1 x="839" :data="getKeyData('KC_SLSH', 'base', '?', '/')" />
-      <U275 x="917" :data="getKeyData('KC_RSFT', 'mod', 'Shift')" isMod="true" />
+      <U275
+        x="917"
+        :data="getKeyData('KC_RSFT', 'mod', 'Shift')"
+        isMod="true"
+      />
       <U1 x="1235" :data="getKeyData('KC_UP', 'base', '↑')" />
     </g>
     <g transform="translate(15, 420)">
       <U15 x="0" :data="getKeyData('KC_LCTL', 'mod', 'Ctrl')" isMod="true" />
       <U15 x="186" :data="getKeyData('KC_LALT', 'mod', 'Alt')" isMod="true" />
       <U7 x="298" :data="getKeyData('KC_SPC', 'base')" />
-      <U15 x="829" :data="getKeyData('KC_RALT', 'mod', 'Alt Gr')" isMod="true" />
+      <U15
+        x="829"
+        :data="getKeyData('KC_RALT', 'mod', 'Alt Gr')"
+        isMod="true"
+      />
       <U15 x="1015" :data="getKeyData('KC_RCTL', 'mod', 'Ctrl')" isMod="true" />
       <U1 x="1160" :data="getKeyData('KC_LEFT', 'base', '←')" />
       <U1 x="1235" :data="getKeyData('KC_DOWN', 'base', '↓')" />
