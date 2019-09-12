@@ -202,10 +202,10 @@
       />
       <rect
         transform="rotate(15)"
-        x="508"
+        x="507"
         y="237"
         fill="#080808"
-        width="155"
+        width="170"
         height="82"
         rx="7"
         ry="7"
@@ -482,7 +482,7 @@
             :data="getKeyData('KC_LALT', 'mod', 'Alt')"
             isMod="true"
           />
-          <U2
+          <U225
             x="115"
             y="-3"
             :data="getKeyData('KC_SPC', 'mod', '')"
