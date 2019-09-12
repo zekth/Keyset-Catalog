@@ -563,7 +563,6 @@
 import tinycolor from 'tinycolor2';
 import { genKeyData } from '../../utils/keys';
 import U1 from '../keys/U1.vue';
-import U225 from '../keys/U225.vue';
 import U125 from '../keys/U125.vue';
 import U275 from '../keys/U275.vue';
 import U175 from '../keys/U175.vue';
@@ -573,7 +572,7 @@ import U7 from '../keys/U7.vue';
 import isoEnter from '../keys/isoEnter.vue';
 export default {
   props: ['keyset', 'keyboardColor'],
-  components: { U1, U125, U15, U175, U275, U2, U7, U225, isoEnter },
+  components: { U1, U125, U15, U175, U275, U2, U7, isoEnter },
   computed: {
     keyboardGradientStart: function() {
       return tinycolor(this.keyboardColor)
