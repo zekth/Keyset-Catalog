@@ -1,5 +1,5 @@
 <template>
-  <svg :stroke="color" :fill="color" viewBox="0.002 -0.585 52.937009 30.755903">
+  <svg :stroke="color" :fill="color">
     <g transform="translate(0,-7.0440968)" style="display:inline">
       <g style="display:inline" transform="translate(-11.000144,-3.2533776)">
         <path

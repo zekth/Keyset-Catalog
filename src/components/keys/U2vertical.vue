@@ -54,7 +54,7 @@
           {{ data.subContent }}
         </text>
       </g>
-      <g v-if="data.key === 'KC_PENT'" transform="scale(1),translate(-530,370)">
+      <g v-if="data.key === 'KC_PENT'" transform="scale(16),translate(-4,25)">
         <pEnter :color="data.colors.color" />
       </g>
     </g>
