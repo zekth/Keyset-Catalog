@@ -21,47 +21,51 @@
         d="M112.45,102.85v428.96c0,14.52,10.4,26.95,24.69,29.51l0,0c145.74,26.15,294.97,26.15,440.72,0l0,0
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
-
-      <text
-        v-if="!isMod"
-        class="key-content"
-        x="220"
-        y="270"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="isMod"
-        class="key-content"
-        x="160"
-        y="370"
-        font-size="130px"
-        :fill="data.colors.color"
-      >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="data.subContent"
-        class="key-content"
-        x="220"
-        y="500"
-        font-size="200px"
-        :fill="data.colors.color"
-      >
-        {{ data.subContent }}
-      </text>
-      <text
-        v-if="data.thirdContent"
-        class="key-content"
-        x="710"
-        y="500"
-        font-size="180px"
-        :fill="data.colors.color"
-      >
-        {{ data.thirdContent }}
-      </text>
+      <g v-if="data.key !== 'KC_TAB'">
+        <text
+          v-if="!isMod"
+          class="key-content"
+          x="220"
+          y="270"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="isMod"
+          class="key-content"
+          x="160"
+          y="370"
+          font-size="130px"
+          :fill="data.colors.color"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="data.subContent"
+          class="key-content"
+          x="220"
+          y="500"
+          font-size="200px"
+          :fill="data.colors.color"
+        >
+          {{ data.subContent }}
+        </text>
+        <text
+          v-if="data.thirdContent"
+          class="key-content"
+          x="710"
+          y="500"
+          font-size="180px"
+          :fill="data.colors.color"
+        >
+          {{ data.thirdContent }}
+        </text>
+      </g>
+      <g v-if="data.key === 'KC_TAB'" transform="translate(120,110) scale(15)">
+        <tab :color="data.colors.color" />
+      </g>
       <text class="cap-size" x="650" y="680" font-size="180px" fill="white">
         1.50
       </text>
@@ -70,7 +74,9 @@
 </template>
 
 <script>
+import tab from './legends/tab.vue';
 export default {
+  components: { tab },
   props: ['data', 'isMod']
 };
 </script>

@@ -412,7 +412,7 @@
           <U175
             x="0"
             isMod="true"
-            :data="getKeyData('KC_CAPSLOCK', 'mod', 'CapsLock')"
+            :data="getKeyData('KC_CAPSLOCK', 'mod', 'Caps Lock')"
           />
           <U1 x="129" :data="getKeyData('KC_A', 'base', 'A')" />
         </g>
@@ -474,7 +474,7 @@
         </g>
       </g>
       <g transform="translate(-45, 418)">
-        <U15 x="25" :data="getKeyData('KC_LCTL', 'mod')" isMod="true" />
+        <U15 x="25" :data="getKeyData('KC_LCTL', 'mod', 'Ctrl')" isMod="true" />
         <g transform="translate(250, 0),rotate(15)">
           <U15
             x="0"

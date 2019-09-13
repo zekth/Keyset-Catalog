@@ -501,13 +501,13 @@
       <U175
         x="0"
         isMod="true"
-        :data="getKeyData('KC_CAPSLOCK', 'mod', 'CapsLock')"
+        :data="getKeyData('KC_CAPSLOCK', 'mod', 'Caps Lock')"
       />
       <U1 x="129" :data="getKeyData('KC_A', 'base', 'A')" />
       <U1 x="204" :data="getKeyData('KC_S', 'base', 'S')" />
       <U1 x="279" :data="getKeyData('KC_D', 'base', 'D')" />
       <U1 x="354" :data="getKeyData('KC_F', 'base', 'F')" />
-      <U1 x="429" :data="getKeyData('KC_G', 'base', 'G')" />
+      <U1 x="430" :data="getKeyData('KC_G', 'base', 'G')" />
       <U1 x="506" :data="getKeyData('KC_H', 'base', 'H')" />
       <U1 x="582" :data="getKeyData('KC_J', 'base', 'J')" />
       <U1 x="658" :data="getKeyData('KC_K', 'base', 'K')" />

@@ -295,7 +295,7 @@
       <U175
         x="0"
         isMod="true"
-        :data="getKeyData('KC_CAPSLOCK', 'mod', 'CapsLock')"
+        :data="getKeyData('KC_CAPSLOCK', 'mod', 'Caps Lock')"
       />
       <U1 x="129" :data="getKeyData('KC_A', 'base', 'A')" />
       <U1 x="204" :data="getKeyData('KC_S', 'base', 'S')" />
