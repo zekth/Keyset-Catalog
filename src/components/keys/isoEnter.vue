@@ -37,19 +37,19 @@
     />
     <path
       :fill="data.colors.background"
-      class="key-shadow"
+      class=""
       d="M 16,8
     h76
     a5,5 0 0 1 2,2
-    v122
+    v119
     a5,5 0 0 1 -2,2
-    h-57
+    s-26,5 -57,0
     a5,5 0 0 1 -2,-2
-    v-71
+    v-69
     a5,5 0 0 0 -2,-2
     h-17
     a5,5 0 0 1 -2,-2
-    v-47
+    v-45
     a5,5 0 0 1 2,-2
     "
     />
