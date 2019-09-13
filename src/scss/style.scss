@@ -8,6 +8,11 @@ $container-max-widths: (
 html.dark {
   @import './variables/darkBootstrapVars';
   @import '../../node_modules/bootstrap/scss/bootstrap';
+  // fix for slider not appearing in darkmode
+  .vue-slider{
+    box-sizing: content-box;
+  }
+
 }
 html {
   @import '../../node_modules/bootstrap/scss/bootstrap';

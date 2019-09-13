@@ -59,7 +59,7 @@
         y="5"
         fill="url(#noise)"
         width="1150"
-        height="440"
+        height="430"
         rx="7"
         ry="7"
       />

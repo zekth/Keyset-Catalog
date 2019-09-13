@@ -1,11 +1,11 @@
 <template>
   <footer class="footer">
-    <div class="container">
+    <div class="container text-center p-4">
       <p>
         ©
         <a href="https://github.com/zekth">Zekth</a> 2019
-        <small>rev: {{ APP_REV }}</small>
       </p>
+      <p style="display:none">rev: {{ APP_REV }}</p>
     </div>
   </footer>
 </template>

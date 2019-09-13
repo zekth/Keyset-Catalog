@@ -3,9 +3,9 @@
     <div id="app" class="container">
       <appHeader />
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <div class="form-group">
-            <label for>Layout</label>
+            <label class="font-weight-bold">Layout</label>
             <select
               v-model="selectedLayout"
               class="form-control"
@@ -19,9 +19,9 @@
             </select>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <div class="form-group">
-            <label for>Keyset</label>
+            <label class="font-weight-bold">Keyset</label>
             <select
               v-model="selectedSet"
               class="form-control"
@@ -36,53 +36,69 @@
             </select>
           </div>
         </div>
-        <div class="col-lg-4">
-          <button v-on:click="toggleSearch()" class="btn btn-info">
-            Show Search Form
+        <div class="col-lg-3">
+          <label for>&nbsp;</label>
+          <br />
+          <button v-on:click="toggleSearch()" class="btn btn-success">
+            Find color match
+            <font-awesome-icon :icon="['fa', 'search']" />
           </button>
         </div>
       </div>
       <div class="row" v-bind:class="{ collapse: !showSearch }">
         <div class="col-lg-6">
-          <h2>Color pick</h2>
           <div class="row">
             <div class="col-lg-6">
+              <label class="font-weight-bold">Color pick</label>
               <chrome-picker v-model="colors" />
             </div>
             <div class="col-lg-6">
-              <h2>Search for</h2>
-              <button class="btn btn-info" v-on:click="findKeyset('base')">
-                Base
-              </button>
-              <button class="btn btn-info" v-on:click="findKeyset('accent')">
-                Accent
-              </button>
-              <button class="btn btn-info" v-on:click="findKeyset('mod')">
-                Mod
-              </button>
-              <label>Color distance threshold</label>
-              <VueSlider v-model="threshold" v-bind="sliderOptions" />
+              <label class="font-weight-bold">Search for</label>
+              <div>
+                <button
+                  class="btn btn-info btn-sm"
+                  v-on:click="findKeyset('base')"
+                >
+                  Base
+                </button>
+                <button
+                  class="btn btn-info btn-sm"
+                  v-on:click="findKeyset('accent')"
+                >
+                  Accent
+                </button>
+                <button
+                  class="btn btn-info btn-sm"
+                  v-on:click="findKeyset('mod')"
+                >
+                  Mod
+                </button>
+                <label>Color distance threshold</label>
+                <VueSlider v-model="threshold" v-bind="sliderOptions" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6" style="height:300px;overflow-y:scroll">
-          <h2>Search Results</h2>
-          <table id="search-results" class="table table-hover">
-            <thead>
-              <tr>
-                <th>Keyset Name</th>
-                <th>Distance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <template v-for="r in searchResult">
-                <tr v-bind:key="r.id" v-on:click="changeSet(r.id)">
-                  <td>{{ r.name }}</td>
-                  <td>{{ r.distance.toFixed() }}</td>
+        <div class="col-lg-6">
+          <perfect-scrollbar class="over-wrapper">
+            <label class="font-weight-bold">Search Results</label>
+            <table id="search-results" class="table table-hover table-sm">
+              <thead>
+                <tr>
+                  <th>Keyset Name</th>
+                  <th>Distance</th>
                 </tr>
-              </template>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <template v-for="r in searchResult">
+                  <tr v-bind:key="r.id" v-on:click="changeSet(r.id)">
+                    <td>{{ r.name }}</td>
+                    <td>{{ r.distance.toFixed() }}</td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </perfect-scrollbar>
         </div>
       </div>
       <div class="row">
@@ -117,23 +133,24 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4">
-          <label>Dark mode</label>
-          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
-        </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
           <button
             class="btn btn-sm btn-info"
             v-on:click="toggleCustomKeyboard()"
           >
-            Customize keyboard case
+            Customize
+            <font-awesome-icon :icon="['fas', 'cog']" />
           </button>
-          <div
-            v-bind:class="{ collapse: !showCustomKeyboard }"
-            style="margin-top:10px;margin-bottom:10px;"
-          >
-            <chrome-picker v-model="keyboardColor" />
-          </div>
+        </div>
+      </div>
+      <div class="row mb-4" v-bind:class="{ collapse: !showCustomKeyboard }">
+        <div class="col-lg-4">
+          <label class="font-weight-bold">Keyboard color</label>
+          <chrome-picker v-model="keyboardColor" />
+        </div>
+        <div class="col-lg-4">
+          <label class="font-weight-bold">Dark mode</label>
+          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
         </div>
       </div>
       <div class="row marketing">
@@ -150,6 +167,12 @@
           <p>Provide a way find the best colormatch</p>
           <h4>Missing keysets?</h4>
           <p>Just submit a pull Request</p>
+          <h4>Disclaimer</h4>
+          <p>
+            Some colors may be off because i do not own all the keysets listed.
+            Also the colors are mostly from the renders and no the final
+            product, so some colors may differ.
+          </p>
         </div>
       </div>
     </div>
@@ -286,3 +309,8 @@ export default class App extends Vue {
   }
 }
 </script>
+<style>
+.over-wrapper {
+  height: 300px;
+}
+</style>
