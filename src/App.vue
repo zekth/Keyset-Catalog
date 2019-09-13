@@ -1,158 +1,156 @@
 <template>
-  <div id="app" class="container">
-    <div class="header clearfix">
-      <h3 class>
-        Keyset Catalog -
-        <a href="https://github.com/zekth/Keyset-Catalog" target="_blank"
-          >GitHub Project</a
-        >
-      </h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="form-group">
-          <label for>Layout</label>
-          <select
-            v-model="selectedLayout"
-            class="form-control"
-            @change="changeKeyboard"
-          >
-            <option value="fullSizeAnsi">Full Size Ansi</option>
-            <option value="wklTkl">Tenkeyless Winkeyless</option>
-            <option value="wklTklIso">Tenkeyless Winkeyless - ISO</option>
-            <option value="60SplitBckSp">60% Split Backspace</option>
-            <option value="lubrigante">Lubrigante / Alice</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="form-group">
-          <label for>Keyset</label>
-          <select
-            v-model="selectedSet"
-            class="form-control"
-            @change="changeKeyset"
-          >
-            <option
-              v-for="k in keysets"
-              v-bind:value="k.id"
-              v-bind:key="k.id"
-              >{{ k.name }}</option
+  <div>
+    <div id="app" class="container">
+      <appHeader />
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for>Layout</label>
+            <select
+              v-model="selectedLayout"
+              class="form-control"
+              @change="changeKeyboard"
             >
-          </select>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <button v-on:click="toggleSearch()" class="btn btn-info">
-          Show Search Form
-        </button>
-      </div>
-    </div>
-    <div class="row" v-bind:class="{ collapse: !showSearch }">
-      <div class="col-lg-6">
-        <h2>Color pick</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <chrome-picker v-model="colors" />
-          </div>
-          <div class="col-lg-6">
-            <h2>Search for</h2>
-            <button class="btn btn-info" v-on:click="findKeyset('base')">
-              Base
-            </button>
-            <button class="btn btn-info" v-on:click="findKeyset('accent')">
-              Accent
-            </button>
-            <button class="btn btn-info" v-on:click="findKeyset('mod')">
-              Mod
-            </button>
-            <label>Color distance threshold</label>
-            <VueSlider v-model="threshold" v-bind="sliderOptions" />
+              <option value="fullSizeAnsi">Full Size Ansi</option>
+              <option value="wklTkl">Tenkeyless Winkeyless</option>
+              <option value="wklTklIso">Tenkeyless Winkeyless - ISO</option>
+              <option value="60SplitBckSp">60% Split Backspace</option>
+              <option value="lubrigante">Lubrigante / Alice</option>
+            </select>
           </div>
         </div>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for>Keyset</label>
+            <select
+              v-model="selectedSet"
+              class="form-control"
+              @change="changeKeyset"
+            >
+              <option
+                v-for="k in keysets"
+                v-bind:value="k.id"
+                v-bind:key="k.id"
+                >{{ k.name }}</option
+              >
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <button v-on:click="toggleSearch()" class="btn btn-info">
+            Show Search Form
+          </button>
+        </div>
       </div>
-      <div class="col-lg-6" style="height:300px;overflow-y:scroll">
-        <h2>Search Results</h2>
-        <table id="search-results" class="table table-hover">
-          <thead>
-            <tr>
-              <th>Keyset Name</th>
-              <th>Distance</th>
-            </tr>
-          </thead>
-          <tbody>
-            <template v-for="r in searchResult">
-              <tr v-bind:key="r.id" v-on:click="changeSet(r.id)">
-                <td>{{ r.name }}</td>
-                <td>{{ r.distance.toFixed() }}</td>
+      <div class="row" v-bind:class="{ collapse: !showSearch }">
+        <div class="col-lg-6">
+          <h2>Color pick</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <chrome-picker v-model="colors" />
+            </div>
+            <div class="col-lg-6">
+              <h2>Search for</h2>
+              <button class="btn btn-info" v-on:click="findKeyset('base')">
+                Base
+              </button>
+              <button class="btn btn-info" v-on:click="findKeyset('accent')">
+                Accent
+              </button>
+              <button class="btn btn-info" v-on:click="findKeyset('mod')">
+                Mod
+              </button>
+              <label>Color distance threshold</label>
+              <VueSlider v-model="threshold" v-bind="sliderOptions" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" style="height:300px;overflow-y:scroll">
+          <h2>Search Results</h2>
+          <table id="search-results" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Keyset Name</th>
+                <th>Distance</th>
               </tr>
-            </template>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="render-container">
-          <fullSizeAnsi
-            v-if="selectedLayout === 'fullSizeAnsi'"
-            :keyset="keyset"
-            :keyboardColor="keyboardColor.hex"
-          />
-          <split60
-            v-if="selectedLayout === '60SplitBckSp'"
-            :keyset="keyset"
-            :keyboardColor="keyboardColor.hex"
-          />
-          <wklTkl
-            v-if="selectedLayout === 'wklTkl'"
-            :keyset="keyset"
-            :keyboardColor="keyboardColor.hex"
-          />
-          <wklTklIso
-            v-if="selectedLayout === 'wklTklIso'"
-            :keyset="keyset"
-            :keyboardColor="keyboardColor.hex"
-          />
-          <lubrigante
-            v-if="selectedLayout === 'lubrigante'"
-            :keyset="keyset"
-            :keyboardColor="keyboardColor.hex"
-          />
+            </thead>
+            <tbody>
+              <template v-for="r in searchResult">
+                <tr v-bind:key="r.id" v-on:click="changeSet(r.id)">
+                  <td>{{ r.name }}</td>
+                  <td>{{ r.distance.toFixed() }}</td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <label>Dark mode</label>
-        <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
-      </div>
-      <div class="col-lg-4">
-        <button class="btn btn-sm btn-info" v-on:click="toggleCustomKeyboard()">
-          Customize keyboard case
-        </button>
-        <div
-          v-bind:class="{ collapse: !showCustomKeyboard }"
-          style="margin-top:10px;margin-bottom:10px;"
-        >
-          <chrome-picker v-model="keyboardColor" />
+      <div class="row">
+        <div class="col">
+          <div class="render-container">
+            <fullSizeAnsi
+              v-if="selectedLayout === 'fullSizeAnsi'"
+              :keyset="keyset"
+              :keyboardColor="keyboardColor.hex"
+            />
+            <split60
+              v-if="selectedLayout === '60SplitBckSp'"
+              :keyset="keyset"
+              :keyboardColor="keyboardColor.hex"
+            />
+            <wklTkl
+              v-if="selectedLayout === 'wklTkl'"
+              :keyset="keyset"
+              :keyboardColor="keyboardColor.hex"
+            />
+            <wklTklIso
+              v-if="selectedLayout === 'wklTklIso'"
+              :keyset="keyset"
+              :keyboardColor="keyboardColor.hex"
+            />
+            <lubrigante
+              v-if="selectedLayout === 'lubrigante'"
+              :keyset="keyset"
+              :keyboardColor="keyboardColor.hex"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row marketing">
-      <div class="col-lg-6">
-        <h4>Just a database</h4>
-        <p>Just here to have a list of all the available keysets</p>
-        <h4>Why there is no novelties?</h4>
-        <p>Because i do not own those designs neither the SVG files.</p>
-        <h4>OMG UI sucks?!</h4>
-        <p>I know, but it works; right?</p>
+      <div class="row">
+        <div class="col-lg-4">
+          <label>Dark mode</label>
+          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
+        </div>
+        <div class="col-lg-4">
+          <button
+            class="btn btn-sm btn-info"
+            v-on:click="toggleCustomKeyboard()"
+          >
+            Customize keyboard case
+          </button>
+          <div
+            v-bind:class="{ collapse: !showCustomKeyboard }"
+            style="margin-top:10px;margin-bottom:10px;"
+          >
+            <chrome-picker v-model="keyboardColor" />
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <h4>Searching</h4>
-        <p>Provide a way find the best colormatch</p>
-        <h4>Missing keysets?</h4>
-        <p>Just submit a pull Request</p>
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Just a database</h4>
+          <p>Just here to have a list of all the available keysets</p>
+          <h4>Why there is no novelties?</h4>
+          <p>Because i do not own those designs neither the SVG files.</p>
+          <h4>OMG UI sucks?!</h4>
+          <p>I know, but it works; right?</p>
+        </div>
+        <div class="col-lg-6">
+          <h4>Searching</h4>
+          <p>Provide a way find the best colormatch</p>
+          <h4>Missing keysets?</h4>
+          <p>Just submit a pull Request</p>
+        </div>
       </div>
     </div>
 
@@ -174,11 +172,13 @@ import fullSizeAnsi from '@/components/layouts/fullSizeAnsi.vue';
 import lubrigante from '@/components/layouts/lubrigante.vue';
 import wklTkl from '@/components/layouts/wkl-tkl.vue';
 import wklTklIso from '@/components/layouts/wkl-tkl-iso.vue';
+import appHeader from '@/components/header.vue';
 import appFooter from '@/components/footer.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
 @Component({
   components: {
     VueSlider,
+    appHeader,
     fullSizeAnsi,
     appFooter,
     ToggleButton,
