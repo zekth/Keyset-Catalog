@@ -12,7 +12,11 @@
       <div class="col-lg-4">
         <div class="form-group">
           <label for>Layout</label>
-          <select v-model="selectedLayout" class="form-control">
+          <select
+            v-model="selectedLayout"
+            class="form-control"
+            @change="changeKeyboard"
+          >
             <option value="fullSizeAnsi">Full Size Ansi</option>
             <option value="wklTkl">Tenkeyless Winkeyless</option>
             <option value="wklTklIso">Tenkeyless Winkeyless - ISO</option>
@@ -24,7 +28,11 @@
       <div class="col-lg-4">
         <div class="form-group">
           <label for>Keyset</label>
-          <select v-model="selectedSet" class="form-control">
+          <select
+            v-model="selectedSet"
+            class="form-control"
+            @change="changeKeyset"
+          >
             <option
               v-for="k in keysets"
               v-bind:value="k.id"
@@ -186,7 +194,10 @@ export default class App extends Vue {
   selectedSet: any = this.keysets[
     Math.floor(Math.random() * Math.floor(k.length))
   ].id;
-  selectedLayout = 'fullSizeAnsi';
+  selectedLayout =
+    localStorage && localStorage.getItem('keyboard')
+      ? localStorage.getItem('keyboard')
+      : 'fullSizeAnsi';
   threshold = 100;
   darkMode = localStorage && localStorage.getItem('darkMode') ? true : false;
   colors: any = '#fff';
@@ -228,6 +239,14 @@ export default class App extends Vue {
       document.getElementsByTagName('html')[0].classList.remove('dark');
       localStorage.removeItem('darkMode');
     }
+  }
+  changeKeyboard(e) {
+    if (localStorage) {
+      localStorage.setItem('keyboard', e.target.value);
+    }
+  }
+  changeKeyset(e) {
+    console.log(e.target.value);
   }
   findKeyset(type) {
     let colorsToTest = {};
