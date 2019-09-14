@@ -88,7 +88,7 @@
       <U1 x="825" :data="getKeyData('KC_MINS', 'base', '_', '-')" />
       <U1 x="900" :data="getKeyData('KC_EQL', 'base', '+', '=')" />
       <U1 x="975" :data="getKeyData('KC_GRV', 'base', '~', '`')" />
-      <U1 x="1052" :data="getKeyData('KC_BSPC', 'mod', '←')" isMod="true" />
+      <U1 x="1052" :data="getKeyData('KC_BSLS', 'base', '|', '\\')" />
     </g>
     <g transform="translate(15, 116)">
       <U15 x="0" :data="getKeyData('KC_TAB', 'mod', 'Tab')" isMod="true" />
@@ -104,7 +104,7 @@
       <U1 x="788" :data="getKeyData('KC_P', 'base', 'P')" />
       <U1 x="863" :data="getKeyData('KC_LBRC', 'base', '{', '[')" />
       <U1 x="940" :data="getKeyData('KC_RBRC', 'base', '}', ']')" />
-      <U15 x="1016" :data="getKeyData('KC_BSLS', 'base', '|', '\\')" />
+      <U15 x="1016" :data="getKeyData('KC_BSPC', 'mod')" isMod="true" />
     </g>
     <g transform="translate(15, 192)">
       <U175

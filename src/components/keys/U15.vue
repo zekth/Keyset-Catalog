@@ -21,7 +21,7 @@
         d="M112.45,102.85v428.96c0,14.52,10.4,26.95,24.69,29.51l0,0c145.74,26.15,294.97,26.15,440.72,0l0,0
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
-      <g v-if="data.legendOverriden || data.key !== 'KC_TAB'">
+      <g v-if="data.legendOverriden || !reservedKeys.includes(data.key)">
         <text
           v-if="!isMod"
           class="key-content"
@@ -69,6 +69,12 @@
       >
         <tab :color="data.colors.legend" />
       </g>
+      <g
+        v-if="!data.legendOverriden && data.key === 'KC_BSPC'"
+        transform="translate(-25,100) scale(15)"
+      >
+        <backspace15 :color="data.colors.legend" />
+      </g>
       <text class="cap-size" x="650" y="680" font-size="180px" fill="white">
         1.50
       </text>
@@ -78,8 +84,14 @@
 
 <script>
 import tab from './legends/tab.vue';
+import backspace15 from './legends/backspace15.vue';
 export default {
-  components: { tab },
-  props: ['data', 'isMod']
+  components: { tab, backspace15 },
+  props: ['data', 'isMod'],
+  data() {
+    return {
+      reservedKeys: ['KC_BSPC', 'KC_TAB']
+    };
+  }
 };
 </script>
