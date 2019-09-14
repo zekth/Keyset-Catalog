@@ -29,15 +29,15 @@ A base keyset is:
     colors: {
       base: {
         background: '#8e71a2',
-        color: '#170b19'
+        legend: '#170b19'
       },
       mod: {
         background: '#170b19',
-        color: '#8e71a2'
+        legend: '#8e71a2'
       },
       accent: {
         background: '#5ed8df',
-        color: '#8e71a2'
+        legend: '#8e71a2'
       }
     }
   }
@@ -52,15 +52,15 @@ This keyset can be customized for each key. Ids of keys are the same as the ones
     colors: {
       base: {
         background: '#393b3b',
-        color: '#689b34'
+        legend: '#689b34'
       },
       mod: {
         background: '#393b3b',
-        color: '#689b34'
+        legend: '#689b34'
       },
       accent: {
         background: '#689b34',
-        color: '#393b3b'
+        legend: '#393b3b'
       }
     },
     specialKeys: {
