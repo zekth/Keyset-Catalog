@@ -58,7 +58,7 @@ const hiraganasAlt = {
     thirdContent: 'ん'
   },
   KC_U: {
-    thirdContent: 'た'
+    thirdContent: 'な'
   },
   KC_I: {
     thirdContent: 'に'
@@ -94,7 +94,7 @@ const hiraganasAlt = {
   KC_K: { thirdContent: 'の' },
   KC_L: { thirdContent: 'り' },
   KC_Z: { thirdContent: 'つ' },
-  KC_X: { thirdContent: 'せ' },
+  KC_X: { thirdContent: 'さ' },
   KC_C: { thirdContent: 'そ' },
   KC_V: { thirdContent: 'ひ' },
   KC_B: { thirdContent: 'こ' },
@@ -159,7 +159,7 @@ const hiraganas = {
     thirdContent: ''
   },
   KC_U: {
-    content: 'た',
+    content: 'な',
     subContent: '',
     thirdContent: ''
   },
@@ -174,7 +174,7 @@ const hiraganas = {
     thirdContent: ''
   },
   KC_P: {
-    content: 'ぜ',
+    content: 'せ',
     subContent: '',
     thirdContent: ''
   },
@@ -203,7 +203,7 @@ const hiraganas = {
   KC_K: { content: 'の', subContent: '', thirdContent: '' },
   KC_L: { content: 'り', subContent: '', thirdContent: '' },
   KC_Z: { content: 'つ', subContent: '', thirdContent: '' },
-  KC_X: { content: 'せ', subContent: '', thirdContent: '' },
+  KC_X: { content: 'さ', subContent: '', thirdContent: '' },
   KC_C: { content: 'そ', subContent: '', thirdContent: '' },
   KC_V: { content: 'ひ', subContent: '', thirdContent: '' },
   KC_B: { content: 'こ', subContent: '', thirdContent: '' },
