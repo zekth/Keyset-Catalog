@@ -28,7 +28,7 @@
         x="220"
         y="270"
         font-size="200px"
-        :fill="data.colors.color"
+        :fill="data.colors.legend"
       >
         {{ data.content }}
       </text>
@@ -38,7 +38,7 @@
         x="160"
         y="370"
         font-size="130px"
-        :fill="data.colors.color"
+        :fill="data.colors.legend"
       >
         {{ data.content }}
       </text>
@@ -48,7 +48,7 @@
         x="220"
         y="500"
         font-size="200px"
-        :fill="data.colors.color"
+        :fill="data.colors.legend"
       >
         {{ data.subContent }}
       </text>

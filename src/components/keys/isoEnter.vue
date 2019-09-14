@@ -54,7 +54,7 @@
     "
     />
     <g transform="scale(1.7),translate(9,24)">
-      <pEnter :color="data.colors.color" />
+      <pEnter :color="data.colors.legend" />
     </g>
   </svg>
 </template>

@@ -29,7 +29,7 @@
           x="160"
           y="270"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.content }}
         </text>
@@ -39,7 +39,7 @@
           x="160"
           y="370"
           font-size="130px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.content }}
         </text>
@@ -49,7 +49,7 @@
           x="160"
           y="500"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.subContent }}
         </text>
@@ -59,7 +59,7 @@
           x="430"
           y="500"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.thirdContent }}
         </text>
@@ -68,11 +68,11 @@
         2.25
       </text>
       <g v-if="data.key === 'KC_ENT'" transform="scale(17),translate(10,-4)">
-        <enterLegend :color="data.colors.color" />
+        <enterLegend :color="data.colors.legend" />
       </g>
 
       <g v-if="data.key === 'KC_LSFT'" transform="scale(17),translate(10,5)">
-        <shift225 :color="data.colors.color" />
+        <shift225 :color="data.colors.legend" />
       </g>
     </g>
   </svg>

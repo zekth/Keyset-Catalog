@@ -28,7 +28,7 @@
           x="220"
           y="270"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.content }}
         </text>
@@ -38,7 +38,7 @@
           x="160"
           y="370"
           font-size="130px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.content }}
         </text>
@@ -48,13 +48,13 @@
           x="220"
           y="500"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.subContent }}
         </text>
       </g>
       <g v-if="data.key === 'KC_LSFT'" transform="translate(130,73) scale(16)">
-        <shift275 :color="data.colors.color" />
+        <shift275 :color="data.colors.legend" />
       </g>
       <text class="cap-size" x="500" y="680" font-size="180px" fill="white">
         1.25

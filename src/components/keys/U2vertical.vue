@@ -28,7 +28,7 @@
           x="160"
           y="270"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.content }}
         </text>
@@ -39,7 +39,7 @@
           y="690"
           font-size="180px"
           font-weight="bold"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.content }}
         </text>
@@ -49,13 +49,13 @@
           x="220"
           y="500"
           font-size="200px"
-          :fill="data.colors.color"
+          :fill="data.colors.legend"
         >
           {{ data.subContent }}
         </text>
       </g>
       <g v-if="data.key === 'KC_PENT'" transform="scale(16),translate(-4,25)">
-        <pEnter :color="data.colors.color" />
+        <pEnter :color="data.colors.legend" />
       </g>
     </g>
   </svg>

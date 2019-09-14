@@ -233,15 +233,15 @@ const sets = [
     colors: {
       base: {
         background: '#fff3ef',
-        color: '#3e728f'
+        legend: '#3e728f'
       },
       mod: {
         background: '#3e728f',
-        color: '#fb7279'
+        legend: '#fb7279'
       },
       accent: {
         background: '#fb7279',
-        color: '#3e728f'
+        legend: '#3e728f'
       }
     },
     specialKeys: {
@@ -254,19 +254,19 @@ const sets = [
     colors: {
       base: {
         background: '#fff3ef',
-        color: '#3e728f'
+        legend: '#3e728f'
       },
       mod: {
         background: '#3e728f',
-        color: '#fb7279'
+        legend: '#fb7279'
       },
       accent: {
         background: '#fb7279',
-        color: '#3e728f'
+        legend: '#3e728f'
       },
       ptn: {
         background: 'red',
-        color: 'white'
+        legend: 'white'
       }
     },
     specialKeys: {
@@ -283,15 +283,15 @@ const sets = [
     colors: {
       base: {
         background: '#00464f',
-        color: '#54bf19'
+        legend: '#54bf19'
       },
       mod: {
         background: '#263740',
-        color: '#54bf19'
+        legend: '#54bf19'
       },
       accent: {
         background: '#54bf19',
-        color: '#263740'
+        legend: '#263740'
       }
     }
   },
@@ -301,15 +301,15 @@ const sets = [
     colors: {
       base: {
         background: '#00464f',
-        color: '#54bf19'
+        legend: '#54bf19'
       },
       mod: {
         background: '#263740',
-        color: '#54bf19'
+        legend: '#54bf19'
       },
       accent: {
         background: '#54bf19',
-        color: '#263740'
+        legend: '#263740'
       }
     },
     specialKeys: {
@@ -322,15 +322,15 @@ const sets = [
     colors: {
       base: {
         background: GmkBaseColors._N9,
-        color: '#689b34'
+        legend: '#689b34'
       },
       mod: {
         background: GmkBaseColors._N9,
-        color: '#689b34'
+        legend: '#689b34'
       },
       accent: {
         background: '#689b34',
-        color: GmkBaseColors._N9
+        legend: GmkBaseColors._N9
       }
     },
     specialKeys: {
@@ -358,15 +358,15 @@ const sets = [
     colors: {
       base: {
         background: GmkBaseColors._TU1,
-        color: GmkBaseColors._GE1
+        legend: GmkBaseColors._GE1
       },
       mod: {
         background: GmkBaseColors._TU2,
-        color: GmkBaseColors._GE1
+        legend: GmkBaseColors._GE1
       },
       accent: {
         background: GmkBaseColors._V2,
-        color: GmkBaseColors._CV
+        legend: GmkBaseColors._CV
       }
     }
   },
@@ -376,15 +376,15 @@ const sets = [
     colors: {
       base: {
         background: GmkBaseColors._U9,
-        color: GmkBaseColors._N7
+        legend: GmkBaseColors._N7
       },
       mod: {
         background: GmkBaseColors._N9,
-        color: GmkBaseColors._N7
+        legend: GmkBaseColors._N7
       },
       accent: {
         background: GmkBaseColors._N7,
-        color: GmkBaseColors._U9
+        legend: GmkBaseColors._U9
       }
     }
   },
@@ -394,15 +394,15 @@ const sets = [
     colors: {
       base: {
         background: '#84172c',
-        color: '#ece4d0'
+        legend: '#ece4d0'
       },
       mod: {
         background: '#ac2c32',
-        color: '#ece4d0'
+        legend: '#ece4d0'
       },
       accent: {
         background: '#272727',
-        color: '#ece4d0'
+        legend: '#ece4d0'
       }
     }
   },
@@ -412,15 +412,15 @@ const sets = [
     colors: {
       base: {
         background: '#ded0af',
-        color: '#736b7c'
+        legend: '#736b7c'
       },
       mod: {
         background: '#736b7c',
-        color: '#ded0af'
+        legend: '#ded0af'
       },
       accent: {
         background: '#863f48',
-        color: '#ded0af'
+        legend: '#ded0af'
       }
     }
   },
@@ -430,15 +430,15 @@ const sets = [
     colors: {
       base: {
         background: '#040403',
-        color: '#63e3f8'
+        legend: '#63e3f8'
       },
       mod: {
         background: '#2d394c',
-        color: '#6c2374'
+        legend: '#6c2374'
       },
       accent: {
         background: '#6c2374',
-        color: '#63e3f8'
+        legend: '#63e3f8'
       }
     }
   },
@@ -448,15 +448,15 @@ const sets = [
     colors: {
       base: {
         background: '#c7e6f5',
-        color: '#f54730'
+        legend: '#f54730'
       },
       mod: {
         background: '#2d394c',
-        color: '#f54730'
+        legend: '#f54730'
       },
       accent: {
         background: '#f54730',
-        color: '#2d394c'
+        legend: '#2d394c'
       }
     }
   },
@@ -466,15 +466,15 @@ const sets = [
     colors: {
       base: {
         background: '#1b365d',
-        color: '#00a4a9'
+        legend: '#00a4a9'
       },
       mod: {
         background: '#1f2a44',
-        color: '#e5a100'
+        legend: '#e5a100'
       },
       accent: {
         background: '#e5a100',
-        color: '#1f2a44'
+        legend: '#1f2a44'
       }
     }
   },
@@ -484,15 +484,15 @@ const sets = [
     colors: {
       base: {
         background: '#e1e1d5',
-        color: '#36373b'
+        legend: '#36373b'
       },
       mod: {
         background: '#eabe16',
-        color: '#36373b'
+        legend: '#36373b'
       },
       accent: {
         background: '#36373b',
-        color: '#e1e1d5'
+        legend: '#e1e1d5'
       }
     }
   },
@@ -502,15 +502,15 @@ const sets = [
     colors: {
       base: {
         background: '#e1e1d5',
-        color: '#36373b'
+        legend: '#36373b'
       },
       mod: {
         background: '#eabe16',
-        color: '#36373b'
+        legend: '#36373b'
       },
       accent: {
         background: '#36373b',
-        color: '#e1e1d5'
+        legend: '#e1e1d5'
       }
     },
     specialKeys: {
@@ -523,15 +523,15 @@ const sets = [
     colors: {
       base: {
         background: '#c6c3b6',
-        color: '#240773'
+        legend: '#240773'
       },
       mod: {
         background: '#747773',
-        color: '#240773'
+        legend: '#240773'
       },
       accent: {
         background: '#8d2a59',
-        color: '#c1bfb2'
+        legend: '#c1bfb2'
       }
     }
   },
@@ -541,15 +541,15 @@ const sets = [
     colors: {
       base: {
         background: '#cec1a9',
-        color: '#464746'
+        legend: '#464746'
       },
       mod: {
         background: '#464746',
-        color: '#de6722'
+        legend: '#de6722'
       },
       accent: {
         background: '#de6722',
-        color: '#464746'
+        legend: '#464746'
       }
     }
   },
@@ -559,15 +559,15 @@ const sets = [
     colors: {
       base: {
         background: GmkBaseColors._2M,
-        color: GmkBaseColors._DY
+        legend: GmkBaseColors._DY
       },
       mod: {
         background: GmkBaseColors._2B,
-        color: GmkBaseColors._TU2
+        legend: GmkBaseColors._TU2
       },
       accent: {
         background: GmkBaseColors._TU2,
-        color: GmkBaseColors._DY
+        legend: GmkBaseColors._DY
       }
     }
   },
@@ -577,15 +577,15 @@ const sets = [
     colors: {
       base: {
         background: '#4ed6d6',
-        color: '#fa67af'
+        legend: '#fa67af'
       },
       mod: {
         background: '#fa67af',
-        color: '#4ed6d6'
+        legend: '#4ed6d6'
       },
       accent: {
         background: '#fa67af',
-        color: '#4ed6d6'
+        legend: '#4ed6d6'
       }
     }
   },
@@ -595,15 +595,15 @@ const sets = [
     colors: {
       base: {
         background: '#345b95',
-        color: '#ffffff'
+        legend: '#ffffff'
       },
       mod: {
         background: '#345b95',
-        color: '#ffffff'
+        legend: '#ffffff'
       },
       accent: {
         background: '#334660',
-        color: '#ffffff'
+        legend: '#ffffff'
       }
     },
     specialKeys: {
@@ -616,15 +616,15 @@ const sets = [
     colors: {
       base: {
         background: '#5a2b0c',
-        color: GmkBaseColors._WS1
+        legend: GmkBaseColors._WS1
       },
       mod: {
         background: '#701111',
-        color: GmkBaseColors._WS1
+        legend: GmkBaseColors._WS1
       },
       accent: {
         background: GmkBaseColors._AE,
-        color: GmkBaseColors._WS1
+        legend: GmkBaseColors._WS1
       }
     }
   },
@@ -634,15 +634,15 @@ const sets = [
     colors: {
       base: {
         background: '#ae9c78',
-        color: '#dfe0d0'
+        legend: '#dfe0d0'
       },
       mod: {
         background: '#ae9c78',
-        color: '#dfe0d0'
+        legend: '#dfe0d0'
       },
       accent: {
         background: '#dfe0d0',
-        color: '#000000'
+        legend: '#000000'
       }
     }
   },
@@ -652,31 +652,31 @@ const sets = [
     colors: {
       base: {
         background: '#596060',
-        color: GmkBaseColors._L9
+        legend: GmkBaseColors._L9
       },
       mod: {
         background: '#424242',
-        color: GmkBaseColors._L9
+        legend: GmkBaseColors._L9
       },
       accent: {
         background: '#424242',
-        color: '#93c247'
+        legend: '#93c247'
       },
       purpleMod: {
         background: '#424242',
-        color: '#a698c5'
+        legend: '#a698c5'
       },
       redMod: {
         background: '#424242',
-        color: '#ea4221'
+        legend: '#ea4221'
       },
       blueMod: {
         background: '#424242',
-        color: '#1a8ab7'
+        legend: '#1a8ab7'
       },
       orangeMod: {
         background: '#424242',
-        color: '#ffac00'
+        legend: '#ffac00'
       }
     },
     specialKeys: {
@@ -772,31 +772,31 @@ const sets = [
     colors: {
       base: {
         background: '#596060',
-        color: '#c8c3b8'
+        legend: '#c8c3b8'
       },
       mod: {
         background: '#424242',
-        color: '#c8c3b8'
+        legend: '#c8c3b8'
       },
       accent: {
         background: '#424242',
-        color: '#93c247'
+        legend: '#93c247'
       },
       purpleMod: {
         background: '#424242',
-        color: '#a698c5'
+        legend: '#a698c5'
       },
       redMod: {
         background: '#424242',
-        color: '#ea4221'
+        legend: '#ea4221'
       },
       blueMod: {
         background: '#424242',
-        color: '#1a8ab7'
+        legend: '#1a8ab7'
       },
       orangeMod: {
         background: '#424242',
-        color: '#ffac00'
+        legend: '#ffac00'
       }
     },
     specialKeys: {
@@ -892,15 +892,15 @@ const sets = [
     colors: {
       base: {
         background: '#302042',
-        color: '#bcac71'
+        legend: '#bcac71'
       },
       mod: {
         background: '#302042',
-        color: '#bcac71'
+        legend: '#bcac71'
       },
       accent: {
         background: '#bcac71',
-        color: '#302042'
+        legend: '#302042'
       }
     }
   },
@@ -910,15 +910,15 @@ const sets = [
     colors: {
       base: {
         background: '#5c6064',
-        color: '#f9fbfa'
+        legend: '#f9fbfa'
       },
       mod: {
         background: '#216a99',
-        color: '#f9fbfa'
+        legend: '#f9fbfa'
       },
       accent: {
         background: '#216a99',
-        color: '#f9fbfa'
+        legend: '#f9fbfa'
       }
     }
   },
@@ -928,15 +928,15 @@ const sets = [
     colors: {
       base: {
         background: '#dbd4c9',
-        color: '#506d57'
+        legend: '#506d57'
       },
       mod: {
         background: '#506d57',
-        color: '#dbd4c9'
+        legend: '#dbd4c9'
       },
       accent: {
         background: '#6c3638',
-        color: '#dbd4c9'
+        legend: '#dbd4c9'
       }
     }
   },
@@ -946,15 +946,15 @@ const sets = [
     colors: {
       base: {
         background: '#64242e',
-        color: '#9f744d'
+        legend: '#9f744d'
       },
       mod: {
         background: '#262629',
-        color: '#9f744d'
+        legend: '#9f744d'
       },
       accent: {
         background: '#9f744d',
-        color: '#64242e'
+        legend: '#64242e'
       }
     }
   },
@@ -964,15 +964,15 @@ const sets = [
     colors: {
       base: {
         background: '#64242e',
-        color: '#9f744d'
+        legend: '#9f744d'
       },
       mod: {
         background: '#262629',
-        color: '#9f744d'
+        legend: '#9f744d'
       },
       accent: {
         background: '#9f744d',
-        color: '#64242e'
+        legend: '#64242e'
       }
     },
     specialKeys: {
@@ -985,15 +985,15 @@ const sets = [
     colors: {
       base: {
         background: '#2e2180',
-        color: '#0c9eb5'
+        legend: '#0c9eb5'
       },
       mod: {
         background: '#1d1551',
-        color: '#b6245e'
+        legend: '#b6245e'
       },
       accent: {
         background: '#b6245e',
-        color: '#1d1551'
+        legend: '#1d1551'
       }
     }
   },
@@ -1003,15 +1003,15 @@ const sets = [
     colors: {
       base: {
         background: '#c1ced6',
-        color: '#678f58'
+        legend: '#678f58'
       },
       mod: {
         background: '#7f8a90',
-        color: '#97bb49'
+        legend: '#97bb49'
       },
       accent: {
         background: '#9ac65e',
-        color: '#c1ced6'
+        legend: '#c1ced6'
       }
     }
   },
@@ -1021,15 +1021,15 @@ const sets = [
     colors: {
       base: {
         background: '#faf7f8',
-        color: '#647675'
+        legend: '#647675'
       },
       mod: {
         background: '#6e6868',
-        color: '#f9f6f6'
+        legend: '#f9f6f6'
       },
       accent: {
         background: '#d63123',
-        color: '#faf7f8'
+        legend: '#faf7f8'
       }
     }
   },
@@ -1039,15 +1039,15 @@ const sets = [
     colors: {
       base: {
         background: '#acc8da',
-        color: '#212b35'
+        legend: '#212b35'
       },
       mod: {
         background: '#212b35',
-        color: '#d6d6d4'
+        legend: '#d6d6d4'
       },
       accent: {
         background: '#d6d6d4',
-        color: '#212b35'
+        legend: '#212b35'
       }
     }
   },
@@ -1057,15 +1057,15 @@ const sets = [
     colors: {
       base: {
         background: '#2b2f31',
-        color: '#f9ff23'
+        legend: '#f9ff23'
       },
       mod: {
         background: '#47456c',
-        color: '#f9ff23'
+        legend: '#f9ff23'
       },
       accent: {
         background: '#f9ff23',
-        color: '#2b2f31'
+        legend: '#2b2f31'
       }
     }
   },
@@ -1075,15 +1075,15 @@ const sets = [
     colors: {
       base: {
         background: '#fefef5',
-        color: '#43413f'
+        legend: '#43413f'
       },
       mod: {
         background: '#43413f',
-        color: '#d1b6a6'
+        legend: '#d1b6a6'
       },
       accent: {
         background: '#d1b6a6',
-        color: '#43413f'
+        legend: '#43413f'
       }
     }
   },
@@ -1093,15 +1093,15 @@ const sets = [
     colors: {
       base: {
         background: '#2e2180',
-        color: '#0c9eb5'
+        legend: '#0c9eb5'
       },
       mod: {
         background: '#1d1551',
-        color: '#b6245e'
+        legend: '#b6245e'
       },
       accent: {
         background: '#b6245e',
-        color: '#1d1551'
+        legend: '#1d1551'
       }
     },
     specialKeys: {
@@ -1114,39 +1114,39 @@ const sets = [
     colors: {
       base: {
         background: '#a11901',
-        color: '#fefef8'
+        legend: '#fefef8'
       },
       mod: {
         background: '#6b428c',
-        color: '#fefef8'
+        legend: '#fefef8'
       },
       accent: {
         background: '#dbb51e',
-        color: '#fefef8'
+        legend: '#fefef8'
       },
       green: {
-        color: '#fefef8',
+        legend: '#fefef8',
         background: '#7eac1a'
       },
       blue: {
-        color: '#fefef8',
+        legend: '#fefef8',
         background: '#0558ab'
       },
       lightPink: {
         background: '#d9b7b8',
-        color: '#fefef8'
+        legend: '#fefef8'
       },
       darkGreen: {
         background: '#307b37',
-        color: '#fefef8'
+        legend: '#fefef8'
       },
       orange: {
         background: '#c86b18',
-        color: '#fefef8'
+        legend: '#fefef8'
       },
       darkCyan: {
         background: '#0b687a',
-        color: '#fefef8'
+        legend: '#fefef8'
       }
     },
     specialKeys: {
@@ -1217,15 +1217,15 @@ const sets = [
     colors: {
       base: {
         background: '#f1f2f6',
-        color: 'black'
+        legend: 'black'
       },
       mod: {
         background: '#f1f2f6',
-        color: 'black'
+        legend: 'black'
       },
       accent: {
         background: '#f1f2f6',
-        color: 'black'
+        legend: 'black'
       }
     }
   },
@@ -1235,15 +1235,15 @@ const sets = [
     colors: {
       base: {
         background: '#82878d',
-        color: '#e2e5ea'
+        legend: '#e2e5ea'
       },
       mod: {
         background: '#595e64',
-        color: '#e2e5ea'
+        legend: '#e2e5ea'
       },
       accent: {
         background: '#6bd8d5',
-        color: '#e2e5ea'
+        legend: '#e2e5ea'
       }
     }
   },
@@ -1253,15 +1253,15 @@ const sets = [
     colors: {
       base: {
         background: '#82878d',
-        color: '#e2e5ea'
+        legend: '#e2e5ea'
       },
       mod: {
         background: '#595e64',
-        color: '#e2e5ea'
+        legend: '#e2e5ea'
       },
       accent: {
         background: '#cf6478',
-        color: '#e2e5ea'
+        legend: '#e2e5ea'
       }
     }
   },
@@ -1271,15 +1271,15 @@ const sets = [
     colors: {
       base: {
         background: GmkBaseColors._N9,
-        color: GmkBaseColors._V2
+        legend: GmkBaseColors._V2
       },
       mod: {
         background: GmkBaseColors._N9,
-        color: GmkBaseColors._V2
+        legend: GmkBaseColors._V2
       },
       accent: {
         background: GmkBaseColors._V2,
-        color: GmkBaseColors._N9
+        legend: GmkBaseColors._N9
       }
     }
   },
@@ -1289,15 +1289,15 @@ const sets = [
     colors: {
       base: {
         background: '#494949',
-        color: '#bcb6a6'
+        legend: '#bcb6a6'
       },
       mod: {
         background: '#494949',
-        color: '#bcb6a6'
+        legend: '#bcb6a6'
       },
       accent: {
         background: '#bcb6a6',
-        color: '#494949'
+        legend: '#494949'
       }
     }
   },
@@ -1307,15 +1307,15 @@ const sets = [
     colors: {
       base: {
         background: '#8e71a2',
-        color: '#170b19'
+        legend: '#170b19'
       },
       mod: {
         background: '#170b19',
-        color: '#8e71a2'
+        legend: '#8e71a2'
       },
       accent: {
         background: '#5ed8df',
-        color: '#170b19'
+        legend: '#170b19'
       }
     }
   },
@@ -1325,15 +1325,15 @@ const sets = [
     colors: {
       base: {
         background: '#000000',
-        color: '#13bac0'
+        legend: '#13bac0'
       },
       mod: {
         background: '#13bac0',
-        color: '#000000'
+        legend: '#000000'
       },
       accent: {
         background: '#13bac0',
-        color: '#000000'
+        legend: '#000000'
       }
     }
   },
@@ -1343,15 +1343,15 @@ const sets = [
     colors: {
       base: {
         background: '#313334',
-        color: '#9381d7'
+        legend: '#9381d7'
       },
       mod: {
         background: '#322b4a',
-        color: '#9381d7'
+        legend: '#9381d7'
       },
       accent: {
         background: '#9381d7',
-        color: '#322b4a'
+        legend: '#322b4a'
       }
     }
   },
@@ -1361,15 +1361,15 @@ const sets = [
     colors: {
       base: {
         background: '#c6c1c1',
-        color: '#c91c0b'
+        legend: '#c91c0b'
       },
       mod: {
         background: '#1c7fc3',
-        color: '#c91c0b'
+        legend: '#c91c0b'
       },
       accent: {
         background: '#c91c0b',
-        color: '#c6c1c1'
+        legend: '#c6c1c1'
       }
     }
   },
@@ -1379,15 +1379,15 @@ const sets = [
     colors: {
       base: {
         background: '#244fa5',
-        color: '#71c2dc'
+        legend: '#71c2dc'
       },
       mod: {
         background: '#243143',
-        color: '#71c2dc'
+        legend: '#71c2dc'
       },
       accent: {
         background: '#71c2dc',
-        color: '#243143'
+        legend: '#243143'
       }
     }
   },
@@ -1397,15 +1397,15 @@ const sets = [
     colors: {
       base: {
         background: '#d5d0c9',
-        color: '#f38568'
+        legend: '#f38568'
       },
       mod: {
         background: '#ecb893',
-        color: '#f38568'
+        legend: '#f38568'
       },
       accent: {
         background: '#f38568',
-        color: '#d5d0c9'
+        legend: '#d5d0c9'
       }
     }
   },
@@ -1415,15 +1415,15 @@ const sets = [
     colors: {
       base: {
         background: '#563b2e',
-        color: '#ada391'
+        legend: '#ada391'
       },
       mod: {
         background: '#463730',
-        color: '#ada391'
+        legend: '#ada391'
       },
       accent: {
         background: '#463730',
-        color: '#ada391'
+        legend: '#ada391'
       }
     }
   },
@@ -1433,15 +1433,15 @@ const sets = [
     colors: {
       base: {
         background: '#e4dfc2',
-        color: '#3c3d41'
+        legend: '#3c3d41'
       },
       mod: {
         background: '#3c3d41',
-        color: '#d43633'
+        legend: '#d43633'
       },
       accent: {
         background: '#d43633',
-        color: '#3c3d41'
+        legend: '#3c3d41'
       }
     }
   },
@@ -1451,15 +1451,15 @@ const sets = [
     colors: {
       base: {
         background: '#ffffff',
-        color: '#000000'
+        legend: '#000000'
       },
       mod: {
         background: '#000000',
-        color: '#ffffff'
+        legend: '#ffffff'
       },
       accent: {
         background: '#dc2e16',
-        color: '#ffffff'
+        legend: '#ffffff'
       }
     },
     specialKeys: {
@@ -1472,15 +1472,15 @@ const sets = [
     colors: {
       base: {
         background: '#fefef4',
-        color: '#28768d'
+        legend: '#28768d'
       },
       mod: {
         background: '#28768d',
-        color: '#fec93d'
+        legend: '#fec93d'
       },
       accent: {
         background: '#fec93d',
-        color: '#28768d'
+        legend: '#28768d'
       }
     }
   },
@@ -1490,15 +1490,15 @@ const sets = [
     colors: {
       base: {
         background: '#65748f',
-        color: '#c7baa0'
+        legend: '#c7baa0'
       },
       mod: {
         background: '#484e5d',
-        color: '#c7baa0'
+        legend: '#c7baa0'
       },
       accent: {
         background: '#ad855d',
-        color: '#9b2f1e'
+        legend: '#9b2f1e'
       }
     },
     specialKeys: {
@@ -1511,19 +1511,19 @@ const sets = [
     colors: {
       base: {
         background: '#e1dbcf',
-        color: '#212121'
+        legend: '#212121'
       },
       mod: {
         background: '#c0b8a3',
-        color: '#212121'
+        legend: '#212121'
       },
       accent: {
         background: '#7f987b',
-        color: '#212121'
+        legend: '#212121'
       },
       accent_red: {
         background: '#e49181',
-        color: '#212121'
+        legend: '#212121'
       }
     },
     specialKeys: {
