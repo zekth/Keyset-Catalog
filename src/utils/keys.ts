@@ -19,7 +19,8 @@ export function genKeyData(
     content,
     subContent,
     thirdContent,
-    colors: keyset.colors[baseColors]
+    colors: keyset.colors[baseColors],
+    legendOverriden:false
   };
   if (keyset.specialKeys && keyset.specialKeys[key]) {
     const spKey = keyset.specialKeys[key];
@@ -28,12 +29,15 @@ export function genKeyData(
     }
     if (!isUndefined(spKey.content)) {
       output.content = spKey.content;
+      output.legendOverriden=true;
     }
     if (!isUndefined(spKey.subContent)) {
       output.subContent = spKey.subContent;
+      output.legendOverriden=true;
     }
     if (!isUndefined(spKey.thirdContent)) {
       output.thirdContent = spKey.thirdContent;
+      output.legendOverriden=true;
     }
   }
   return output;
