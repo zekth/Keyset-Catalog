@@ -515,7 +515,7 @@
       <U1 x="734" :data="getKeyData('KC_L', 'base', 'L')" />
       <U1 x="810" :data="getKeyData('KC_M', 'base', 'M')" />
       <U1 x="886" :data="getKeyData('KC_QUOT', 'base', '%', 'ù')" />
-      <U1 x="962" :data="getKeyData('KC_QUOT', 'base', '%', 'ù')" />
+      <U1 x="962" :data="getKeyData('KC_QUOT', 'base', 'µ', '*')" />
       <!-- <U225
         x="963"
         :data="getKeyData('KC_ENT', 'accent', 'Enter')"
