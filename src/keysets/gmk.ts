@@ -1530,6 +1530,68 @@ const sets = [
       KC_ENT: { type: 'accent_red' },
       KC_SPC: { type: 'accent' }
     }
+  },
+  {
+    name: 'Fro.Yo',
+    designer: 'The_Royal',
+    colors: {
+      base: {
+        background: GmkBaseColors._L9,
+        legend: GmkBaseColors._2B
+      },
+      blueMod: {
+        background: GmkBaseColors._L9,
+        legend: '#6BAABD'
+      },
+      pinkMod: {
+        background: GmkBaseColors._L9,
+        legend: '#E78A87'
+      },
+      greenMod: {
+        background: GmkBaseColors._L9,
+        legend: '#79B695'
+      },
+      yellowishMod: {
+        background: GmkBaseColors._L9,
+        legend: '#B69856'
+      },
+      purpleMod: {
+        background: GmkBaseColors._L9,
+        legend: '#826E9E'
+      }
+    },
+    specialKeys: {
+      KC_BSPC: { type: 'pinkMod', content: 'Discount' },
+      KC_INS: { type: 'pinkMod', content: 'Sale' },
+      KC_LCTL: { type: 'pinkMod', content: 'Fill' },
+      KC_RCTL: { type: 'pinkMod', content: 'Fill' },
+      KC_ESC: { type: 'pinkMod', content: 'Mix' },
+
+      KC_LALT: { type: 'greenMod', content: 'Topping' },
+      KC_LGUI: { type: 'blueMod', content: 'Deluxe' },
+      KC_RALT: { type: 'greenMod', content: 'Topping' },
+      KC_RGUI: { type: 'blueMod', content: 'Deluxe' },
+      KC_APP: { type: 'purpleMod', content: 'Weigh' },
+
+      KC_TAB: { type: 'blueMod', content: 'Extra' },
+      KC_CAPSLOCK: { type: 'purpleMod', content: 'Double' },
+      KC_ENT: { type: 'greenMod', content: 'Total' },
+
+      KC_LSFT: { type: 'yellowishMod', content: 'Add' },
+      KC_RSFT: { type: 'yellowishMod', content: 'Add' },
+
+      KC_F5: { type: 'base' },
+      KC_F6: { type: 'base' },
+      KC_F7: { type: 'base' },
+      KC_F8: { type: 'base' },
+
+      KC_PENT: { type: 'greenMod', content: 'Enter' },
+      KC_PMNS: { type: 'base' },
+      KC_PPLS: { type: 'base' },
+      KC_PSLS: { type: 'base' },
+      KC_NLCK: { type: 'base' },
+      KC_PAST: { type: 'base' }
+    }
   }
 ];
 export default genIds(sets);
