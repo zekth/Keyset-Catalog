@@ -15,6 +15,7 @@ const GmkBaseColors = {
   _GR1: '#c5c7ca',
   _CP: '#e1dad1',
   _WS1: '#f7f2ea',
+  _WS4: '#FFFDEB',
   _BR1: '#653c25',
   _N7: '#00773a',
   _AE: '#689b34',
@@ -1482,6 +1483,24 @@ const sets = [
         background: '#fec93d',
         legend: '#28768d'
       }
+    }
+  },
+  {
+    name: 'Violet on Cream',
+    designer: 'hineybush',
+    colors: {
+      base: {
+        background: GmkBaseColors._WS4,
+        legend: '#652D60'
+      },
+      mod: {
+        background: '#652D60',
+        legend: GmkBaseColors._WS4
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'mod' },
+      KC_ESC: { type: 'mod' }
     }
   },
   {
