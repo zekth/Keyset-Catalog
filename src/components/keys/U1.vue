@@ -19,46 +19,72 @@
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
 
-      <text
-        v-if="!isMod"
-        class="key-content"
-        x="160"
-        y="270"
-        font-size="200px"
-        :fill="data.colors.legend"
+      <g v-if="data.legendOverriden || !reservedKeys.includes(data.key)">
+        <text
+          v-if="!isMod"
+          class="key-content"
+          x="160"
+          y="270"
+          font-size="200px"
+          :fill="data.colors.legend"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="isMod"
+          class="key-content"
+          x="160"
+          y="370"
+          font-size="130px"
+          :fill="data.colors.legend"
+        >
+          {{ data.content }}
+        </text>
+        <text
+          v-if="data.subContent"
+          class="key-content"
+          x="160"
+          y="500"
+          font-size="200px"
+          :fill="data.colors.legend"
+        >
+          {{ data.subContent }}
+        </text>
+        <text
+          v-if="data.thirdContent"
+          class="key-content"
+          x="410"
+          y="500"
+          font-size="180px"
+          :fill="data.colors.legend"
+        >
+          {{ data.thirdContent }}
+        </text>
+      </g>
+      <g
+        v-if="!data.legendOverriden && data.key === 'KC_UP'"
+        transform="scale(15),translate(10,8)"
       >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="isMod"
-        class="key-content"
-        x="160"
-        y="370"
-        font-size="130px"
-        :fill="data.colors.legend"
+        <up :color="data.colors.legend" />
+      </g>
+      <g
+        v-if="!data.legendOverriden && data.key === 'KC_DOWN'"
+        transform="scale(15),translate(10,8)"
       >
-        {{ data.content }}
-      </text>
-      <text
-        v-if="data.subContent"
-        class="key-content"
-        x="160"
-        y="500"
-        font-size="200px"
-        :fill="data.colors.legend"
+        <down :color="data.colors.legend" />
+      </g>
+      <g
+        v-if="!data.legendOverriden && data.key === 'KC_LEFT'"
+        transform="scale(15),translate(10,8)"
       >
-        {{ data.subContent }}
-      </text>
-      <text
-        v-if="data.thirdContent"
-        class="key-content"
-        x="410"
-        y="500"
-        font-size="180px"
-        :fill="data.colors.legend"
+        <left :color="data.colors.legend" />
+      </g>
+      <g
+        v-if="!data.legendOverriden && data.key === 'KC_RGHT'"
+        transform="scale(15),translate(10,8)"
       >
-        {{ data.thirdContent }}
-      </text>
+        <right :color="data.colors.legend" />
+      </g>
       <text class="cap-size" x="350" y="680" font-size="180px" fill="white">
         1.00
       </text>
@@ -67,7 +93,18 @@
 </template>
 
 <script>
+import up from './legends/arrows/up.vue';
+import down from './legends/arrows/down.vue';
+import right from './legends/arrows/right.vue';
+import left from './legends/arrows/left.vue';
+
 export default {
-  props: ['data', 'isMod']
+  props: ['data', 'isMod'],
+  components: { up, down, left, right },
+  data() {
+    return {
+      reservedKeys: ['KC_UP', 'KC_LEFT', 'KC_DOWN', 'KC_RGHT']
+    };
+  }
 };
 </script>
