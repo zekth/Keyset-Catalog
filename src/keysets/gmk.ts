@@ -1525,6 +1525,45 @@ const sets = [
     }
   },
   {
+    name: 'Vaporwave',
+    designer: 'NaturalPack',
+    colors: {
+      base: {
+        background: '#9595D2',
+        legend: '#FF3EB5'
+      },
+      mod: {
+        background: '#5644AA',
+        legend: '#27B2BF'
+      },
+      accent: {
+        background: '#27B2BF',
+        legend: '#5644AA'
+      }
+    }
+  },
+  {
+    name: 'Vaporwave - weeb',
+    designer: 'NaturalPack',
+    colors: {
+      base: {
+        background: '#9595D2',
+        legend: '#FF3EB5'
+      },
+      mod: {
+        background: '#5644AA',
+        legend: '#27B2BF'
+      },
+      accent: {
+        background: '#27B2BF',
+        legend: '#5644AA'
+      }
+    },
+    specialKeys: {
+      ...hiraganasAlt
+    }
+  },
+  {
     name: '9009',
     designer: 'janglad',
     colors: {
