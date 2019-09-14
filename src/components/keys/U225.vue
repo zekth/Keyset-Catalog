@@ -22,7 +22,7 @@
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
 
-      <g v-if="!reservedKeys.includes(data.key)">
+      <g v-if="data.legendOverriden || !reservedKeys.includes(data.key)">
         <text
           v-if="!isMod"
           class="key-content"
@@ -67,12 +67,14 @@
       <text class="cap-size" x="1150" y="680" font-size="180px" fill="white">
         2.25
       </text>
-      <g v-if="data.key === 'KC_ENT'" transform="scale(17),translate(10,-4)">
-        <enterLegend :color="data.colors.legend" />
-      </g>
+      <g v-if="!data.legendOverriden">
+        <g v-if="data.key === 'KC_ENT'" transform="scale(17),translate(10,-4)">
+          <enterLegend :color="data.colors.legend" />
+        </g>
 
-      <g v-if="data.key === 'KC_LSFT'" transform="scale(17),translate(10,5)">
-        <shift225 :color="data.colors.legend" />
+        <g v-if="data.key === 'KC_LSFT'" transform="scale(17),translate(10,5)">
+          <shift225 :color="data.colors.legend" />
+        </g>
       </g>
     </g>
   </svg>

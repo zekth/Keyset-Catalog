@@ -21,7 +21,7 @@
         d="M112.45,102.85v428.96c0,14.52,10.4,26.95,24.69,29.51l0,0c145.74,26.15,294.97,26.15,440.72,0l0,0
                         c14.29-2.56,24.69-14.99,24.69-29.51V102.85c0-16.56-13.42-29.98-29.98-29.98H142.43C125.88,72.86,112.45,86.29,112.45,102.85z"
       />
-      <g v-if="data.key !== 'KC_LSFT'">
+      <g v-if="data.legendOverriden || data.key !== 'KC_LSFT'">
         <text
           v-if="!isMod"
           class="key-content"
@@ -53,7 +53,10 @@
           {{ data.subContent }}
         </text>
       </g>
-      <g v-if="data.key === 'KC_LSFT'" transform="translate(130,73) scale(16)">
+      <g
+        v-if="!data.legendOverriden && data.key === 'KC_LSFT'"
+        transform="translate(130,73) scale(16)"
+      >
         <shift275 :color="data.colors.legend" />
       </g>
       <text class="cap-size" x="500" y="680" font-size="180px" fill="white">
