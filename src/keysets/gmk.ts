@@ -1486,6 +1486,24 @@ const sets = [
     }
   },
   {
+    name: 'Triumph Adler 90',
+    designer: 'Drclick',
+    colors: {
+      base: {
+        background: '#A9ADAB',
+        legend: '#3E6D81'
+      },
+      mod: {
+        background: '#3E6D81',
+        legend: '#A9ADAB'
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'mod' },
+      KC_ESC: { type: 'mod' }
+    }
+  },
+  {
     name: 'Violet on Cream',
     designer: 'hineybush',
     colors: {
