@@ -1504,6 +1504,28 @@ const sets = [
     }
   },
   {
+    name: 'Shoko',
+    designer: 'RaySasQuach',
+    colors: {
+      base: {
+        background: '#DDE5ED',
+        legend: '#7A99AC'
+      },
+      mod: {
+        background: '#7A99AC',
+        legend: '#DDE5ED'
+      },
+      accent: {
+        background: '#99D6EA',
+        legend: '#DDE5ED'
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'accent' },
+      KC_ESC: { type: 'mod' }
+    }
+  },
+  {
     name: 'Denim',
     designer: '',
     colors: {
