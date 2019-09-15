@@ -1525,6 +1525,24 @@ const sets = [
     }
   },
   {
+    name: 'Q:01',
+    designer: '',
+    colors: {
+      base: {
+        background: GmkBaseColors._N9,
+        legend: GmkBaseColors._L9
+      },
+      mod: {
+        background: GmkBaseColors._DY,
+        legend: GmkBaseColors._L9
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'mod' },
+      KC_ESC: { type: 'mod' }
+    }
+  },
+  {
     name: 'Vaporwave',
     designer: 'NaturalPack',
     colors: {
