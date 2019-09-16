@@ -1564,6 +1564,24 @@ const sets = [
     }
   },
   {
+    name: 'Olive',
+    designer: 'Olivia',
+    colors: {
+      base: {
+        background: '#EAE5CF',
+        legend: '#45433B'
+      },
+      mod: {
+        background: '#45433B',
+        legend: '#EAE5CF'
+      },
+      accent: {
+        background: '#8E916D',
+        legend: '#45433B'
+      }
+    }
+  },
+  {
     name: '9009',
     designer: 'janglad',
     colors: {
