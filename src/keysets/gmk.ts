@@ -1429,6 +1429,24 @@ const sets = [
     }
   },
   {
+    name: 'Violet Tendencies',
+    designer: 'Voxicles',
+    colors: {
+      base: {
+        background: GmkBaseColors._GR1,
+        legend: GmkBaseColors._DY
+      },
+      mod: {
+        background: GmkBaseColors._N9,
+        legend: GmkBaseColors._DY
+      },
+      accent: {
+        background: GmkBaseColors._DY,
+        legend: GmkBaseColors._GR1
+      }
+    }
+  },
+  {
     name: 'Led Zep',
     designer: '',
     colors: {
