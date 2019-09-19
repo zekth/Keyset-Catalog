@@ -50,31 +50,42 @@
           <div class="row">
             <div class="col-lg-6">
               <label class="font-weight-bold">Color pick</label>
-              <chrome-picker v-model="colors" />
+              <chrome-picker class="mx-auto" v-model="colors" />
             </div>
             <div class="col-lg-6">
               <label class="font-weight-bold">Search for</label>
               <div>
-                <button
-                  class="btn btn-info btn-sm"
-                  v-on:click="findKeyset('base')"
-                >
-                  Base
-                </button>
-                <button
-                  class="btn btn-info btn-sm"
-                  v-on:click="findKeyset('accent')"
-                >
-                  Accent
-                </button>
-                <button
-                  class="btn btn-info btn-sm"
-                  v-on:click="findKeyset('mod')"
-                >
-                  Mod
-                </button>
-                <label>Color distance threshold</label>
-                <VueSlider v-model="threshold" v-bind="sliderOptions" />
+                <div class="form-group">
+                  <button
+                    class="btn btn-info btn-sm"
+                    v-on:click="findKeyset('base')"
+                  >
+                    Base
+                  </button>
+                  <button
+                    class="btn btn-info btn-sm"
+                    v-on:click="findKeyset('accent')"
+                  >
+                    Accent
+                  </button>
+                  <button
+                    class="btn btn-info btn-sm"
+                    v-on:click="findKeyset('mod')"
+                  >
+                    Mod
+                  </button>
+                </div>
+                <div class="form-group">
+                  <label>Type of research</label>
+                  <select v-model="searchCriteria" class="form-control">
+                    <option value="background">Background</option>
+                    <option value="legend">Legend</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Color distance threshold</label>
+                  <VueSlider v-model="threshold" v-bind="sliderOptions" />
+                </div>
               </div>
             </div>
           </div>
@@ -222,6 +233,7 @@ export default class App extends Vue {
       ? localStorage.getItem('keyboard')
       : 'fullSizeAnsi';
   threshold = 100;
+  searchCriteria = 'background';
   darkMode = localStorage && localStorage.getItem('darkMode') ? true : false;
   colors: any = '#fff';
   showCustomKeyboard = false;
@@ -273,8 +285,12 @@ export default class App extends Vue {
   }
   findKeyset(type) {
     let colorsToTest = {};
+    console.log(type);
+    console.log(k);
     k.forEach(x => {
-      colorsToTest[x.id] = x.colors[type].background;
+      if (x.colors[type]) {
+        colorsToTest[x.id] = x.colors[type][this.searchCriteria];
+      }
     });
     const outputs: any = [];
     let nearestKeyset;

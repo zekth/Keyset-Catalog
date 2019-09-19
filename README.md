@@ -121,8 +121,6 @@ Also `weebAlt` and `weeb` are stored as const because it's used in several keyse
 ## TODO
 
 - Add Keysets
-- Add research on color of writing and not only the background
+- Add research on color of legends and not only the background
 - Add an editor for keysets
-- Add more layouts
-- Make a better UI
 - Improve todo list?
