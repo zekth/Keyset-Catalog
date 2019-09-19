@@ -7,11 +7,5 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {},
   mutations: {},
-  actions: {
-    genKeyset(_, name) {
-      const s = gmk.find(e => {
-        return e.name === name;
-      });
-    }
-  }
+  actions: {}
 });
