@@ -172,7 +172,7 @@
 </template>
 
 <script lang="ts">
-import { KeyboardLayout } from '../../utils/keyboardLayout';
+import { KeyboardLayout } from '@/utils/keyboardLayout';
 import { Component } from 'vue-property-decorator';
 import U1 from '../keys/U1.vue';
 import U125 from '../keys/U125.vue';
