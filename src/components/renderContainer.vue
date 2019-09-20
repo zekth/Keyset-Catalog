@@ -51,5 +51,3 @@ import split60 from '@/components/layouts/60SplitBckSp.vue';
 })
 export default class renderContainer extends Vue {}
 </script>
-
-<style></style>

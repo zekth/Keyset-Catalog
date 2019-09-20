@@ -519,48 +519,17 @@
   </svg>
 </template>
 
-<script>
-import tinycolor from 'tinycolor2';
-import { genKeyData } from '../../utils/keys';
+<script lang="ts">
+import { KeyboardLayout } from '../../utils/keyboardLayout';
+import { Component } from 'vue-property-decorator';
 import U1 from '../keys/U1.vue';
 import U225 from '../keys/U225.vue';
 import U275 from '../keys/U275.vue';
 import U175 from '../keys/U175.vue';
 import U15 from '../keys/U15.vue';
 import U2 from '../keys/U2.vue';
-export default {
-  props: ['keyset', 'keyboardColor'],
-  components: { U1, U15, U175, U275, U2, U225 },
-  computed: {
-    keyboardGradientStart: function() {
-      return tinycolor(this.keyboardColor)
-        .darken(5)
-        .toString();
-    },
-    keyboardGradientEnd: function() {
-      return tinycolor(this.keyboardColor)
-        .lighten(5)
-        .toString();
-    }
-  },
-  methods: {
-    getKeyData(key, baseColors, content, subContent, thirdContent) {
-      return genKeyData(
-        this.keyset,
-        key,
-        baseColors,
-        content,
-        subContent,
-        thirdContent
-      );
-    }
-  },
-  data() {
-    return {
-      char: '&',
-      doubleQuote: '"',
-      simpleQuote: "'"
-    };
-  }
-};
+@Component({
+  components: { U1, U15, U175, U275, U2, U225 }
+})
+export default class lubrigante extends KeyboardLayout {}
 </script>
