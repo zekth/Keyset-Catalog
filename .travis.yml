@@ -22,6 +22,7 @@ deploy:
     on:
       branch: master
   - provider: script
+    skip_cleanup: true
     script: bash scripts/deploy-tag.sh
     on:
       tags: true
