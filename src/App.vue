@@ -22,11 +22,7 @@
         <div class="col-lg-3">
           <div class="form-group">
             <label class="font-weight-bold">Keyset</label>
-            <select
-              v-model="selectedSet"
-              class="form-control"
-              @change="changeKeyset"
-            >
+            <select v-model="selectedSet" class="form-control">
               <option
                 v-for="k in keysets"
                 v-bind:value="k.id"
@@ -171,9 +167,10 @@ import appFooter from '@/components/footer.vue';
 })
 export default class App extends Vue {
   keysets = orderBy(k, [key => key.name.toLowerCase()], ['asc']);
-  selectedSet: any = this.keysets[
-    Math.floor(Math.random() * Math.floor(k.length))
-  ].id;
+  selectedSet: any =
+    localStorage && localStorage.getItem('keyset')
+      ? Number(localStorage.getItem('keyset'))
+      : this.keysets[Math.floor(Math.random() * Math.floor(k.length))].id;
   selectedLayout =
     localStorage && localStorage.getItem('keyboard')
       ? localStorage.getItem('keyboard')
@@ -207,11 +204,8 @@ export default class App extends Vue {
   toggleSearch() {
     this.showSearch = !this.showSearch;
   }
-  changeSet(s) {
-    this.selectedSet = s;
-  }
-  toggleDarkMode(e) {
-    if (e.value) {
+  toggleDarkMode({ value }) {
+    if (value === true) {
       document.getElementsByTagName('html')[0].classList.add('dark');
       if (localStorage) {
         localStorage.setItem('darkMode', 'true');
@@ -221,13 +215,15 @@ export default class App extends Vue {
       localStorage.removeItem('darkMode');
     }
   }
-  changeKeyboard(e) {
+  changeKeyboard({ target }) {
     if (localStorage) {
-      localStorage.setItem('keyboard', e.target.value);
+      localStorage.setItem('keyboard', target.value);
     }
   }
-  changeKeyset(e) {
-    console.log(e.target.value);
+  changeKeyset({ target }) {
+    if (localStorage) {
+      localStorage.setItem('keyset', target.value);
+    }
   }
   findKeyset(type) {
     let colorsToTest = {};
@@ -264,7 +260,7 @@ export default class App extends Vue {
     }
     this.searchResult = outputs;
     if (outputs.length > 0) {
-      this.changeSet(outputs[0].id);
+      this.selectedSet = outputs[0].id;
     } else {
       console.log('no keyset found');
     }

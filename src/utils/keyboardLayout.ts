@@ -12,12 +12,12 @@ export class KeyboardLayout extends Vue {
   doubleQuote = '"';
   simpleQuote = "'";
 
-  get keyboardGradientStart() {
+  get keyboardGradientStart(): string {
     return tinycolor(this.keyboardColor)
       .darken(5)
       .toString();
   }
-  get keyboardGradientEnd() {
+  get keyboardGradientEnd(): string {
     return tinycolor(this.keyboardColor)
       .lighten(5)
       .toString();

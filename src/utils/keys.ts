@@ -20,6 +20,8 @@ export function genKeyData(
     subContent,
     thirdContent,
     colors: keyset.colors[baseColors],
+    type: baseColors,
+    keysetColors: keyset.colors,
     legendOverriden: false
   };
   if (keyset.specialKeys && keyset.specialKeys[key]) {
