@@ -87,10 +87,8 @@ import { Fragment } from 'vue-fragment';
   }
 })
 export default class colorMatchSearch extends Vue {
-  @Prop()
-  keysets: any;
-  // @Prop()
-  // setSelectedKeyset: any;
+  public keysets: any;
+  public setSelectedKeyset: any;
 
   sliderOptions = {
     max: 300
@@ -130,7 +128,6 @@ export default class colorMatchSearch extends Vue {
     }
     this.searchResult = outputs;
     if (outputs.length > 0) {
-      // @ts-ignore
       this.setSelectedKeyset(outputs[0].id);
     } else {
       console.log('no keyset found');

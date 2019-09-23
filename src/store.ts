@@ -6,6 +6,7 @@ import { orderBy, isEmpty } from 'lodash';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: false,
   getters: {
     keyset: state => {
       return state.keysets.find(x => {

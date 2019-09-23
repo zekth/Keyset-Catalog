@@ -121,14 +121,10 @@ import { mapState, mapMutations, mapGetters } from 'vuex';
   }
 })
 export default class App extends Vue {
-  @Prop()
-  keysets: any;
-  @Prop()
-  keyset: any;
-  @Prop()
-  selectedKeyset: any;
-  @Prop()
-  setSelectedKeyset: any;
+  public keysets: any;
+  public keyset: any;
+  public selectedKeyset: any;
+  public setSelectedKeyset: any;
 
   selectedLayout =
     localStorage && localStorage.getItem('keyboard')
