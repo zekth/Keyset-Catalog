@@ -22,7 +22,7 @@
         <div class="col-lg-3">
           <div class="form-group">
             <label class="font-weight-bold">Keyset</label>
-            <select v-model="selectedSet" class="form-control">
+            <select v-model="_selectedKeyset" class="form-control">
               <option
                 v-for="k in keysets"
                 v-bind:value="k.id"
@@ -42,71 +42,7 @@
         </div>
       </div>
       <div class="row" v-bind:class="{ collapse: !showSearch }">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-6">
-              <label class="font-weight-bold">Color pick</label>
-              <chrome-picker class="mx-auto" v-model="colors" />
-            </div>
-            <div class="col-lg-6">
-              <label class="font-weight-bold">Search for</label>
-              <div>
-                <div class="form-group">
-                  <button
-                    class="btn btn-info btn-sm"
-                    v-on:click="findKeyset('base')"
-                  >
-                    Base
-                  </button>
-                  <button
-                    class="btn btn-info btn-sm"
-                    v-on:click="findKeyset('accent')"
-                  >
-                    Accent
-                  </button>
-                  <button
-                    class="btn btn-info btn-sm"
-                    v-on:click="findKeyset('mod')"
-                  >
-                    Mod
-                  </button>
-                </div>
-                <div class="form-group">
-                  <label>Type of research</label>
-                  <select v-model="searchCriteria" class="form-control">
-                    <option value="background">Background</option>
-                    <option value="legend">Legend</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Color distance threshold</label>
-                  <VueSlider v-model="threshold" v-bind="sliderOptions" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <perfect-scrollbar class="over-wrapper">
-            <label class="font-weight-bold">Search Results</label>
-            <table id="search-results" class="table table-hover table-sm">
-              <thead>
-                <tr>
-                  <th>Keyset Name</th>
-                  <th>Distance</th>
-                </tr>
-              </thead>
-              <tbody>
-                <template v-for="r in searchResult">
-                  <tr v-bind:key="r.id" v-on:click="changeSet(r.id)">
-                    <td>{{ r.name }}</td>
-                    <td>{{ r.distance.toFixed() }}</td>
-                  </tr>
-                </template>
-              </tbody>
-            </table>
-          </perfect-scrollbar>
-        </div>
+        <colorMatchSearch />
       </div>
       <renderContainer
         :selectedLayout="selectedLayout"
@@ -125,11 +61,11 @@
         </div>
       </div>
       <div class="row mb-4" v-bind:class="{ collapse: !showCustomKeyboard }">
-        <div class="col-lg-4">
+        <div class="col-md-3">
           <label class="font-weight-bold">Keyboard color</label>
           <chrome-picker v-model="keyboardColor" />
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-3">
           <label class="font-weight-bold">Dark mode</label>
           <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
         </div>
@@ -146,16 +82,35 @@ import 'vue-slider-component/theme/antd.css';
 import { ToggleButton } from 'vue-js-toggle-button';
 import { orderBy, isEmpty } from 'lodash';
 import { from } from 'nearest-color';
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 import { Chrome } from 'vue-color';
 import '@/scss/style.scss';
-import k from './keysets/gmk';
+// import k from './keysets/gmk';
 import appHeader from '@/components/header.vue';
 import renderContainer from '@/components/renderContainer.vue';
 import appDescription from '@/components/description.vue';
 import appFooter from '@/components/footer.vue';
+import colorMatchSearch from '@/components/colorMatchSearch.vue';
+import { mapState, mapMutations, mapGetters } from 'vuex';
 @Component({
+  computed: {
+    ...mapGetters(['keyset']),
+    ...mapState([
+      'keysets',
+      'selectedKeyset',
+      'customBackgroundColor',
+      'customLegendColor'
+    ])
+  },
+  methods: {
+    ...mapMutations([
+      'setCustomBackground',
+      'setCustomLegend',
+      'setSelectedKeyset'
+    ])
+  },
   components: {
+    colorMatchSearch,
     VueSlider,
     renderContainer,
     appDescription,
@@ -166,32 +121,36 @@ import appFooter from '@/components/footer.vue';
   }
 })
 export default class App extends Vue {
-  keysets = orderBy(k, [key => key.name.toLowerCase()], ['asc']);
-  selectedSet: any =
-    localStorage && localStorage.getItem('keyset')
-      ? Number(localStorage.getItem('keyset'))
-      : this.keysets[Math.floor(Math.random() * Math.floor(k.length))].id;
+  @Prop()
+  keysets: any;
+  @Prop()
+  keyset: any;
+  @Prop()
+  selectedKeyset: any;
+  @Prop()
+  setSelectedKeyset: any;
+
   selectedLayout =
     localStorage && localStorage.getItem('keyboard')
       ? localStorage.getItem('keyboard')
       : 'fullSizeAnsi';
-  threshold = 100;
-  searchCriteria = 'background';
   darkMode = localStorage && localStorage.getItem('darkMode') ? true : false;
-  colors: any = '#fff';
   showCustomKeyboard = false;
   keyboardColor = {
     hex: '#322B2B'
   };
-  searchResult: any[] = [];
   showSearch = false;
-  sliderOptions = {
-    max: 300
-  };
-  get keyset() {
-    return this.keysets.find(x => {
-      return x.id === this.selectedSet;
-    });
+  get _selectedKeyset() {
+    return this.selectedKeyset;
+  }
+  set _selectedKeyset(v) {
+    this.setSelectedKeyset(v);
+  }
+  changeCustomBackground(e) {
+    console.log(e);
+  }
+  changeCustomLegend(e) {
+    console.log(e);
   }
   mounted() {
     if (this.darkMode) {
@@ -223,46 +182,6 @@ export default class App extends Vue {
   changeKeyset({ target }) {
     if (localStorage) {
       localStorage.setItem('keyset', target.value);
-    }
-  }
-  findKeyset(type) {
-    let colorsToTest = {};
-    console.log(type);
-    console.log(k);
-    k.forEach(x => {
-      if (x.colors[type]) {
-        colorsToTest[x.id] = x.colors[type][this.searchCriteria];
-      }
-    });
-    const outputs: any = [];
-    let nearestKeyset;
-    for (;;) {
-      const nearest = from(colorsToTest);
-      let tempNearest;
-      if (this.colors.hex) {
-        tempNearest = nearest(this.colors.hex);
-      } else {
-        tempNearest = nearest(this.colors);
-      }
-      if (Number(tempNearest.distance.toFixed()) > this.threshold) {
-        break;
-      } else {
-        delete colorsToTest[tempNearest.name];
-      }
-      outputs.push({
-        distance: tempNearest.distance,
-        name: k[tempNearest.name].name,
-        id: k[tempNearest.name].id
-      });
-      if (isEmpty(colorsToTest)) {
-        break;
-      }
-    }
-    this.searchResult = outputs;
-    if (outputs.length > 0) {
-      this.selectedSet = outputs[0].id;
-    } else {
-      console.log('no keyset found');
     }
   }
 }

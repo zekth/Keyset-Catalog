@@ -7,11 +7,14 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faSearch, faCog } from '@fortawesome/free-solid-svg-icons';
 import PerfectScrollbar from 'vue2-perfect-scrollbar';
 import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css';
+import { Plugin } from 'vue-fragment';
+Vue.use(Plugin);
 
 library.add(faCog);
 library.add(faGithub);
 library.add(faSearch);
 
+Vue.use(Plugin);
 Vue.use(PerfectScrollbar);
 Vue.config.productionTip = false;
 

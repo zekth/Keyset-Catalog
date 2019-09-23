@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U1">
       <path
         fill="black"
@@ -93,6 +93,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import up from './legends/arrows/up.vue';
 import down from './legends/arrows/down.vue';
 import right from './legends/arrows/right.vue';
@@ -101,6 +102,15 @@ import left from './legends/arrows/left.vue';
 export default {
   props: ['data', 'isMod'],
   components: { up, down, left, right },
+  computed: {},
+  methods: {
+    ...mapMutations(['setCustomBackground', 'setCustomLegend']),
+    clickHandler() {
+      console.log(this);
+      this.setCustomBackground(this.data.colors.background);
+      this.setCustomLegend(this.data.colors.legend);
+    }
+  },
   data() {
     return {
       reservedKeys: ['KC_UP', 'KC_LEFT', 'KC_DOWN', 'KC_RGHT']
