@@ -33,6 +33,7 @@
 </template>
 
 <script lang="ts">
+import { mapGetters } from 'vuex';
 import { Component, Vue } from 'vue-property-decorator';
 import fullSizeAnsi from '@/components/layouts/fullSizeAnsi.vue';
 import lubrigante from '@/components/layouts/lubrigante.vue';
@@ -40,7 +41,10 @@ import wklTkl from '@/components/layouts/wkl-tkl.vue';
 import wklTklIso from '@/components/layouts/wkl-tkl-iso.vue';
 import split60 from '@/components/layouts/60SplitBckSp.vue';
 @Component({
-  props: ['selectedLayout', 'keyset', 'keyboardColor'],
+  computed: {
+    ...mapGetters(['keyset'])
+  },
+  props: ['selectedLayout', 'keyboardColor'],
   components: {
     fullSizeAnsi,
     split60,

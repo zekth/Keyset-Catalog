@@ -9,10 +9,9 @@ html.dark {
   @import './variables/darkBootstrapVars';
   @import '../../node_modules/bootstrap/scss/bootstrap';
   // fix for slider not appearing in darkmode
-  .vue-slider{
+  .vue-slider {
     box-sizing: content-box;
   }
-
 }
 html {
   @import '../../node_modules/bootstrap/scss/bootstrap';
@@ -53,6 +52,17 @@ html {
 }
 .key-shadow {
   fill-opacity: 0.78;
+}
+.target-style {
+  font-family: 'Helvetica Rounded LT';
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  td {
+    text-align: center;
+    padding: 5px;
+    user-select: none;
+  }
 }
 .key-content {
   font-family: 'Helvetica Rounded LT';

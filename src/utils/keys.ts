@@ -1,4 +1,6 @@
 import { isUndefined } from 'lodash';
+import { Vue, Component, Prop } from 'vue-property-decorator';
+import { mapMutations } from 'vuex';
 export function genIds(arr) {
   let i = 0;
   return arr.map(x => {
@@ -43,4 +45,20 @@ export function genKeyData(
     }
   }
   return output;
+}
+
+@Component({
+  methods: {
+    ...mapMutations(['setEditTarget'])
+  }
+})
+export class KeyComponent extends Vue {
+  @Prop()
+  public data: any;
+  @Prop()
+  isMod!: Boolean;
+  public setEditTarget: any;
+  clickHandler() {
+    this.setEditTarget(this.data.colors);
+  }
 }

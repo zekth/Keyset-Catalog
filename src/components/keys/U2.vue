@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U2">
       <path
         style="transform:scaleX(2.05)"
@@ -66,16 +66,14 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 import backspace from './legends/backspace.vue';
-
-export default {
-  components: { backspace },
-  props: ['data', 'isMod'],
-  data() {
-    return {
-      reservedKeys: ['KC_BSPC']
-    };
-  }
-};
+import { KeyComponent } from '@/utils/keys';
+import Component from 'vue-class-component';
+@Component({
+  components: { backspace }
+})
+export default class U2 extends KeyComponent {
+  public reservedKeys = ['KC_BSPC'];
+}
 </script>

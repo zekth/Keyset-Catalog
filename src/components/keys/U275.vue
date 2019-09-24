@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U275">
       <path
         style="transform:scaleX(2.88)"
@@ -67,16 +67,14 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
+import { KeyComponent } from '@/utils/keys';
 import shift275 from './legends/shift275.vue';
-
-export default {
-  components: { shift275 },
-  props: ['data', 'isMod'],
-  data() {
-    return {
-      reservedKeys: ['KC_RSFT']
-    };
-  }
-};
+import Component from 'vue-class-component';
+@Component({
+  components: { shift275 }
+})
+export default class U2 extends KeyComponent {
+  public reservedKeys = ['KC_RSFT'];
+}
 </script>

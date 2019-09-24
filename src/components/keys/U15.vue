@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U15">
       <path
         style="transform:scaleX(1.5)"
@@ -82,16 +82,15 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
+import { KeyComponent } from '@/utils/keys';
 import tab from './legends/tab.vue';
 import backspace15 from './legends/backspace15.vue';
-export default {
-  components: { tab, backspace15 },
-  props: ['data', 'isMod'],
-  data() {
-    return {
-      reservedKeys: ['KC_BSPC', 'KC_TAB']
-    };
-  }
-};
+import Component from 'vue-class-component';
+@Component({
+  components: { tab, backspace15 }
+})
+export default class U2 extends KeyComponent {
+  public reservedKeys = ['KC_BSPC', 'KC_TAB'];
+}
 </script>

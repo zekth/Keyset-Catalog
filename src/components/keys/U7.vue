@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U625">
       <path
         style="transform:scaleX(7.36)"
@@ -28,8 +28,13 @@
   </svg>
 </template>
 
-<script>
-export default {
-  props: ['data']
-};
+<script lang="ts">
+import { KeyComponent } from '@/utils/keys';
+import Component from 'vue-class-component';
+@Component({
+  components: {}
+})
+export default class U2 extends KeyComponent {
+  public reservedKeys = [];
+}
 </script>

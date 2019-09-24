@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U225">
       <path
         style="transform:scaleX(2.25)"
@@ -80,17 +80,16 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 import enterLegend from './legends/enter.vue';
 import shift225 from './legends/shift225.vue';
-
-export default {
-  components: { enterLegend, shift225 },
-  props: ['data', 'isMod'],
-  data() {
-    return {
-      reservedKeys: ['KC_ENT', 'KC_LSFT']
-    };
-  }
-};
+import { KeyComponent } from '@/utils/keys';
+import shift275 from './legends/shift275.vue';
+import Component from 'vue-class-component';
+@Component({
+  components: { enterLegend, shift225 }
+})
+export default class U2 extends KeyComponent {
+  public reservedKeys = ['KC_ENT', 'KC_LSFT'];
+}
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <svg>
+  <svg @click="clickHandler">
     <g class="keycap U2V">
       <path
         style="transform:scaleY(2.08)"
@@ -64,16 +64,14 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 import pEnter from './legends/pEnter.vue';
-
-export default {
-  components: { pEnter },
-  props: ['data', 'isMod'],
-  data() {
-    return {
-      reservedKeys: ['KC_PENT']
-    };
-  }
-};
+import { KeyComponent } from '@/utils/keys';
+import Component from 'vue-class-component';
+@Component({
+  components: { pEnter }
+})
+export default class U2 extends KeyComponent {
+  public reservedKeys = ['KC_PENT'];
+}
 </script>

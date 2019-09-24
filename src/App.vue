@@ -46,7 +46,6 @@
       </div>
       <renderContainer
         :selectedLayout="selectedLayout"
-        :keyset="keyset"
         :keyboardColor="keyboardColor"
       />
       <div class="row">
@@ -58,6 +57,8 @@
             Customize
             <font-awesome-icon :icon="['fas', 'cog']" />
           </button>
+          <label class="font-weight-bold">Dark mode</label>
+          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
         </div>
       </div>
       <div class="row mb-4" v-bind:class="{ collapse: !showCustomKeyboard }">
@@ -66,8 +67,55 @@
           <chrome-picker v-model="keyboardColor" />
         </div>
         <div class="col-md-3">
-          <label class="font-weight-bold">Dark mode</label>
-          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
+          <label class="font-weight-bold">Keyset Colors</label>
+          <table style="width:100%">
+            <tr
+              @click="_setEditTarget(t.name)"
+              v-for="t in targets"
+              :value="t.name"
+              :key="t.name"
+              class="target-style"
+              v-bind:style="{
+                backgroundColor: t.color.background,
+                color: t.color.legend
+              }"
+            >
+              <td>{{ t.name }}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-3">
+          <label class="font-weight-bold">Custom Backgroud</label>
+          <chrome-picker
+            v-if="_customBackgroundColor"
+            v-model="_customBackgroundColor"
+          />
+        </div>
+        <div class="col-md-3">
+          <label class="font-weight-bold">Custom Legend</label>
+          <chrome-picker
+            v-if="_customLegendColor"
+            v-model="_customLegendColor"
+          />
+        </div>
+      </div>
+      <div class="row" v-bind:class="{ collapse: !showCustomKeyboard }">
+        <div class="col-md-3">
+          <button
+            class="btn btn-sm btn-success"
+            v-on:click="designerMoDaF0ckA()"
+          >
+            $$ I AM DEZIGNER $$
+          </button>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <button class="btn btn-sm btn-info" v-on:click="biipMe()">
+              Biip Notice Me
+              <font-awesome-icon :icon="['fas', 'eye']" />
+            </button>
+          </div>
         </div>
       </div>
       <appDescription />
@@ -85,16 +133,15 @@ import { from } from 'nearest-color';
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { Chrome } from 'vue-color';
 import '@/scss/style.scss';
-// import k from './keysets/gmk';
 import appHeader from '@/components/header.vue';
 import renderContainer from '@/components/renderContainer.vue';
 import appDescription from '@/components/description.vue';
 import appFooter from '@/components/footer.vue';
 import colorMatchSearch from '@/components/colorMatchSearch.vue';
-import { mapState, mapMutations, mapGetters } from 'vuex';
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
 @Component({
   computed: {
-    ...mapGetters(['keyset']),
+    ...mapGetters(['keyset', 'targets', 'customBackground', 'customLegend']),
     ...mapState([
       'keysets',
       'selectedKeyset',
@@ -106,8 +153,10 @@ import { mapState, mapMutations, mapGetters } from 'vuex';
     ...mapMutations([
       'setCustomBackground',
       'setCustomLegend',
-      'setSelectedKeyset'
-    ])
+      'setSelectedKeyset',
+      'setEditTarget'
+    ]),
+    ...mapActions(['biipMe', 'designerMoDaF0ckA'])
   },
   components: {
     colorMatchSearch,
@@ -123,8 +172,15 @@ import { mapState, mapMutations, mapGetters } from 'vuex';
 export default class App extends Vue {
   public keysets: any;
   public keyset: any;
+  public biipMe: any;
   public selectedKeyset: any;
   public setSelectedKeyset: any;
+  public customBackground: any;
+  public customLegend: any;
+  public setCustomBackground: any;
+  public setCustomLegend: any;
+  public targets: any;
+  public setEditTarget: any;
 
   selectedLayout =
     localStorage && localStorage.getItem('keyboard')
@@ -140,13 +196,26 @@ export default class App extends Vue {
     return this.selectedKeyset;
   }
   set _selectedKeyset(v) {
+    if (localStorage) {
+      localStorage.setItem('keyset', v);
+    }
+    console.log(this.targets);
     this.setSelectedKeyset(v);
   }
-  changeCustomBackground(e) {
-    console.log(e);
+  get _customBackgroundColor() {
+    return this.customBackground;
   }
-  changeCustomLegend(e) {
-    console.log(e);
+  set _customBackgroundColor(value) {
+    this.setCustomBackground(value.hex);
+  }
+  get _customLegendColor() {
+    return this.customLegend;
+  }
+  set _customLegendColor(value) {
+    this.setCustomLegend(value.hex);
+  }
+  _setEditTarget(name) {
+    this.setEditTarget(this.keyset.colors[name]);
   }
   mounted() {
     if (this.darkMode) {
@@ -173,11 +242,6 @@ export default class App extends Vue {
   changeKeyboard({ target }) {
     if (localStorage) {
       localStorage.setItem('keyboard', target.value);
-    }
-  }
-  changeKeyset({ target }) {
-    if (localStorage) {
-      localStorage.setItem('keyset', target.value);
     }
   }
 }
