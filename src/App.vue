@@ -2,7 +2,7 @@
   <div>
     <div id="app" class="container">
       <appHeader />
-      <div class="row">
+      <div class="row mb-2">
         <div class="col-lg-3">
           <div class="form-group">
             <label class="font-weight-bold">Layout</label>
@@ -19,7 +19,7 @@
             </select>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-2">
           <div class="form-group">
             <label class="font-weight-bold">Keyset</label>
             <select v-model="_selectedKeyset" class="form-control">
@@ -32,13 +32,36 @@
             </select>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mb-2">
           <label for>&nbsp;</label>
           <br />
           <button v-on:click="toggleSearch()" class="btn btn-success">
             Find color match
             <font-awesome-icon :icon="['fa', 'search']" />
           </button>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <button
+              class="btn btn-sm btn-info"
+              v-on:click="toggleCustomKeyboard()"
+            >
+              Customize
+              <font-awesome-icon :icon="['fas', 'cog']" />
+            </button>
+            <label class="font-weight-bold">Dark mode</label>
+            <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
+            <button class="btn btn-sm btn-info" v-on:click="biipMe()">
+              Biip Notice Me
+              <font-awesome-icon :icon="['fas', 'eye']" />
+            </button>
+            <button
+              class="btn btn-sm btn-success"
+              v-on:click="designerMoDaF0ckA()"
+            >
+              I AM DEZIGNER $$
+            </button>
+          </div>
         </div>
       </div>
       <div class="row" v-bind:class="{ collapse: !showSearch }">
@@ -49,24 +72,14 @@
         :keyboardColor="keyboardColor"
       />
       <div class="row">
-        <div class="col-lg-4 mb-4">
-          <button
-            class="btn btn-sm btn-info"
-            v-on:click="toggleCustomKeyboard()"
-          >
-            Customize
-            <font-awesome-icon :icon="['fas', 'cog']" />
-          </button>
-          <label class="font-weight-bold">Dark mode</label>
-          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
-        </div>
+        <div class="col-lg-4 mb-4"></div>
       </div>
       <div class="row mb-4" v-bind:class="{ collapse: !showCustomKeyboard }">
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4">
           <label class="font-weight-bold">Keyboard color</label>
-          <chrome-picker v-model="keyboardColor" />
+          <chrome-picker class="mx-auto" v-model="keyboardColor" />
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4">
           <label class="font-weight-bold">Keyset Colors</label>
           <table style="width:100%">
             <tr
@@ -84,38 +97,21 @@
             </tr>
           </table>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4">
           <label class="font-weight-bold">Custom Backgroud</label>
           <chrome-picker
+            class="mx-auto"
             v-if="_customBackgroundColor"
             v-model="_customBackgroundColor"
           />
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4">
           <label class="font-weight-bold">Custom Legend</label>
           <chrome-picker
+            class="mx-auto"
             v-if="_customLegendColor"
             v-model="_customLegendColor"
           />
-        </div>
-      </div>
-      <div class="row" v-bind:class="{ collapse: !showCustomKeyboard }">
-        <div class="col-md-3">
-          <button
-            class="btn btn-sm btn-success"
-            v-on:click="designerMoDaF0ckA()"
-          >
-            $$ I AM DEZIGNER $$
-          </button>
-        </div>
-
-        <div class="col-md-3">
-          <div class="form-group">
-            <button class="btn btn-sm btn-info" v-on:click="biipMe()">
-              Biip Notice Me
-              <font-awesome-icon :icon="['fas', 'eye']" />
-            </button>
-          </div>
         </div>
       </div>
       <appDescription />
@@ -153,10 +149,9 @@ import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
     ...mapMutations([
       'setCustomBackground',
       'setCustomLegend',
-      'setSelectedKeyset',
       'setEditTarget'
     ]),
-    ...mapActions(['biipMe', 'designerMoDaF0ckA'])
+    ...mapActions(['biipMe', 'designerMoDaF0ckA', 'selectKeyset'])
   },
   components: {
     colorMatchSearch,
@@ -174,13 +169,14 @@ export default class App extends Vue {
   public keyset: any;
   public biipMe: any;
   public selectedKeyset: any;
-  public setSelectedKeyset: any;
+  public selectKeyset: any;
   public customBackground: any;
   public customLegend: any;
   public setCustomBackground: any;
   public setCustomLegend: any;
   public targets: any;
   public setEditTarget: any;
+  public showIntro: boolean = true;
 
   selectedLayout =
     localStorage && localStorage.getItem('keyboard')
@@ -199,8 +195,7 @@ export default class App extends Vue {
     if (localStorage) {
       localStorage.setItem('keyset', v);
     }
-    console.log(this.targets);
-    this.setSelectedKeyset(v);
+    this.selectKeyset(v);
   }
   get _customBackgroundColor() {
     return this.customBackground;
@@ -221,6 +216,7 @@ export default class App extends Vue {
     if (this.darkMode) {
       this.toggleDarkMode({ value: true });
     }
+    this.setEditTarget(this.keyset.colors[this.targets[0].name]);
   }
   toggleCustomKeyboard() {
     this.showCustomKeyboard = !this.showCustomKeyboard;

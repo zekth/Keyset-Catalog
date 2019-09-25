@@ -2,11 +2,11 @@
   <fragment>
     <div class="col-lg-6">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-4">
           <label class="font-weight-bold">Color pick</label>
           <chrome-picker class="mx-auto" v-model="colors" />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-4">
           <label class="font-weight-bold">Search for</label>
           <div>
             <div class="form-group">
@@ -73,7 +73,7 @@ import VueSlider from 'vue-slider-component';
 import { Chrome } from 'vue-color';
 import 'vue-slider-component/theme/antd.css';
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { mapState, mapMutations, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 import { from } from 'nearest-color';
 import { isEmpty } from 'lodash';
 import { Fragment } from 'vue-fragment';
@@ -83,12 +83,12 @@ import { Fragment } from 'vue-fragment';
     ...mapState(['keysets'])
   },
   methods: {
-    ...mapMutations(['setSelectedKeyset'])
+    ...mapActions(['selectKeyset'])
   }
 })
 export default class colorMatchSearch extends Vue {
   public keysets: any;
-  public setSelectedKeyset: any;
+  public selectKeyset: any;
 
   sliderOptions = {
     max: 300
@@ -128,7 +128,7 @@ export default class colorMatchSearch extends Vue {
     }
     this.searchResult = outputs;
     if (outputs.length > 0) {
-      this.setSelectedKeyset(outputs[0].id);
+      this.selectKeyset(outputs[0].id);
     } else {
       console.log('no keyset found');
     }

@@ -7,7 +7,7 @@ import tinycolor from 'tinycolor2';
 Vue.use(Vuex);
 function rngColor(c) {
   let t = tinycolor(c);
-  const rng = Math.floor(Math.random() * Math.floor(10));
+  const rng = Math.floor(Math.random() * Math.floor(6));
   const lightDark = Math.floor(Math.random() * Math.floor(2));
   if (lightDark === 1) {
     t = t.lighten(rng);
@@ -67,12 +67,10 @@ export default new Vuex.Store({
   },
   mutations: {
     setCustomBackground(state, color) {
-      // state.customBackgroundColor = color;
       // @ts-ignore
       state.editTarget.background = color;
     },
     setCustomLegend(state, color) {
-      // state.customLegendColor = color;
       // @ts-ignore
       state.editTarget.legend = color;
     },
@@ -88,6 +86,13 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    selectKeyset({ commit, getters }, value) {
+      commit('setSelectedKeyset', value);
+      commit(
+        'setEditTarget',
+        getters.targets[Object.getOwnPropertyNames(getters.targets)[0]].color
+      );
+    },
     designerMoDaF0ckA({ commit, state, getters }) {
       commit(
         'setSelectedKeyset',
