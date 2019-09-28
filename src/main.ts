@@ -8,7 +8,8 @@ import {
   faSearch,
   faCog,
   faEye,
-  faCommentDollar
+  faCommentDollar,
+  faTrash
 } from '@fortawesome/free-solid-svg-icons';
 import PerfectScrollbar from 'vue2-perfect-scrollbar';
 import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css';
@@ -20,6 +21,7 @@ library.add(faGithub);
 library.add(faSearch);
 library.add(faEye);
 library.add(faCommentDollar);
+library.add(faTrash);
 
 Vue.use(Plugin);
 Vue.use(PerfectScrollbar);

@@ -1,8 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import gmk from './keysets/gmk';
-import { orderBy } from 'lodash';
+import { orderBy, maxBy } from 'lodash';
 import tinycolor from 'tinycolor2';
+import { genIds } from '@/utils/keys';
+import { IKeyset } from './keysets/keysets';
+const ALL_KEYSETS = getKeysets();
 
 Vue.use(Vuex);
 function rngColor(c) {
@@ -19,6 +22,28 @@ function rngColor(c) {
 function yoloColor() {
   return tinycolor.random().toString();
 }
+function getKeysets(): IKeyset[] {
+  const _gmk = orderBy(gmk, [key => key.name.toLowerCase()], ['asc']);
+  const customKeysets = localStorage.getItem('customKeysets')
+    ? JSON.parse(localStorage.getItem('customKeysets')!)
+    : [];
+  return genIds([..._gmk, ...customKeysets]);
+}
+function getSelectedKeyset() {
+  const prefKeyset =
+    localStorage && localStorage.getItem('keyset')
+      ? Number(localStorage.getItem('keyset'))
+      : -1;
+  const found = ALL_KEYSETS.filter(x => {
+    return x.id === prefKeyset;
+  });
+  if (found[0]) {
+    return found[0].id;
+  } else {
+    return ALL_KEYSETS[Math.floor(Math.random() * Math.floor(gmk.length))].id;
+  }
+}
+
 export default new Vuex.Store({
   strict: false,
   getters: {
@@ -56,16 +81,19 @@ export default new Vuex.Store({
     }
   },
   state: {
-    keysets: orderBy(gmk, [key => key.name.toLowerCase()], ['asc']),
+    keysets: getKeysets(),
     customBackgroundColor: '',
     customLegendColor: '',
     editTarget: null,
-    selectedKeyset:
-      localStorage && localStorage.getItem('keyset')
-        ? Number(localStorage.getItem('keyset'))
-        : gmk[Math.floor(Math.random() * Math.floor(gmk.length))].id
+    selectedKeyset: getSelectedKeyset(),
+    showCustomize: !!ALL_KEYSETS.filter(x => {
+      return x.id === getSelectedKeyset();
+    })[0].isCustom
   },
   mutations: {
+    setShowCustomize(state, value) {
+      state.showCustomize = value;
+    },
     setCustomBackground(state, color) {
       // @ts-ignore
       state.editTarget.background = color;
@@ -83,15 +111,79 @@ export default new Vuex.Store({
       if (localStorage) {
         localStorage.setItem('keyset', value);
       }
+    },
+    deleteKeyset(state, value) {
+      state.keysets.splice(state.keysets.indexOf(value), 1);
+      if (localStorage) {
+        const customKeysets = localStorage.getItem('customKeysets')
+          ? JSON.parse(localStorage.getItem('customKeysets')!)
+          : [];
+        customKeysets.splice(state.keysets.indexOf(value), 1);
+        localStorage.setItem('customKeysets', JSON.stringify(customKeysets));
+      }
+      state.selectedKeyset = 1;
+    },
+    addKeyset(state, value) {
+      state.keysets.push(value);
+      if (localStorage) {
+        const customKeysets = localStorage.getItem('customKeysets')
+          ? JSON.parse(localStorage.getItem('customKeysets')!)
+          : [];
+        customKeysets.push(value);
+        localStorage.setItem('customKeysets', JSON.stringify(customKeysets));
+      }
     }
   },
   actions: {
+    toggleShowCustomize({ state, commit }) {
+      commit('setShowCustomize', !state.showCustomize);
+    },
     selectKeyset({ commit, getters }, value) {
       commit('setSelectedKeyset', value);
       commit(
         'setEditTarget',
         getters.targets[Object.getOwnPropertyNames(getters.targets)[0]].color
       );
+    },
+    saveCustomKeyset({ commit, getters }) {
+      const k = getters.keyset;
+      const customKeysets = localStorage.getItem('customKeysets')
+        ? JSON.parse(localStorage.getItem('customKeysets')!)
+        : [];
+      const out = customKeysets.filter(x => {
+        return x.id !== k.id;
+      });
+      out.push(k);
+      localStorage.setItem('customKeysets', JSON.stringify(out));
+    },
+    createKeyset({ commit, state, getters }) {
+      const max = maxBy(state.keysets, function(o) {
+        return o.id;
+      }).id;
+      const newId = max + 1;
+      const k = {
+        id: newId,
+        name: `Custom Keyset ${newId}`,
+        designer: 'you',
+        isCustom: true,
+        colors: {
+          base: {
+            background: '#ffffff',
+            legend: '#000000'
+          },
+          mod: {
+            background: '#ffffff',
+            legend: '#000000'
+          },
+          accent: {
+            background: '#ffffff',
+            legend: '#000000'
+          }
+        }
+      };
+      commit('addKeyset', k);
+      commit('setSelectedKeyset', newId);
+      commit('setEditTarget', getters.targets[0].color);
     },
     designerMoDaF0ckA({ commit, state, getters }) {
       commit(

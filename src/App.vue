@@ -35,6 +35,13 @@
         <div class="col-lg-3 mb-2">
           <label for>&nbsp;</label>
           <br />
+          <button
+            class="btn btn-danger"
+            v-if="keyset.isCustom"
+            @click="deleteKeyset(keyset)"
+          >
+            <font-awesome-icon :icon="['fa', 'trash']" />
+          </button>
           <button v-on:click="toggleSearch()" class="btn btn-success">
             Find color match
             <font-awesome-icon :icon="['fa', 'search']" />
@@ -44,9 +51,13 @@
           <div class="form-group">
             <button
               class="btn btn-sm btn-info"
-              v-on:click="toggleCustomKeyboard()"
+              v-on:click="toggleShowCustomize()"
             >
               Customize
+              <font-awesome-icon :icon="['fas', 'cog']" />
+            </button>
+            <button class="btn btn-sm btn-info" v-on:click="createKeyset()">
+              CreateKeyset
               <font-awesome-icon :icon="['fas', 'cog']" />
             </button>
             <label class="font-weight-bold">Dark mode</label>
@@ -71,15 +82,12 @@
         :selectedLayout="selectedLayout"
         :keyboardColor="keyboardColor"
       />
-      <div class="row">
-        <div class="col-lg-4 mb-4"></div>
-      </div>
-      <div class="row mb-4" v-bind:class="{ collapse: !showCustomKeyboard }">
+      <div class="row mb-4" v-bind:class="{ collapse: !showCustomize }">
         <div class="col-lg-3 mb-4">
           <label class="font-weight-bold">Keyboard color</label>
           <chrome-picker class="mx-auto" v-model="keyboardColor" />
         </div>
-        <div class="col-lg-3 mb-4">
+        <div class="col-lg-3 mb-4" v-if="keyset.isCustom">
           <label class="font-weight-bold">Keyset Colors</label>
           <table style="width:100%">
             <tr
@@ -96,16 +104,26 @@
               <td>{{ t.name }}</td>
             </tr>
           </table>
+
+          <div class="form-group">
+            <label class="font-weight-bold">Keyset Name</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="keyset.name"
+              @change="saveCustomKeyset"
+            />
+          </div>
         </div>
-        <div class="col-lg-3 mb-4">
-          <label class="font-weight-bold">Custom Backgroud</label>
+        <div class="col-lg-3 mb-4" v-if="keyset.isCustom">
+          <label class="font-weight-bold">Custom Background</label>
           <chrome-picker
             class="mx-auto"
             v-if="_customBackgroundColor"
             v-model="_customBackgroundColor"
           />
         </div>
-        <div class="col-lg-3 mb-4">
+        <div class="col-lg-3 mb-4" v-if="keyset.isCustom">
           <label class="font-weight-bold">Custom Legend</label>
           <chrome-picker
             class="mx-auto"
@@ -139,6 +157,7 @@ import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
   computed: {
     ...mapGetters(['keyset', 'targets', 'customBackground', 'customLegend']),
     ...mapState([
+      'showCustomize',
       'keysets',
       'selectedKeyset',
       'customBackgroundColor',
@@ -149,9 +168,17 @@ import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
     ...mapMutations([
       'setCustomBackground',
       'setCustomLegend',
-      'setEditTarget'
+      'setEditTarget',
+      'deleteKeyset'
     ]),
-    ...mapActions(['biipMe', 'designerMoDaF0ckA', 'selectKeyset'])
+    ...mapActions([
+      'toggleShowCustomize',
+      'biipMe',
+      'designerMoDaF0ckA',
+      'selectKeyset',
+      'createKeyset',
+      'saveCustomKeyset'
+    ])
   },
   components: {
     colorMatchSearch,
@@ -176,7 +203,9 @@ export default class App extends Vue {
   public setCustomLegend: any;
   public targets: any;
   public setEditTarget: any;
+  public saveCustomKeyset: any;
   public showIntro: boolean = true;
+  public toggleShowCustomize: any;
 
   selectedLayout =
     localStorage && localStorage.getItem('keyboard')
@@ -196,18 +225,28 @@ export default class App extends Vue {
       localStorage.setItem('keyset', v);
     }
     this.selectKeyset(v);
+    // @ts-ignore
+    if (this.keyset.isCustom && !this.showCustomize) {
+      this.toggleShowCustomize();
+    }
   }
   get _customBackgroundColor() {
     return this.customBackground;
   }
   set _customBackgroundColor(value) {
     this.setCustomBackground(value.hex);
+    if (this.keyset.isCustom) {
+      this.saveCustomKeyset();
+    }
   }
   get _customLegendColor() {
     return this.customLegend;
   }
   set _customLegendColor(value) {
     this.setCustomLegend(value.hex);
+    if (this.keyset.isCustom) {
+      this.saveCustomKeyset();
+    }
   }
   _setEditTarget(name) {
     this.setEditTarget(this.keyset.colors[name]);
@@ -217,9 +256,6 @@ export default class App extends Vue {
       this.toggleDarkMode({ value: true });
     }
     this.setEditTarget(this.keyset.colors[this.targets[0].name]);
-  }
-  toggleCustomKeyboard() {
-    this.showCustomKeyboard = !this.showCustomKeyboard;
   }
   toggleSearch() {
     this.showSearch = !this.showSearch;

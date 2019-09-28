@@ -1,6 +1,6 @@
-import { genIds } from '@/utils/keys';
+import { ISpecialKey, IKeyset } from './keysets';
 
-const GmkBaseColors = {
+const GmkBaseColors: Record<string, string> = {
   _CR: '#171718',
   _N9: '#393b3b',
   _CC: '#67635b',
@@ -38,7 +38,7 @@ const GmkBaseColors = {
   _GE1: '#ebd400'
 };
 
-const hiraganasAlt = {
+const hiraganasAlt: Record<string, ISpecialKey> = {
   KC_Q: {
     thirdContent: 'た'
   },
@@ -117,7 +117,7 @@ const hiraganasAlt = {
   KC_EQL: { thirdContent: 'へ' },
   KC_GRV: { thirdContent: 'ろ' }
 };
-const hiraganas = {
+const hiraganas: Record<string, ISpecialKey> = {
   KC_Q: {
     content: 'た',
     subContent: '',
@@ -227,7 +227,7 @@ const hiraganas = {
   KC_GRV: { content: 'ろ', subContent: '', thirdContent: '' }
 };
 
-const sets = [
+const sets: IKeyset[] = [
   {
     name: 'Bento',
     designer: 'biip',
@@ -1746,4 +1746,7 @@ const sets = [
     }
   }
 ];
-export default genIds(sets);
+export default sets.map(x => {
+  x.name = `GMK - ${x.name}`;
+  return x;
+});

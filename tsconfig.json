@@ -3,7 +3,7 @@
   "compilerOptions": {
       "outDir": "./dist/",
       "sourceMap": true,
-      "strict": true,
+      "strict": false,
       "noImplicitReturns": true,
       "experimentalDecorators": true,
       "allowSyntheticDefaultImports": true,
