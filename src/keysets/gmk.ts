@@ -1658,6 +1658,87 @@ const sets: IKeyset[] = [
     }
   },
   {
+    name: 'Solarized Dark',
+    designer: 'rainb1ood',
+    colors: {
+      base: {
+        background: '#073642',
+        legend: '#93a1a1'
+      },
+      mod: {
+        background: '#00232c',
+        legend: GmkBaseColors._TU2
+      },
+      accent: {
+        background: GmkBaseColors._TU2,
+        legend: '#00232c'
+      }
+    }
+  },
+  {
+    name: 'Solarized Dark - Color',
+    designer: 'rainb1ood',
+    colors: {
+      base: {
+        background: '#073642',
+        legend: '#93a1a1'
+      },
+      mod: {
+        background: '#00232c',
+        legend: GmkBaseColors._TU2
+      },
+      accent: {
+        background: GmkBaseColors._TU2,
+        legend: '#00232c'
+      },
+      R1: {
+        background: '#00232c',
+        legend: GmkBaseColors._MG1
+      },
+      R2: {
+        background: '#00232c',
+        legend: GmkBaseColors._V2
+      },
+      R3: {
+        background: '#00232c',
+        legend: GmkBaseColors._DY
+      },
+      shift: {
+        background: '#00232c',
+        legend: GmkBaseColors._N7
+      },
+      ctrl: {
+        background: '#00232c',
+        legend: GmkBaseColors._RO2
+      },
+      alt: {
+        background: '#00232c',
+        legend: GmkBaseColors._N5
+      },
+      hash: {
+        background: '#00232c',
+        legend: GmkBaseColors._N6
+      }
+    },
+    specialKeys: {
+      KC_ESC: { type: 'R1' },
+      KC_BSPC: { type: 'R1' },
+      KC_GRV: { type: 'R1' },
+      KC_TAB: { type: 'R2' },
+      KC_BSLS: { type: 'R2' },
+      KC_ENT: { type: 'R3' },
+      KC_CAPSLOCK: { type: 'R3' },
+      KC_LSFT: { type: 'shift' },
+      KC_RSFT: { type: 'shift' },
+      KC_LCTL: { type: 'ctrl' },
+      KC_RCTL: { type: 'ctrl' },
+      KC_LALT: { type: 'alt' },
+      KC_RALT: { type: 'alt' },
+      KC_LGUI: { type: 'hash', content: '#!' },
+      KC_RGUI: { type: 'hash', content: '#!' }
+    }
+  },
+  {
     name: 'Eclipse',
     designer: 'T0mb3ry',
     colors: {
