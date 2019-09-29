@@ -1658,6 +1658,157 @@ const sets: IKeyset[] = [
     }
   },
   {
+    name: 'Solarized Dark',
+    designer: 'rainb1ood',
+    colors: {
+      base: {
+        background: '#073642',
+        legend: '#93a1a1'
+      },
+      mod: {
+        background: '#00232c',
+        legend: GmkBaseColors._TU2
+      },
+      accent: {
+        background: GmkBaseColors._TU2,
+        legend: '#00232c'
+      }
+    }
+  },
+  {
+    name: 'Solarized Dark - Color',
+    designer: 'rainb1ood',
+    colors: {
+      base: {
+        background: '#073642',
+        legend: '#93a1a1'
+      },
+      mod: {
+        background: '#00232c',
+        legend: GmkBaseColors._TU2
+      },
+      accent: {
+        background: GmkBaseColors._TU2,
+        legend: '#00232c'
+      },
+      R1: {
+        background: '#00232c',
+        legend: GmkBaseColors._MG1
+      },
+      R2: {
+        background: '#00232c',
+        legend: GmkBaseColors._V2
+      },
+      R3: {
+        background: '#00232c',
+        legend: GmkBaseColors._DY
+      },
+      shift: {
+        background: '#00232c',
+        legend: GmkBaseColors._N7
+      },
+      ctrl: {
+        background: '#00232c',
+        legend: GmkBaseColors._RO2
+      },
+      alt: {
+        background: '#00232c',
+        legend: GmkBaseColors._N5
+      },
+      hash: {
+        background: '#00232c',
+        legend: GmkBaseColors._N6
+      }
+    },
+    specialKeys: {
+      KC_ESC: { type: 'R1' },
+      KC_BSPC: { type: 'R1' },
+      KC_GRV: { type: 'R1' },
+      KC_TAB: { type: 'R2' },
+      KC_BSLS: { type: 'R2' },
+      KC_ENT: { type: 'R3' },
+      KC_CAPSLOCK: { type: 'R3' },
+      KC_LSFT: { type: 'shift' },
+      KC_RSFT: { type: 'shift' },
+      KC_LCTL: { type: 'ctrl' },
+      KC_RCTL: { type: 'ctrl' },
+      KC_LALT: { type: 'alt' },
+      KC_RALT: { type: 'alt' },
+      KC_LGUI: { type: 'hash', content: '#!' },
+      KC_RGUI: { type: 'hash', content: '#!' }
+    }
+  },
+  {
+    name: 'Eclipse',
+    designer: 'T0mb3ry',
+    colors: {
+      base: {
+        background: '#3a3a3a',
+        legend: '#abc6dc'
+      },
+      mod: {
+        background: '#314f6f',
+        legend: '#abc6dc'
+      },
+      accent: {
+        background: '#6c4299',
+        legend: '#abc6dc'
+      },
+      orangeAccent: {
+        background: '#e86700',
+        legend: '#314f6f'
+      },
+      paleBlueAccent: {
+        background: '#C38525',
+        legend: '#733A72'
+      }
+    }
+  },
+  {
+    name: 'Deep Space',
+    designer: 'Omniclecltie',
+    colors: {
+      base: {
+        background: '#5C656A',
+        legend: '#733A72'
+      },
+      mod: {
+        background: '#733A72',
+        legend: '#2C77C2'
+      },
+      accent: {
+        background: '#2C77C2',
+        legend: '#733A72'
+      },
+      accent_yellow: {
+        background: '#C38525',
+        legend: '#733A72'
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'accent' },
+      KC_ESC: { type: 'accent_yellow' }
+    }
+  },
+  {
+    name: '8008',
+    designer: '',
+    colors: {
+      base: {
+        background: '#949FAF',
+        legend: '#333A44'
+      },
+      mod: {
+        background: '#333A44',
+        legend: '#FD5588'
+      },
+      accent: {
+        background: '#FD5588',
+        legend: '#333A44'
+      }
+    }
+  },
+  {
     name: '9009',
     designer: 'janglad',
     colors: {
