@@ -189,7 +189,7 @@ export default new Vuex.Store({
       commit(
         'setSelectedKeyset',
         state.keysets.find(x => {
-          return x.name === 'Minimal';
+          return x.name.indexOf('Minimal') > 0;
         }).id
       );
       for (let p in getters.targets) {
@@ -202,7 +202,7 @@ export default new Vuex.Store({
       commit(
         'setSelectedKeyset',
         state.keysets.find(x => {
-          return x.name === 'Bento';
+          return x.name.indexOf('Bento') > 0;
         }).id
       );
       for (let p in getters.targets) {
