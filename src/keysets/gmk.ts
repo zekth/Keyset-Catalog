@@ -1658,6 +1658,24 @@ const sets: IKeyset[] = [
     }
   },
   {
+    name: '8008',
+    designer: '',
+    colors: {
+      base: {
+        background: '#949FAF',
+        legend: '#333A44'
+      },
+      mod: {
+        background: '#333A44',
+        legend: '#FD5588'
+      },
+      accent: {
+        background: '#FD5588',
+        legend: '#333A44'
+      }
+    }
+  },
+  {
     name: '9009',
     designer: 'janglad',
     colors: {
