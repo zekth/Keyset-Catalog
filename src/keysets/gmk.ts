@@ -1658,6 +1658,32 @@ const sets: IKeyset[] = [
     }
   },
   {
+    name: 'Deep Space',
+    designer: 'Omniclecltie',
+    colors: {
+      base: {
+        background: '#5C656A',
+        legend: '#733A72'
+      },
+      mod: {
+        background: '#733A72',
+        legend: '#2C77C2'
+      },
+      accent: {
+        background: '#2C77C2',
+        legend: '#733A72'
+      },
+      accent_yellow: {
+        background: '#C38525',
+        legend: '#733A72'
+      }
+    },
+    specialKeys: {
+      KC_ENT: { type: 'accent' },
+      KC_ESC: { type: 'accent_yellow' }
+    }
+  },
+  {
     name: '8008',
     designer: '',
     colors: {
