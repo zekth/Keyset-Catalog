@@ -44,6 +44,16 @@ function getSelectedKeyset() {
   }
 }
 
+function initShowCustomize() {
+  const k = ALL_KEYSETS.filter(x => {
+    return x.id === getSelectedKeyset();
+  })[0];
+  if (k) {
+    return !!k.isCustom;
+  } else {
+    return false;
+  }
+}
 export default new Vuex.Store({
   strict: false,
   getters: {
@@ -86,9 +96,7 @@ export default new Vuex.Store({
     customLegendColor: '',
     editTarget: null,
     selectedKeyset: getSelectedKeyset(),
-    showCustomize: !!ALL_KEYSETS.filter(x => {
-      return x.id === getSelectedKeyset();
-    })[0].isCustom
+    showCustomize: initShowCustomize()
   },
   mutations: {
     setShowCustomize(state, value) {
