@@ -1658,6 +1658,32 @@ const sets: IKeyset[] = [
     }
   },
   {
+    name: 'Eclipse',
+    designer: 'T0mb3ry',
+    colors: {
+      base: {
+        background: '#3a3a3a',
+        legend: '#abc6dc'
+      },
+      mod: {
+        background: '#314f6f',
+        legend: '#abc6dc'
+      },
+      accent: {
+        background: '#6c4299',
+        legend: '#abc6dc'
+      },
+      orangeAccent: {
+        background: '#e86700',
+        legend: '#314f6f'
+      },
+      paleBlueAccent: {
+        background: '#C38525',
+        legend: '#733A72'
+      }
+    }
+  },
+  {
     name: 'Deep Space',
     designer: 'Omniclecltie',
     colors: {
