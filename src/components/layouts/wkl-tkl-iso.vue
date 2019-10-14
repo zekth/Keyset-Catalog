@@ -535,7 +535,7 @@
         :data="getKeyData('KC_RSFT', 'mod', 'Shift')"
         isMod="true"
       />
-      <U1 x="1235" :data="getKeyData('KC_UP', 'base', '↑')" />
+      <U1 x="1235" :data="getKeyData('KC_UP', 'mod', '↑')" />
     </g>
     <g transform="translate(15, 420)">
       <U15 x="0" :data="getKeyData('KC_LCTL', 'mod', 'Ctrl')" isMod="true" />
@@ -547,9 +547,9 @@
         isMod="true"
       />
       <U15 x="1015" :data="getKeyData('KC_RCTL', 'mod', 'Ctrl')" isMod="true" />
-      <U1 x="1160" :data="getKeyData('KC_LEFT', 'base', '←')" />
-      <U1 x="1235" :data="getKeyData('KC_DOWN', 'base', '↓')" />
-      <U1 x="1310" :data="getKeyData('KC_RGHT', 'base', '→')" />
+      <U1 x="1160" :data="getKeyData('KC_LEFT', 'mod', '←')" />
+      <U1 x="1235" :data="getKeyData('KC_DOWN', 'mod', '↓')" />
+      <U1 x="1310" :data="getKeyData('KC_RGHT', 'mod', '→')" />
     </g>
   </svg>
 </template>
