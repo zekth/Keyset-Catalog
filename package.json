@@ -35,7 +35,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.19",
+    "@types/jest": "^24.0.20",
     "@types/lodash": "^4.14.144",
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
