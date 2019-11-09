@@ -117,10 +117,3 @@ Also `weebAlt` and `weeb` are stored as const because it's used in several keyse
     }
   }
 ```
-
-## TODO
-
-- Add Keysets
-- Add research on color of legends and not only the background
-- Add an editor for keysets
-- Improve todo list?
