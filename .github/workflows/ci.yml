@@ -1,0 +1,22 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install
+        run: npm install
+      - name: Lint
+        run: npm run pre:build
+      - name: Build
+        run: npm run build
+      - name: GitHub Pages Deploy
+        if: github.ref == 'refs/heads/master'
+        uses: zekth/gh-deploy-action@1.0.0
+        with:
+          dir: dist
+          gh_token: ${{ secrets.GH_TOKEN }}
