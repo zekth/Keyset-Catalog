@@ -98,7 +98,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
-      APP_REV: JSON.stringify(process.env.TRAVIS_COMMIT || 'dev')
+      APP_REV: JSON.stringify(process.env.GITHUB_SHA || 'dev')
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
