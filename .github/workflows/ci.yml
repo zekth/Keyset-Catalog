@@ -1,21 +1,48 @@
 name: CI
-
-on: [push, pull_request]
-
+on:
+  push:
+    branches-ignore:
+      - 'dependabot/**'
+  pull_request:
+    branches:
+      - '**'
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.16]
     steps:
       - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Install
         run: npm install
       - name: Lint
         run: npm run pre:build
       - name: Build
         run: npm run build
-      - name: GitHub Pages Deploy
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
         if: github.ref == 'refs/heads/master'
+        with:
+          name: build
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@master
+        if: github.ref == 'refs/heads/master'
+        with:
+          name: build
+          path: dist
+      - name: GitHub Pages Deploy
         uses: zekth/gh-deploy-action@1.0.0
         with:
           dir: dist
