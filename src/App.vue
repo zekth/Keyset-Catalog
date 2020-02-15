@@ -2,6 +2,7 @@
   <div>
     <div id="app" class="container">
       <appHeader />
+      <router-view />
       <div class="row mb-2">
         <div class="col-lg-3">
           <div class="form-group">
@@ -48,7 +49,14 @@
           </button>
         </div>
         <div class="col-lg-4">
-          <div class="form-group">
+          <div class="form-group"> 
+            <button
+              class="btn btn-sm btn-info"
+              v-on:click="printQuestion()"
+            >
+              Question
+              <font-awesome-icon :icon="['fas', 'cog']" />
+            </button>
             <button
               class="btn btn-sm btn-info"
               v-on:click="toggleShowCustomize()"
@@ -155,7 +163,7 @@ import colorMatchSearch from '@/components/colorMatchSearch.vue';
 import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
 @Component({
   computed: {
-    ...mapGetters(['keyset', 'targets', 'customBackground', 'customLegend']),
+    ...mapGetters(['keyset', 'targets', 'customBackground', 'customLegend','questionContext']),
     ...mapState([
       'showCustomize',
       'keysets',
@@ -202,6 +210,7 @@ export default class App extends Vue {
   public setCustomBackground: any;
   public setCustomLegend: any;
   public targets: any;
+  public questionContext: any;
   public setEditTarget: any;
   public saveCustomKeyset: any;
   public showIntro: boolean = true;
@@ -259,6 +268,9 @@ export default class App extends Vue {
   }
   toggleSearch() {
     this.showSearch = !this.showSearch;
+  }
+  printQuestion(){
+    console.log(this.questionContext)
   }
   toggleDarkMode({ value }) {
     if (value === true) {

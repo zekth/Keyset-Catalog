@@ -6,6 +6,8 @@
         <font-awesome-icon :icon="['fab', 'github']" />
       </a>
     </h3>
+    <button>Catalog</button>
+    <button>Game</button>
   </div>
 </template>
 
