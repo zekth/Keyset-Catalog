@@ -8,7 +8,11 @@
     </h3>
     <div class="form-group ml-2" style="display:inline-block;">
       <label class="font-weight-bold">Dark mode</label>
-      <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
+      <ToggleButton
+        @change="toggleDarkMode"
+        v-model="darkMode"
+        style="padding-top: 7px;"
+      />
     </div>
     <ul class="nav nav-tabs">
       <li class="nav-item">
