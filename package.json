@@ -10,6 +10,7 @@
     "lint:fix": "eslint --ext .vue,.ts src --fix",
     "pre:build": "npm run prettier && npm run lint",
     "build": "webpack -d",
+    "build:prod": "webpack",
     "serve": "npm run build && webpack-dev-server --progress --colors"
   },
   "dependencies": {

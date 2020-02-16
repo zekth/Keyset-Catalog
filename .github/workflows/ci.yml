@@ -24,7 +24,7 @@ jobs:
       - name: Lint
         run: yarn pre:build
       - name: Build
-        run: yarn build
+        run: yarn build:prod
       - name: Upload artifact
         uses: actions/upload-artifact@master
         if: github.ref == 'refs/heads/master'
