@@ -8,6 +8,7 @@ import { IKeyset } from './keysets/keysets';
 const ALL_KEYSETS = getKeysets();
 
 Vue.use(Vuex);
+
 function rngColor(c) {
   let t = tinycolor(c);
   const rng = Math.floor(Math.random() * Math.floor(6));
@@ -19,9 +20,11 @@ function rngColor(c) {
   }
   return t.toString();
 }
+
 function yoloColor() {
   return tinycolor.random().toString();
 }
+
 function getKeysets(): IKeyset[] {
   const _gmk = orderBy(gmk, [key => key.name.toLowerCase()], ['asc']);
   const customKeysets = localStorage.getItem('customKeysets')
@@ -29,6 +32,7 @@ function getKeysets(): IKeyset[] {
     : [];
   return genIds([..._gmk, ...customKeysets]);
 }
+
 function getSelectedKeyset() {
   const prefKeyset =
     localStorage && localStorage.getItem('keyset')
@@ -45,18 +49,58 @@ function getSelectedKeyset() {
 }
 
 function initShowCustomize() {
-  const k = ALL_KEYSETS.filter(x => {
+  const k = ALL_KEYSETS.find(x => {
     return x.id === getSelectedKeyset();
-  })[0];
+  });
   if (k) {
     return !!k.isCustom;
   } else {
     return false;
   }
 }
+
+function randItems(array, nbItems) {
+  const a = array.slice(0);
+  const out = [];
+  const l = nbItems > a.length ? a.length : nbItems;
+  while (out.length < nbItems) {
+    const idxToGet = Math.floor(Math.random() * a.length);
+    out.push(a.splice(idxToGet, 1)[0]);
+  }
+  return out;
+}
+
+function setAnswer(array) {
+  array[Math.floor(Math.random() * array.length)].answer = true;
+}
+
 export default new Vuex.Store({
   strict: false,
   getters: {
+    successRate: state => {
+      if (!state.gameHistory.length) {
+        return 0;
+      }
+      return Math.ceil(
+        (state.gameHistory.filter(x => x.isRight).length /
+          state.gameHistory.length) *
+          100
+      );
+    },
+    successScore: state => {
+      return `${state.gameHistory.filter(x => x.isRight).length}/${
+        state.gameHistory.length
+      }`;
+    },
+    questionContext: state => {
+      const alreadyInHistory = state.gameHistory.map(x => x.id);
+      const availableAnswers = state.keysets.filter(
+        x => !alreadyInHistory.includes(x.id)
+      );
+      const ctx = randItems(availableAnswers, 4);
+      setAnswer(ctx);
+      return ctx;
+    },
     keyset: state => {
       return state.keysets.find(x => {
         return x.id === state.selectedKeyset;
@@ -96,9 +140,14 @@ export default new Vuex.Store({
     customLegendColor: '',
     editTarget: null,
     selectedKeyset: getSelectedKeyset(),
-    showCustomize: initShowCustomize()
+    showCustomize: initShowCustomize(),
+    gameHistory: []
   },
   mutations: {
+    addAnswer(state, value) {
+      Vue.set(state.gameHistory, state.gameHistory.length, value);
+      console.log(state.gameHistory);
+    },
     setShowCustomize(state, value) {
       state.showCustomize = value;
     },
