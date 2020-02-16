@@ -47,10 +47,6 @@
       </div>
       <div class="col-lg-4">
         <div class="form-group">
-          <button class="btn btn-sm btn-info" v-on:click="printQuestion()">
-            Question
-            <font-awesome-icon :icon="['fas', 'cog']" />
-          </button>
           <button
             class="btn btn-sm btn-info"
             v-on:click="toggleShowCustomize()"
@@ -62,8 +58,6 @@
             CreateKeyset
             <font-awesome-icon :icon="['fas', 'cog']" />
           </button>
-          <label class="font-weight-bold">Dark mode</label>
-          <ToggleButton @change="toggleDarkMode" v-model="darkMode" />
           <button class="btn btn-sm btn-info" v-on:click="biipMe()">
             Biip Notice Me
             <font-awesome-icon :icon="['fas', 'eye']" />
@@ -138,8 +132,132 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script lang="ts">
+import VueSlider from 'vue-slider-component';
+import 'vue-slider-component/theme/antd.css';
+import { orderBy, isEmpty } from 'lodash';
+import { from } from 'nearest-color';
+import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Chrome } from 'vue-color';
+import '@/scss/style.scss';
+import appHeader from '@/components/header.vue';
+import renderContainer from '@/components/renderContainer.vue';
+import appDescription from '@/components/description.vue';
+import appFooter from '@/components/footer.vue';
+import colorMatchSearch from '@/components/colorMatchSearch.vue';
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
+@Component({
+  computed: {
+    ...mapGetters(['keyset', 'targets', 'customBackground', 'customLegend']),
+    ...mapState([
+      'showCustomize',
+      'keysets',
+      'selectedKeyset',
+      'customBackgroundColor',
+      'customLegendColor'
+    ])
+  },
+  methods: {
+    ...mapMutations([
+      'setCustomBackground',
+      'setCustomLegend',
+      'setEditTarget',
+      'deleteKeyset'
+    ]),
+    ...mapActions([
+      'toggleShowCustomize',
+      'biipMe',
+      'designerMoDaF0ckA',
+      'selectKeyset',
+      'createKeyset',
+      'saveCustomKeyset'
+    ])
+  },
+  components: {
+    colorMatchSearch,
+    VueSlider,
+    renderContainer,
+    appDescription,
+    appHeader,
+    appFooter,
+    'chrome-picker': Chrome
+  }
+})
+export default class App extends Vue {
+  public keysets: any;
+  public keyset: any;
+  public biipMe: any;
+  public selectedKeyset: any;
+  public selectKeyset: any;
+  public customBackground: any;
+  public customLegend: any;
+  public setCustomBackground: any;
+  public setCustomLegend: any;
+  public targets: any;
+  public setEditTarget: any;
+  public saveCustomKeyset: any;
+  public showIntro: boolean = true;
+  public toggleShowCustomize: any;
 
-<style></style>
+  selectedLayout =
+    localStorage && localStorage.getItem('keyboard')
+      ? localStorage.getItem('keyboard')
+      : 'fullSizeAnsi';
+  showCustomKeyboard = false;
+  keyboardColor = {
+    hex: '#322B2B'
+  };
+  showSearch = false;
+  get _selectedKeyset() {
+    return this.selectedKeyset;
+  }
+  set _selectedKeyset(v) {
+    if (localStorage) {
+      localStorage.setItem('keyset', v);
+    }
+    this.selectKeyset(v);
+    // @ts-ignore
+    if (this.keyset.isCustom && !this.showCustomize) {
+      this.toggleShowCustomize();
+    }
+  }
+  get _customBackgroundColor() {
+    return this.customBackground;
+  }
+  set _customBackgroundColor(value) {
+    this.setCustomBackground(value.hex);
+    if (this.keyset.isCustom) {
+      this.saveCustomKeyset();
+    }
+  }
+  get _customLegendColor() {
+    return this.customLegend;
+  }
+  set _customLegendColor(value) {
+    this.setCustomLegend(value.hex);
+    if (this.keyset.isCustom) {
+      this.saveCustomKeyset();
+    }
+  }
+  _setEditTarget(name) {
+    this.setEditTarget(this.keyset.colors[name]);
+  }
+  mounted() {
+    this.setEditTarget(this.keyset.colors[this.targets[0].name]);
+  }
+  toggleSearch() {
+    this.showSearch = !this.showSearch;
+  }
+
+  changeKeyboard({ target }) {
+    if (localStorage) {
+      localStorage.setItem('keyboard', target.value);
+    }
+  }
+}
+</script>
+<style>
+.over-wrapper {
+  height: 300px;
+}
+</style>

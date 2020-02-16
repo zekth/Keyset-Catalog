@@ -3,7 +3,8 @@
     <div class="container text-center p-4">
       <p>
         ©
-        <a href="https://github.com/zekth">Zekth</a> 2019
+        <a href="https://github.com/zekth">Zekth</a>
+        {{ new Date().getFullYear() }}
       </p>
       <p style="display:none">rev: {{ APP_REV }}</p>
     </div>

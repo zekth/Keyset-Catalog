@@ -49,9 +49,9 @@ function getSelectedKeyset() {
 }
 
 function initShowCustomize() {
-  const k = ALL_KEYSETS.filter(x => {
+  const k = ALL_KEYSETS.find(x => {
     return x.id === getSelectedKeyset();
-  })[0];
+  });
   if (k) {
     return !!k.isCustom;
   } else {
@@ -77,6 +77,21 @@ function setAnswer(array) {
 export default new Vuex.Store({
   strict: false,
   getters: {
+    successRate: state => {
+      if (!state.gameHistory.length) {
+        return 0;
+      }
+      return Math.ceil(
+        (state.gameHistory.filter(x => x.isRight).length /
+          state.gameHistory.length) *
+          100
+      );
+    },
+    successScore: state => {
+      return `${state.gameHistory.filter(x => x.isRight).length}/${
+        state.gameHistory.length
+      }`;
+    },
     questionContext: state => {
       const alreadyInHistory = state.gameHistory.map(x => x.id);
       const availableAnswers = state.keysets.filter(
@@ -130,7 +145,8 @@ export default new Vuex.Store({
   },
   mutations: {
     addAnswer(state, value) {
-      state.gameHistory.push({ id: value.id, success: value.success });
+      Vue.set(state.gameHistory, state.gameHistory.length, value);
+      console.log(state.gameHistory);
     },
     setShowCustomize(state, value) {
       state.showCustomize = value;
