@@ -73,7 +73,7 @@ import VueSlider from 'vue-slider-component';
 import { Chrome } from 'vue-color';
 import 'vue-slider-component/theme/antd.css';
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
 import { from } from 'nearest-color';
 import { isEmpty } from 'lodash';
 import { Fragment } from 'vue-fragment';
@@ -83,7 +83,8 @@ import { Fragment } from 'vue-fragment';
     ...mapState(['keysets'])
   },
   methods: {
-    ...mapActions(['selectKeyset'])
+    ...mapActions(['selectKeyset']),
+    ...mapMutations(['setSelectedKeyset'])
   }
 })
 export default class colorMatchSearch extends Vue {
