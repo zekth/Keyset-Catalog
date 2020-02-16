@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Catalog from '@/Catalog.vue';
-import Game from '@/game.vue';
+import Game from '@/Game.vue';
 
 Vue.use(Router);
 
