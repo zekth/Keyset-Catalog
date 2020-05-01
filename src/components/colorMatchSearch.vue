@@ -100,7 +100,7 @@ export default class colorMatchSearch extends Vue {
   searchResult: any[] = [];
   findKeyset(type) {
     let colorsToTest = {};
-    this.keysets.forEach(x => {
+    this.keysets.forEach((x) => {
       if (x.colors[type]) {
         colorsToTest[x.id] = x.colors[type][this.searchCriteria];
       }
@@ -115,7 +115,7 @@ export default class colorMatchSearch extends Vue {
       } else {
         delete colorsToTest[tempNearest.name];
       }
-      const toPush = this.keysets.find(x => {
+      const toPush = this.keysets.find((x) => {
         return x.id == tempNearest.name;
       });
       outputs.push({

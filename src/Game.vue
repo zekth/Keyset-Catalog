@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row mb-3">
-      <div class="col" style="text-align:center">
+      <div class="col" style="text-align: center;">
         <h3>What is this Colorscheme?</h3>
         Win rate : {{ this.successRate }} % {{ this.successScore }}
       </div>
@@ -35,7 +35,7 @@
         />
       </div>
     </div>
-    <div class="row" style="margin-top:50px;text-align:center">
+    <div class="row" style="margin-top: 50px; text-align: center;">
       <div class="col">
         <button
           type="button"
@@ -57,7 +57,7 @@
         </button>
       </div>
     </div>
-    <div class="row" style="margin-top:50px;text-align:center">
+    <div class="row" style="margin-top: 50px; text-align: center;">
       <div class="col">
         <button
           type="button"
@@ -79,7 +79,7 @@
         </button>
       </div>
     </div>
-    <div class="row" style="margin-top:50px;text-align:center">
+    <div class="row" style="margin-top: 50px; text-align: center;">
       <div class="col">
         <button
           :disabled="!this.showAnswer"
@@ -140,7 +140,7 @@ export default class Game extends Vue {
     this.addAnswer(this.answer);
   }
   get answer() {
-    return this.questionContext.filter(x => x.answer)[0];
+    return this.questionContext.filter((x) => x.answer)[0];
   }
   get alphaColors() {
     return this.answer.colors.base;

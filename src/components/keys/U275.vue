@@ -2,13 +2,13 @@
   <svg @click="clickHandler">
     <g class="keycap U275">
       <path
-        style="transform:scaleX(2.88)"
+        style="transform: scaleX(2.88);"
         fill="black"
         d="M705.94,715H9.06C4.06,715,0,710.94,0,705.94V9.06C0,4.06,4.06,0,9.06,0h696.87c5.01,0,9.06,4.06,9.06,9.06
                         v696.87C715,710.94,710.94,715,705.94,715z"
       />
       <path
-        style="transform:scaleX(2.88)"
+        style="transform: scaleX(2.88);"
         :fill="data.colors.background"
         class="key-shadow"
         d="M705.94,715H9.06C4.06,715,0,710.94,0,705.94V9.06C0,4.06,4.06,0,9.06,0h696.87c5.01,0,9.06,4.06,9.06,9.06

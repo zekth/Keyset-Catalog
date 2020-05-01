@@ -3,7 +3,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 import { mapMutations } from 'vuex';
 export function genIds(arr) {
   let i = 0;
-  return arr.map(x => {
+  return arr.map((x) => {
     x.id = i++;
     return x;
   });

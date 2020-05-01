@@ -183,7 +183,7 @@
         rx="7"
         ry="7"
       />
-      <g transform="translate(1200,290)" style="opacity:0.4">
+      <g transform="translate(1200,290)" style="opacity: 0.4;">
         <line
           x1="0"
           x2="30"
