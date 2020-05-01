@@ -151,14 +151,14 @@
           y1="90"
           x2="1608"
           y2="90"
-          style="stroke:rgb(240,240,240);stroke-width:3"
+          style="stroke: rgb(240, 240, 240); stroke-width: 3;"
         />
         <line
           x1="1632"
           y1="90"
           x2="1683"
           y2="90"
-          style="stroke:rgb(240,240,240);stroke-width:3"
+          style="stroke: rgb(240, 240, 240); stroke-width: 3;"
         />
         <circle cx="1545" cy="90" r="8" />
         <circle

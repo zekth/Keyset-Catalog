@@ -26,7 +26,7 @@ function yoloColor() {
 }
 
 function getKeysets(): IKeyset[] {
-  const _gmk = orderBy(gmk, [key => key.name.toLowerCase()], ['asc']);
+  const _gmk = orderBy(gmk, [(key) => key.name.toLowerCase()], ['asc']);
   const customKeysets = localStorage.getItem('customKeysets')
     ? JSON.parse(localStorage.getItem('customKeysets')!)
     : [];
@@ -38,7 +38,7 @@ function getSelectedKeyset() {
     localStorage && localStorage.getItem('keyset')
       ? Number(localStorage.getItem('keyset'))
       : -1;
-  const found = ALL_KEYSETS.filter(x => {
+  const found = ALL_KEYSETS.filter((x) => {
     return x.id === prefKeyset;
   });
   if (found[0]) {
@@ -49,7 +49,7 @@ function getSelectedKeyset() {
 }
 
 function initShowCustomize() {
-  const k = ALL_KEYSETS.find(x => {
+  const k = ALL_KEYSETS.find((x) => {
     return x.id === getSelectedKeyset();
   });
   if (k) {
@@ -77,37 +77,37 @@ function setAnswer(array) {
 export default new Vuex.Store({
   strict: false,
   getters: {
-    successRate: state => {
+    successRate: (state) => {
       if (!state.gameHistory.length) {
         return 0;
       }
       return Math.ceil(
-        (state.gameHistory.filter(x => x.isRight).length /
+        (state.gameHistory.filter((x) => x.isRight).length /
           state.gameHistory.length) *
           100
       );
     },
-    successScore: state => {
-      return `${state.gameHistory.filter(x => x.isRight).length}/${
+    successScore: (state) => {
+      return `${state.gameHistory.filter((x) => x.isRight).length}/${
         state.gameHistory.length
       }`;
     },
-    questionContext: state => {
-      const alreadyInHistory = state.gameHistory.map(x => x.id);
+    questionContext: (state) => {
+      const alreadyInHistory = state.gameHistory.map((x) => x.id);
       const availableAnswers = state.keysets.filter(
-        x => !alreadyInHistory.includes(x.id)
+        (x) => !alreadyInHistory.includes(x.id)
       );
       const ctx = randItems(availableAnswers, 4);
       setAnswer(ctx);
       return ctx;
     },
-    keyset: state => {
-      return state.keysets.find(x => {
+    keyset: (state) => {
+      return state.keysets.find((x) => {
         return x.id === state.selectedKeyset;
       });
     },
-    targets: state => {
-      const k = state.keysets.find(x => {
+    targets: (state) => {
+      const k = state.keysets.find((x) => {
         return x.id === state.selectedKeyset;
       });
       const out: any[] = [];
@@ -119,14 +119,14 @@ export default new Vuex.Store({
       }
       return out;
     },
-    customBackground: state => {
+    customBackground: (state) => {
       if (!state.editTarget) {
         return '';
       }
       // @ts-ignore
       return state.editTarget!.background;
     },
-    customLegend: state => {
+    customLegend: (state) => {
       if (!state.editTarget) {
         return '';
       }
@@ -207,14 +207,14 @@ export default new Vuex.Store({
       const customKeysets = localStorage.getItem('customKeysets')
         ? JSON.parse(localStorage.getItem('customKeysets')!)
         : [];
-      const out = customKeysets.filter(x => {
+      const out = customKeysets.filter((x) => {
         return x.id !== k.id;
       });
       out.push(k);
       localStorage.setItem('customKeysets', JSON.stringify(out));
     },
     createKeyset({ commit, state, getters }) {
-      const max = maxBy(state.keysets, function(o) {
+      const max = maxBy(state.keysets, function (o) {
         return o.id;
       }).id;
       const newId = max + 1;
@@ -245,7 +245,7 @@ export default new Vuex.Store({
     designerMoDaF0ckA({ commit, state, getters }) {
       commit(
         'setSelectedKeyset',
-        state.keysets.find(x => {
+        state.keysets.find((x) => {
           return x.name.indexOf('Minimal') > 0;
         }).id
       );
@@ -258,7 +258,7 @@ export default new Vuex.Store({
     biipMe({ commit, state, getters }) {
       commit(
         'setSelectedKeyset',
-        state.keysets.find(x => {
+        state.keysets.find((x) => {
           return x.name.indexOf('Bento') > 0;
         }).id
       );

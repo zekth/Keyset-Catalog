@@ -85,7 +85,7 @@
       </div>
       <div class="col-lg-3 mb-4" v-if="keyset.isCustom">
         <label class="font-weight-bold">Keyset Colors</label>
-        <table style="width:100%">
+        <table style="width: 100%;">
           <tr
             @click="_setEditTarget(t.name)"
             v-for="t in targets"

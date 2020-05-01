@@ -6,7 +6,7 @@
         <a href="https://github.com/zekth">Zekth</a>
         {{ new Date().getFullYear() }}
       </p>
-      <p style="display:none">rev: {{ APP_REV }}</p>
+      <p style="display: none;">rev: {{ APP_REV }}</p>
     </div>
   </footer>
 </template>

@@ -1897,7 +1897,7 @@ const sets: IKeyset[] = [
     }
   }
 ];
-export default sets.map(x => {
+export default sets.map((x) => {
   x.name = `GMK - ${x.name}`;
   return x;
 });

@@ -13,14 +13,10 @@ export class KeyboardLayout extends Vue {
   simpleQuote = "'";
 
   get keyboardGradientStart(): string {
-    return tinycolor(this.keyboardColor)
-      .darken(5)
-      .toString();
+    return tinycolor(this.keyboardColor).darken(5).toString();
   }
   get keyboardGradientEnd(): string {
-    return tinycolor(this.keyboardColor)
-      .lighten(5)
-      .toString();
+    return tinycolor(this.keyboardColor).lighten(5).toString();
   }
   getKeyData(key, baseColors, content, subContent, thirdContent) {
     return genKeyData(

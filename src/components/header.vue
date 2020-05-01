@@ -1,12 +1,12 @@
 <template>
   <div class="header clearfix mb-4">
-    <h3 style="display:inline-block">
+    <h3 style="display: inline-block;">
       Keyset Catalog
       <a href="https://github.com/zekth/Keyset-Catalog" target="_blank">
         <font-awesome-icon :icon="['fab', 'github']" />
       </a>
     </h3>
-    <div class="form-group ml-2" style="display:inline-block;">
+    <div class="form-group ml-2" style="display: inline-block;">
       <label class="font-weight-bold">Dark mode</label>
       <ToggleButton
         @change="toggleDarkMode"
