@@ -63,7 +63,7 @@
     "sass-loader": "8.0.2",
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",
-    "ts-jest": "25.3.0",
+    "ts-jest": "26.1.0",
     "ts-loader": "6.2.1",
     "typescript": "3.8.3",
     "vue-loader": "15.9.0",
