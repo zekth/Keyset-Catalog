@@ -37,7 +37,7 @@
     "vuex": "3.4.0"
   },
   "devDependencies": {
-    "@types/jest": "25.2.1",
+    "@types/jest": "26.0.15",
     "@types/lodash": "4.14.161",
     "@typescript-eslint/eslint-plugin": "2.30.0",
     "@typescript-eslint/parser": "2.34.0",
