@@ -62,7 +62,7 @@
     "prettier": "2.0.5",
     "sass-loader": "8.0.2",
     "stylus": "0.54.7",
-    "stylus-loader": "3.0.2",
+    "stylus-loader": "4.3.0",
     "ts-jest": "26.1.0",
     "ts-loader": "8.0.3",
     "typescript": "3.8.3",
