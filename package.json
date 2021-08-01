@@ -20,7 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "5.12.1",
     "@fortawesome/vue-fontawesome": "0.1.9",
     "bootstrap": "4.4.1",
-    "core-js": "3.6.5",
+    "core-js": "3.16.0",
     "lodash": "4.17.20",
     "nearest-color": "0.4.4",
     "tinycolor2": "1.4.1",
